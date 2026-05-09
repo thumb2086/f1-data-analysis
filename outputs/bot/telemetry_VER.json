@@ -1,0 +1,254 @@
+{
+  "command": "telemetry",
+  "title": "遙測摘要：VER",
+  "summary": [
+    "車手：VER",
+    "平均速度：253.6 km/h；最高速度：333.0 km/h",
+    "全油門：73.9%；煞車：13.3%；滑行：1.4%"
+  ],
+  "metrics": {
+    "driver": "VER",
+    "avg_speed": 253.61133846803287,
+    "max_speed": 333.0,
+    "full_throttle_pct": 73.89240506329115,
+    "braking_pct": 13.291139240506327,
+    "coasting_pct": 1.4240506329113924,
+    "drs_active_pct": 0.0,
+    "brake_points": 7
+  },
+  "tables": {
+    "gear_distribution": {
+      "columns": [
+        "gear",
+        "count",
+        "pct"
+      ],
+      "rows": [
+        {
+          "gear": 2.0,
+          "count": 24.0,
+          "pct": 3.79746835443038
+        },
+        {
+          "gear": 3.0,
+          "count": 35.0,
+          "pct": 5.537974683544303
+        },
+        {
+          "gear": 4.0,
+          "count": 24.0,
+          "pct": 3.79746835443038
+        },
+        {
+          "gear": 5.0,
+          "count": 118.0,
+          "pct": 18.670886075949365
+        },
+        {
+          "gear": 6.0,
+          "count": 84.0,
+          "pct": 13.291139240506327
+        },
+        {
+          "gear": 7.0,
+          "count": 75.0,
+          "pct": 11.867088607594937
+        },
+        {
+          "gear": 8.0,
+          "count": 272.0,
+          "pct": 43.037974683544306
+        }
+      ]
+    },
+    "speed_profile": {
+      "columns": [
+        "Distance",
+        "Speed",
+        "RelativeDistance",
+        "RPM",
+        "nGear",
+        "Throttle",
+        "Brake",
+        "DRS"
+      ],
+      "rows": [
+        {
+          "Distance": 0.2666646566685417,
+          "Speed": 316.54250048,
+          "RelativeDistance": 4.62095740319656e-05,
+          "RPM": 11229.17251136,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 5.653888888888893,
+          "Speed": 317.0,
+          "RelativeDistance": 0.0009797466242568,
+          "RPM": 11240.0,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 17.68519994804546,
+          "Speed": 317.7555555555556,
+          "RelativeDistance": 0.0030646189355536,
+          "RPM": 11280.044444444444,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 30.09729156720772,
+          "Speed": 318.53333333333336,
+          "RelativeDistance": 0.005215475647248,
+          "RPM": 11321.266666666666,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 37.55388888888889,
+          "Speed": 319.0,
+          "RelativeDistance": 0.0065076085840514,
+          "RPM": 11346.0,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 51.4202215709857,
+          "Speed": 319.975,
+          "RelativeDistance": 0.0089104666704219,
+          "RPM": 11353.8,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 51.77611111111111,
+          "Speed": 320.0,
+          "RelativeDistance": 0.008972137775461,
+          "RPM": 11354.0,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 72.81822925218329,
+          "Speed": 320.9833333333333,
+          "RelativeDistance": 0.0126184676947568,
+          "RPM": 11343.183333333332,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 73.17611111111111,
+          "Speed": 321.0,
+          "RelativeDistance": 0.0126804840431602,
+          "RPM": 11343.0,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 87.25782731252092,
+          "Speed": 322.57000192,
+          "RelativeDistance": 0.0151206653384077,
+          "RPM": 11415.22008832,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 91.12055555555555,
+          "Speed": 323.0,
+          "RelativeDistance": 0.0157900267338841,
+          "RPM": 11435.0,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 112.4349723089017,
+          "Speed": 323.7406256,
+          "RelativeDistance": 0.0194835425196531,
+          "RPM": 11463.8843984,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 119.92055555555557,
+          "Speed": 324.0,
+          "RelativeDistance": 0.0207806983464886,
+          "RPM": 11474.0,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 130.49698818622528,
+          "Speed": 324.58500096,
+          "RelativeDistance": 0.0226134588358118,
+          "RPM": 11471.65999616,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        },
+        {
+          "Distance": 150.4359988307044,
+          "Speed": 325.68499968,
+          "RelativeDistance": 0.0260686343360486,
+          "RPM": 11467.26000128,
+          "nGear": 8,
+          "Throttle": 100.0,
+          "Brake": false,
+          "DRS": 0
+        }
+      ]
+    }
+  },
+  "details": {
+    "analysis": {
+      "driver": "VER",
+      "total_points": 632,
+      "full_throttle_pct": 73.89240506329115,
+      "braking_pct": 13.291139240506327,
+      "coasting_pct": 1.4240506329113924,
+      "drs_active_pct": 0.0,
+      "avg_speed": 253.61133846803287,
+      "max_speed": 333.0,
+      "avg_rpm": 10716.022887795189,
+      "max_rpm": 11941.0,
+      "brake_points": 7,
+      "gear_usage": {
+        "2": 24,
+        "3": 35,
+        "4": 24,
+        "5": 118,
+        "6": 84,
+        "7": 75,
+        "8": 272
+      }
+    }
+  },
+  "artifacts": {}
+}

@@ -1,0 +1,90 @@
+最終排名 / 車隊積分
+===========
+
+摘要:
+- 2024 Italian Grand Prix @ Monza
+- 冠軍：Charles Leclerc (Ferrari)
+- 總圈數：53 圈；參賽車手：20 位；完賽：13 位
+
+指標:
+- winner: Charles Leclerc
+- winner_team: Ferrari
+- total_laps: 53
+- drivers: 20
+- finishers: 13
+
+Final Standings:
+ Position Abbreviation         FullName        TeamName  GridPosition  Points  Laps   Status
+      1.0          LEC  Charles Leclerc         Ferrari           4.0    25.0  53.0 Finished
+      2.0          PIA    Oscar Piastri         McLaren           2.0    18.0  53.0 Finished
+      3.0          NOR     Lando Norris         McLaren           1.0    16.0  53.0 Finished
+      4.0          SAI     Carlos Sainz         Ferrari           5.0    12.0  53.0 Finished
+      5.0          HAM   Lewis Hamilton        Mercedes           6.0    10.0  53.0 Finished
+      6.0          VER   Max Verstappen Red Bull Racing           7.0     8.0  53.0 Finished
+      7.0          RUS   George Russell        Mercedes           3.0     6.0  53.0 Finished
+      8.0          PER     Sergio Perez Red Bull Racing           8.0     4.0  53.0 Finished
+      9.0          ALB  Alexander Albon        Williams           9.0     2.0  53.0 Finished
+     10.0          MAG  Kevin Magnussen    Haas F1 Team          13.0     1.0  53.0 Finished
+     11.0          ALO  Fernando Alonso    Aston Martin          11.0     0.0  53.0 Finished
+     12.0          COL Franco Colapinto        Williams          18.0     0.0  53.0 Finished
+     13.0          RIC Daniel Ricciardo              RB          12.0     0.0  53.0 Finished
+     14.0          OCO     Esteban Ocon          Alpine          15.0     0.0  52.0   Lapped
+     15.0          GAS     Pierre Gasly          Alpine          14.0     0.0  52.0   Lapped
+     16.0          BOT  Valtteri Bottas     Kick Sauber          19.0     0.0  52.0   Lapped
+     17.0          HUL  Nico Hulkenberg    Haas F1 Team          10.0     0.0  52.0   Lapped
+     18.0          ZHO      Guanyu Zhou     Kick Sauber          20.0     0.0  52.0   Lapped
+     19.0          STR     Lance Stroll    Aston Martin          17.0     0.0  52.0   Lapped
+     20.0          TSU     Yuki Tsunoda              RB          16.0     0.0   7.0  Retired
+
+Position Changes:
+Abbreviation         FullName        TeamName  GridPosition  Position  position_change change_label  Points
+         COL Franco Colapinto        Williams          18.0      12.0              6.0           +6     0.0
+         LEC  Charles Leclerc         Ferrari           4.0       1.0              3.0           +3    25.0
+         MAG  Kevin Magnussen    Haas F1 Team          13.0      10.0              3.0           +3     1.0
+         BOT  Valtteri Bottas     Kick Sauber          19.0      16.0              3.0           +3     0.0
+         ZHO      Guanyu Zhou     Kick Sauber          20.0      18.0              2.0           +2     0.0
+         HAM   Lewis Hamilton        Mercedes           6.0       5.0              1.0           +1    10.0
+         SAI     Carlos Sainz         Ferrari           5.0       4.0              1.0           +1    12.0
+         OCO     Esteban Ocon          Alpine          15.0      14.0              1.0           +1     0.0
+         VER   Max Verstappen Red Bull Racing           7.0       6.0              1.0           +1     8.0
+         PIA    Oscar Piastri         McLaren           2.0       2.0              0.0            0    18.0
+         PER     Sergio Perez Red Bull Racing           8.0       8.0              0.0            0     4.0
+         ALB  Alexander Albon        Williams           9.0       9.0              0.0            0     2.0
+         ALO  Fernando Alonso    Aston Martin          11.0      11.0              0.0            0     0.0
+         GAS     Pierre Gasly          Alpine          14.0      15.0             -1.0           -1     0.0
+         RIC Daniel Ricciardo              RB          12.0      13.0             -1.0           -1     0.0
+         NOR     Lando Norris         McLaren           1.0       3.0             -2.0           -2    16.0
+         STR     Lance Stroll    Aston Martin          17.0      19.0             -2.0           -2     0.0
+         RUS   George Russell        Mercedes           3.0       7.0             -4.0           -4     6.0
+         TSU     Yuki Tsunoda              RB          16.0      20.0             -4.0           -4     0.0
+         HUL  Nico Hulkenberg    Haas F1 Team          10.0      17.0             -7.0           -7     0.0
+
+Team Standings:
+       TeamName  total_points   drivers  best_position  color
+        Ferrari          37.0 LEC / SAI            1.0 E80020
+        McLaren          34.0 NOR / PIA            2.0 FF8000
+       Mercedes          16.0 HAM / RUS            5.0 27F4D2
+Red Bull Racing          12.0 PER / VER            6.0 3671C6
+       Williams           2.0 ALB / COL            9.0 64C4FF
+   Haas F1 Team           1.0 HUL / MAG           10.0 B6BABD
+   Aston Martin           0.0 ALO / STR           11.0 229971
+         Alpine           0.0 GAS / OCO           14.0 0093cc
+    Kick Sauber           0.0 BOT / ZHO           16.0 52e252
+             RB           0.0 RIC / TSU           13.0 6692FF
+
+詳細資料:
+- race_info:
+  - event: 2024 Italian Grand Prix
+  - circuit: Monza
+  - date: 2024-09-01
+  - drivers: 20
+  - finishers: 13
+  - total_laps: 53
+  - weather:
+    - temp_min: 32.2
+    - temp_max: 34.1
+    - track_temp_min: 43.5
+    - track_temp_max: 54.6
+    - rain: No
+  - winner: Charles Leclerc
+  - winner_team: Ferrari

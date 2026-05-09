@@ -1,0 +1,1209 @@
+{
+  "command": "laps",
+  "title": "圈速分析：VER",
+  "summary": [
+    "車手：VER",
+    "最快圈速榜取前 10 名，並顯示 VER 的完整圈速序列。",
+    "一致性排名以變異係數 CV 排序。"
+  ],
+  "metrics": {
+    "driver": "VER",
+    "driver_laps": 48,
+    "fastest_laps_count": 20,
+    "consistency_cv": 1.3328633675803527
+  },
+  "tables": {
+    "fastest_laps": {
+      "columns": [
+        "Driver",
+        "Team",
+        "LapTime",
+        "LapTime_seconds",
+        "LapNumber",
+        "Compound",
+        "TyreLife",
+        "Position"
+      ],
+      "rows": [
+        {
+          "Driver": "NOR",
+          "Team": "McLaren",
+          "LapTime": "0 days 00:01:21.432000",
+          "LapTime_seconds": 81.432,
+          "LapNumber": 53.0,
+          "Compound": "HARD",
+          "TyreLife": 21.0,
+          "Position": 3.0
+        },
+        {
+          "Driver": "HAM",
+          "Team": "Mercedes",
+          "LapTime": "0 days 00:01:21.512000",
+          "LapTime_seconds": 81.512,
+          "LapNumber": 53.0,
+          "Compound": "HARD",
+          "TyreLife": 16.0,
+          "Position": 5.0
+        },
+        {
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:21.745000",
+          "LapTime_seconds": 81.745,
+          "LapNumber": 43.0,
+          "Compound": "MEDIUM",
+          "TyreLife": 2.0,
+          "Position": 6.0
+        },
+        {
+          "Driver": "PIA",
+          "Team": "McLaren",
+          "LapTime": "0 days 00:01:21.943000",
+          "LapTime_seconds": 81.943,
+          "LapNumber": 53.0,
+          "Compound": "HARD",
+          "TyreLife": 15.0,
+          "Position": 2.0
+        },
+        {
+          "Driver": "RUS",
+          "Team": "Mercedes",
+          "LapTime": "0 days 00:01:22.036000",
+          "LapTime_seconds": 82.036,
+          "LapNumber": 49.0,
+          "Compound": "HARD",
+          "TyreLife": 16.0,
+          "Position": 7.0
+        },
+        {
+          "Driver": "STR",
+          "Team": "Aston Martin",
+          "LapTime": "0 days 00:01:22.232000",
+          "LapTime_seconds": 82.232,
+          "LapNumber": 52.0,
+          "Compound": "SOFT",
+          "TyreLife": 2.0,
+          "Position": 19.0
+        },
+        {
+          "Driver": "ALO",
+          "Team": "Aston Martin",
+          "LapTime": "0 days 00:01:22.944000",
+          "LapTime_seconds": 82.944,
+          "LapNumber": 46.0,
+          "Compound": "HARD",
+          "TyreLife": 13.0,
+          "Position": 11.0
+        },
+        {
+          "Driver": "PER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:22.971000",
+          "LapTime_seconds": 82.971,
+          "LapNumber": 47.0,
+          "Compound": "MEDIUM",
+          "TyreLife": 12.0,
+          "Position": 8.0
+        },
+        {
+          "Driver": "SAI",
+          "Team": "Ferrari",
+          "LapTime": "0 days 00:01:23.219000",
+          "LapTime_seconds": 83.219,
+          "LapNumber": 53.0,
+          "Compound": "HARD",
+          "TyreLife": 34.0,
+          "Position": 4.0
+        },
+        {
+          "Driver": "LEC",
+          "Team": "Ferrari",
+          "LapTime": "0 days 00:01:23.226000",
+          "LapTime_seconds": 83.226,
+          "LapNumber": 33.0,
+          "Compound": "HARD",
+          "TyreLife": 18.0,
+          "Position": 2.0
+        }
+      ]
+    },
+    "driver_laps": {
+      "columns": [
+        "LapNumber",
+        "LapTime",
+        "LapTime_seconds",
+        "Compound",
+        "TyreLife",
+        "Position",
+        "IsPersonalBest"
+      ],
+      "rows": [
+        {
+          "LapNumber": 2.0,
+          "LapTime": "0 days 00:01:26.170000",
+          "LapTime_seconds": 86.17,
+          "Compound": "HARD",
+          "TyreLife": 2.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 3.0,
+          "LapTime": "0 days 00:01:25.855000",
+          "LapTime_seconds": 85.855,
+          "Compound": "HARD",
+          "TyreLife": 3.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 4.0,
+          "LapTime": "0 days 00:01:25.633000",
+          "LapTime_seconds": 85.633,
+          "Compound": "HARD",
+          "TyreLife": 4.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 5.0,
+          "LapTime": "0 days 00:01:25.218000",
+          "LapTime_seconds": 85.218,
+          "Compound": "HARD",
+          "TyreLife": 5.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 6.0,
+          "LapTime": "0 days 00:01:25.096000",
+          "LapTime_seconds": 85.096,
+          "Compound": "HARD",
+          "TyreLife": 6.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 7.0,
+          "LapTime": "0 days 00:01:25.042000",
+          "LapTime_seconds": 85.042,
+          "Compound": "HARD",
+          "TyreLife": 7.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 8.0,
+          "LapTime": "0 days 00:01:24.918000",
+          "LapTime_seconds": 84.918,
+          "Compound": "HARD",
+          "TyreLife": 8.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 9.0,
+          "LapTime": "0 days 00:01:25.050000",
+          "LapTime_seconds": 85.05,
+          "Compound": "HARD",
+          "TyreLife": 9.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 10.0,
+          "LapTime": "0 days 00:01:24.964000",
+          "LapTime_seconds": 84.964,
+          "Compound": "HARD",
+          "TyreLife": 10.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 11.0,
+          "LapTime": "0 days 00:01:24.978000",
+          "LapTime_seconds": 84.978,
+          "Compound": "HARD",
+          "TyreLife": 11.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 12.0,
+          "LapTime": "0 days 00:01:24.968000",
+          "LapTime_seconds": 84.968,
+          "Compound": "HARD",
+          "TyreLife": 12.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 13.0,
+          "LapTime": "0 days 00:01:24.957000",
+          "LapTime_seconds": 84.957,
+          "Compound": "HARD",
+          "TyreLife": 13.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 14.0,
+          "LapTime": "0 days 00:01:25.287000",
+          "LapTime_seconds": 85.287,
+          "Compound": "HARD",
+          "TyreLife": 14.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 15.0,
+          "LapTime": "0 days 00:01:25.746000",
+          "LapTime_seconds": 85.746,
+          "Compound": "HARD",
+          "TyreLife": 15.0,
+          "Position": 4.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 16.0,
+          "LapTime": "0 days 00:01:25.244000",
+          "LapTime_seconds": 85.244,
+          "Compound": "HARD",
+          "TyreLife": 16.0,
+          "Position": 3.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 17.0,
+          "LapTime": "0 days 00:01:25.340000",
+          "LapTime_seconds": 85.34,
+          "Compound": "HARD",
+          "TyreLife": 17.0,
+          "Position": 2.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 18.0,
+          "LapTime": "0 days 00:01:25.469000",
+          "LapTime_seconds": 85.469,
+          "Compound": "HARD",
+          "TyreLife": 18.0,
+          "Position": 2.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 19.0,
+          "LapTime": "0 days 00:01:25.537000",
+          "LapTime_seconds": 85.537,
+          "Compound": "HARD",
+          "TyreLife": 19.0,
+          "Position": 1.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 20.0,
+          "LapTime": "0 days 00:01:25.559000",
+          "LapTime_seconds": 85.559,
+          "Compound": "HARD",
+          "TyreLife": 20.0,
+          "Position": 1.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 21.0,
+          "LapTime": "0 days 00:01:25.381000",
+          "LapTime_seconds": 85.381,
+          "Compound": "HARD",
+          "TyreLife": 21.0,
+          "Position": 1.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 24.0,
+          "LapTime": "0 days 00:01:23.545000",
+          "LapTime_seconds": 83.545,
+          "Compound": "HARD",
+          "TyreLife": 2.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 25.0,
+          "LapTime": "0 days 00:01:23.801000",
+          "LapTime_seconds": 83.801,
+          "Compound": "HARD",
+          "TyreLife": 3.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 26.0,
+          "LapTime": "0 days 00:01:23.618000",
+          "LapTime_seconds": 83.618,
+          "Compound": "HARD",
+          "TyreLife": 4.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 27.0,
+          "LapTime": "0 days 00:01:23.524000",
+          "LapTime_seconds": 83.524,
+          "Compound": "HARD",
+          "TyreLife": 5.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 28.0,
+          "LapTime": "0 days 00:01:23.509000",
+          "LapTime_seconds": 83.509,
+          "Compound": "HARD",
+          "TyreLife": 6.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 29.0,
+          "LapTime": "0 days 00:01:23.452000",
+          "LapTime_seconds": 83.452,
+          "Compound": "HARD",
+          "TyreLife": 7.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 30.0,
+          "LapTime": "0 days 00:01:23.542000",
+          "LapTime_seconds": 83.542,
+          "Compound": "HARD",
+          "TyreLife": 8.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 31.0,
+          "LapTime": "0 days 00:01:23.424000",
+          "LapTime_seconds": 83.424,
+          "Compound": "HARD",
+          "TyreLife": 9.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 32.0,
+          "LapTime": "0 days 00:01:23.490000",
+          "LapTime_seconds": 83.49,
+          "Compound": "HARD",
+          "TyreLife": 10.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 33.0,
+          "LapTime": "0 days 00:01:23.621000",
+          "LapTime_seconds": 83.621,
+          "Compound": "HARD",
+          "TyreLife": 11.0,
+          "Position": 5.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 34.0,
+          "LapTime": "0 days 00:01:23.576000",
+          "LapTime_seconds": 83.576,
+          "Compound": "HARD",
+          "TyreLife": 12.0,
+          "Position": 5.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 35.0,
+          "LapTime": "0 days 00:01:23.589000",
+          "LapTime_seconds": 83.589,
+          "Compound": "HARD",
+          "TyreLife": 13.0,
+          "Position": 5.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 36.0,
+          "LapTime": "0 days 00:01:23.559000",
+          "LapTime_seconds": 83.559,
+          "Compound": "HARD",
+          "TyreLife": 14.0,
+          "Position": 5.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 37.0,
+          "LapTime": "0 days 00:01:23.485000",
+          "LapTime_seconds": 83.485,
+          "Compound": "HARD",
+          "TyreLife": 15.0,
+          "Position": 5.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 38.0,
+          "LapTime": "0 days 00:01:23.427000",
+          "LapTime_seconds": 83.427,
+          "Compound": "HARD",
+          "TyreLife": 16.0,
+          "Position": 4.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 39.0,
+          "LapTime": "0 days 00:01:23.501000",
+          "LapTime_seconds": 83.501,
+          "Compound": "HARD",
+          "TyreLife": 17.0,
+          "Position": 4.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 40.0,
+          "LapTime": "0 days 00:01:24.337000",
+          "LapTime_seconds": 84.337,
+          "Compound": "HARD",
+          "TyreLife": 18.0,
+          "Position": 4.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 43.0,
+          "LapTime": "0 days 00:01:21.745000",
+          "LapTime_seconds": 81.745,
+          "Compound": "MEDIUM",
+          "TyreLife": 2.0,
+          "Position": 6.0,
+          "IsPersonalBest": true
+        },
+        {
+          "LapNumber": 44.0,
+          "LapTime": "0 days 00:01:23.045000",
+          "LapTime_seconds": 83.045,
+          "Compound": "MEDIUM",
+          "TyreLife": 3.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 45.0,
+          "LapTime": "0 days 00:01:23.363000",
+          "LapTime_seconds": 83.363,
+          "Compound": "MEDIUM",
+          "TyreLife": 4.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 46.0,
+          "LapTime": "0 days 00:01:22.941000",
+          "LapTime_seconds": 82.941,
+          "Compound": "MEDIUM",
+          "TyreLife": 5.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 47.0,
+          "LapTime": "0 days 00:01:22.520000",
+          "LapTime_seconds": 82.52,
+          "Compound": "MEDIUM",
+          "TyreLife": 6.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 48.0,
+          "LapTime": "0 days 00:01:22.570000",
+          "LapTime_seconds": 82.57,
+          "Compound": "MEDIUM",
+          "TyreLife": 7.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 49.0,
+          "LapTime": "0 days 00:01:22.584000",
+          "LapTime_seconds": 82.584,
+          "Compound": "MEDIUM",
+          "TyreLife": 8.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 50.0,
+          "LapTime": "0 days 00:01:22.585000",
+          "LapTime_seconds": 82.585,
+          "Compound": "MEDIUM",
+          "TyreLife": 9.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 51.0,
+          "LapTime": "0 days 00:01:22.574000",
+          "LapTime_seconds": 82.574,
+          "Compound": "MEDIUM",
+          "TyreLife": 10.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 52.0,
+          "LapTime": "0 days 00:01:22.920000",
+          "LapTime_seconds": 82.92,
+          "Compound": "MEDIUM",
+          "TyreLife": 11.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        },
+        {
+          "LapNumber": 53.0,
+          "LapTime": "0 days 00:01:23.711000",
+          "LapTime_seconds": 83.711,
+          "Compound": "MEDIUM",
+          "TyreLife": 12.0,
+          "Position": 6.0,
+          "IsPersonalBest": false
+        }
+      ]
+    },
+    "consistency": {
+      "columns": [
+        "Driver",
+        "avg_laptime",
+        "std_laptime",
+        "min_laptime",
+        "max_laptime",
+        "lap_count",
+        "team",
+        "cv",
+        "final_position"
+      ],
+      "rows": [
+        {
+          "Driver": "RIC",
+          "avg_laptime": 85.2385,
+          "std_laptime": 0.6125542791442764,
+          "min_laptime": 84.219,
+          "max_laptime": 87.177,
+          "lap_count": 50,
+          "team": "RB",
+          "cv": 0.7186356859215922,
+          "final_position": 13.0
+        },
+        {
+          "Driver": "LEC",
+          "avg_laptime": 83.94936,
+          "std_laptime": 0.6294293742294218,
+          "min_laptime": 83.226,
+          "max_laptime": 85.606,
+          "lap_count": 50,
+          "team": "Ferrari",
+          "cv": 0.7497726894277953,
+          "final_position": 1.0
+        },
+        {
+          "Driver": "ALB",
+          "avg_laptime": 85.17497999999999,
+          "std_laptime": 0.7680666023947932,
+          "min_laptime": 83.918,
+          "max_laptime": 87.011,
+          "lap_count": 50,
+          "team": "Williams",
+          "cv": 0.9017514326329085,
+          "final_position": 9.0
+        },
+        {
+          "Driver": "SAI",
+          "avg_laptime": 84.23608,
+          "std_laptime": 0.7830349339302244,
+          "min_laptime": 83.219,
+          "max_laptime": 85.731,
+          "lap_count": 50,
+          "team": "Ferrari",
+          "cv": 0.9295719054474334,
+          "final_position": 4.0
+        },
+        {
+          "Driver": "OCO",
+          "avg_laptime": 85.76504081632653,
+          "std_laptime": 0.8264122750173369,
+          "min_laptime": 84.343,
+          "max_laptime": 87.519,
+          "lap_count": 49,
+          "team": "Alpine",
+          "cv": 0.9635770789023146,
+          "final_position": 14.0
+        },
+        {
+          "Driver": "ZHO",
+          "avg_laptime": 86.18110204081633,
+          "std_laptime": 0.8510993685839969,
+          "min_laptime": 85.092,
+          "max_laptime": 89.256,
+          "lap_count": 49,
+          "team": "Kick Sauber",
+          "cv": 0.9875707648538851,
+          "final_position": 18.0
+        },
+        {
+          "Driver": "GAS",
+          "avg_laptime": 85.32393617021276,
+          "std_laptime": 0.8974834963786116,
+          "min_laptime": 83.755,
+          "max_laptime": 87.191,
+          "lap_count": 47,
+          "team": "Alpine",
+          "cv": 1.0518543056759846,
+          "final_position": 15.0
+        },
+        {
+          "Driver": "MAG",
+          "avg_laptime": 84.96264,
+          "std_laptime": 0.9022232802066971,
+          "min_laptime": 83.437,
+          "max_laptime": 87.205,
+          "lap_count": 50,
+          "team": "Haas F1 Team",
+          "cv": 1.0619058920564346,
+          "final_position": 10.0
+        },
+        {
+          "Driver": "COL",
+          "avg_laptime": 85.37216000000001,
+          "std_laptime": 0.920494329484016,
+          "min_laptime": 83.728,
+          "max_laptime": 87.845,
+          "lap_count": 50,
+          "team": "Williams",
+          "cv": 1.0782137051282477,
+          "final_position": 12.0
+        },
+        {
+          "Driver": "PIA",
+          "avg_laptime": 83.542,
+          "std_laptime": 0.9514082731023797,
+          "min_laptime": 81.943,
+          "max_laptime": 85.261,
+          "lap_count": 48,
+          "team": "McLaren",
+          "cv": 1.1388382766780538,
+          "final_position": 2.0
+        }
+      ]
+    },
+    "lap_evolution": {
+      "columns": [
+        "LapNumber",
+        "Driver",
+        "Team",
+        "LapTime",
+        "LapTime_seconds",
+        "Compound",
+        "TyreLife",
+        "Position"
+      ],
+      "rows": [
+        {
+          "LapNumber": 2.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:26.170000",
+          "LapTime_seconds": 86.17,
+          "Compound": "HARD",
+          "TyreLife": 2.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 3.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.855000",
+          "LapTime_seconds": 85.855,
+          "Compound": "HARD",
+          "TyreLife": 3.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 4.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.633000",
+          "LapTime_seconds": 85.633,
+          "Compound": "HARD",
+          "TyreLife": 4.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 5.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.218000",
+          "LapTime_seconds": 85.218,
+          "Compound": "HARD",
+          "TyreLife": 5.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 6.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.096000",
+          "LapTime_seconds": 85.096,
+          "Compound": "HARD",
+          "TyreLife": 6.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 7.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.042000",
+          "LapTime_seconds": 85.042,
+          "Compound": "HARD",
+          "TyreLife": 7.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 8.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:24.918000",
+          "LapTime_seconds": 84.918,
+          "Compound": "HARD",
+          "TyreLife": 8.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 9.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.050000",
+          "LapTime_seconds": 85.05,
+          "Compound": "HARD",
+          "TyreLife": 9.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 10.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:24.964000",
+          "LapTime_seconds": 84.964,
+          "Compound": "HARD",
+          "TyreLife": 10.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 11.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:24.978000",
+          "LapTime_seconds": 84.978,
+          "Compound": "HARD",
+          "TyreLife": 11.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 12.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:24.968000",
+          "LapTime_seconds": 84.968,
+          "Compound": "HARD",
+          "TyreLife": 12.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 13.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:24.957000",
+          "LapTime_seconds": 84.957,
+          "Compound": "HARD",
+          "TyreLife": 13.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 14.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.287000",
+          "LapTime_seconds": 85.287,
+          "Compound": "HARD",
+          "TyreLife": 14.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 15.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.746000",
+          "LapTime_seconds": 85.746,
+          "Compound": "HARD",
+          "TyreLife": 15.0,
+          "Position": 4.0
+        },
+        {
+          "LapNumber": 16.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.244000",
+          "LapTime_seconds": 85.244,
+          "Compound": "HARD",
+          "TyreLife": 16.0,
+          "Position": 3.0
+        },
+        {
+          "LapNumber": 17.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.340000",
+          "LapTime_seconds": 85.34,
+          "Compound": "HARD",
+          "TyreLife": 17.0,
+          "Position": 2.0
+        },
+        {
+          "LapNumber": 18.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.469000",
+          "LapTime_seconds": 85.469,
+          "Compound": "HARD",
+          "TyreLife": 18.0,
+          "Position": 2.0
+        },
+        {
+          "LapNumber": 19.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.537000",
+          "LapTime_seconds": 85.537,
+          "Compound": "HARD",
+          "TyreLife": 19.0,
+          "Position": 1.0
+        },
+        {
+          "LapNumber": 20.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.559000",
+          "LapTime_seconds": 85.559,
+          "Compound": "HARD",
+          "TyreLife": 20.0,
+          "Position": 1.0
+        },
+        {
+          "LapNumber": 21.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:25.381000",
+          "LapTime_seconds": 85.381,
+          "Compound": "HARD",
+          "TyreLife": 21.0,
+          "Position": 1.0
+        },
+        {
+          "LapNumber": 24.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.545000",
+          "LapTime_seconds": 83.545,
+          "Compound": "HARD",
+          "TyreLife": 2.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 25.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.801000",
+          "LapTime_seconds": 83.801,
+          "Compound": "HARD",
+          "TyreLife": 3.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 26.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.618000",
+          "LapTime_seconds": 83.618,
+          "Compound": "HARD",
+          "TyreLife": 4.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 27.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.524000",
+          "LapTime_seconds": 83.524,
+          "Compound": "HARD",
+          "TyreLife": 5.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 28.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.509000",
+          "LapTime_seconds": 83.509,
+          "Compound": "HARD",
+          "TyreLife": 6.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 29.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.452000",
+          "LapTime_seconds": 83.452,
+          "Compound": "HARD",
+          "TyreLife": 7.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 30.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.542000",
+          "LapTime_seconds": 83.542,
+          "Compound": "HARD",
+          "TyreLife": 8.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 31.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.424000",
+          "LapTime_seconds": 83.424,
+          "Compound": "HARD",
+          "TyreLife": 9.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 32.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.490000",
+          "LapTime_seconds": 83.49,
+          "Compound": "HARD",
+          "TyreLife": 10.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 33.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.621000",
+          "LapTime_seconds": 83.621,
+          "Compound": "HARD",
+          "TyreLife": 11.0,
+          "Position": 5.0
+        },
+        {
+          "LapNumber": 34.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.576000",
+          "LapTime_seconds": 83.576,
+          "Compound": "HARD",
+          "TyreLife": 12.0,
+          "Position": 5.0
+        },
+        {
+          "LapNumber": 35.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.589000",
+          "LapTime_seconds": 83.589,
+          "Compound": "HARD",
+          "TyreLife": 13.0,
+          "Position": 5.0
+        },
+        {
+          "LapNumber": 36.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.559000",
+          "LapTime_seconds": 83.559,
+          "Compound": "HARD",
+          "TyreLife": 14.0,
+          "Position": 5.0
+        },
+        {
+          "LapNumber": 37.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.485000",
+          "LapTime_seconds": 83.485,
+          "Compound": "HARD",
+          "TyreLife": 15.0,
+          "Position": 5.0
+        },
+        {
+          "LapNumber": 38.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.427000",
+          "LapTime_seconds": 83.427,
+          "Compound": "HARD",
+          "TyreLife": 16.0,
+          "Position": 4.0
+        },
+        {
+          "LapNumber": 39.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.501000",
+          "LapTime_seconds": 83.501,
+          "Compound": "HARD",
+          "TyreLife": 17.0,
+          "Position": 4.0
+        },
+        {
+          "LapNumber": 40.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:24.337000",
+          "LapTime_seconds": 84.337,
+          "Compound": "HARD",
+          "TyreLife": 18.0,
+          "Position": 4.0
+        },
+        {
+          "LapNumber": 43.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:21.745000",
+          "LapTime_seconds": 81.745,
+          "Compound": "MEDIUM",
+          "TyreLife": 2.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 44.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.045000",
+          "LapTime_seconds": 83.045,
+          "Compound": "MEDIUM",
+          "TyreLife": 3.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 45.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.363000",
+          "LapTime_seconds": 83.363,
+          "Compound": "MEDIUM",
+          "TyreLife": 4.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 46.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:22.941000",
+          "LapTime_seconds": 82.941,
+          "Compound": "MEDIUM",
+          "TyreLife": 5.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 47.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:22.520000",
+          "LapTime_seconds": 82.52,
+          "Compound": "MEDIUM",
+          "TyreLife": 6.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 48.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:22.570000",
+          "LapTime_seconds": 82.57,
+          "Compound": "MEDIUM",
+          "TyreLife": 7.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 49.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:22.584000",
+          "LapTime_seconds": 82.584,
+          "Compound": "MEDIUM",
+          "TyreLife": 8.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 50.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:22.585000",
+          "LapTime_seconds": 82.585,
+          "Compound": "MEDIUM",
+          "TyreLife": 9.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 51.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:22.574000",
+          "LapTime_seconds": 82.574,
+          "Compound": "MEDIUM",
+          "TyreLife": 10.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 52.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:22.920000",
+          "LapTime_seconds": 82.92,
+          "Compound": "MEDIUM",
+          "TyreLife": 11.0,
+          "Position": 6.0
+        },
+        {
+          "LapNumber": 53.0,
+          "Driver": "VER",
+          "Team": "Red Bull Racing",
+          "LapTime": "0 days 00:01:23.711000",
+          "LapTime_seconds": 83.711,
+          "Compound": "MEDIUM",
+          "TyreLife": 12.0,
+          "Position": 6.0
+        }
+      ]
+    }
+  },
+  "details": {
+    "driver_consistency": {
+      "Driver": "VER",
+      "avg_laptime": 84.124375,
+      "std_laptime": 1.1212629775809244,
+      "min_laptime": 81.745,
+      "max_laptime": 86.17,
+      "lap_count": 48,
+      "team": "Red Bull Racing",
+      "cv": 1.3328633675803527,
+      "final_position": 6.0
+    }
+  },
+  "artifacts": {}
+}

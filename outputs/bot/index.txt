@@ -1,0 +1,21 @@
+Bot demo outputs
+=================
+
+standings: outputs/bot/standings.md
+      outputs/bot/standings.json
+      outputs/bot/standings.txt
+strategy: outputs/bot/strategy.md
+      outputs/bot/strategy.json
+      outputs/bot/strategy.txt
+compare: outputs/bot/compare.md
+      outputs/bot/compare.json
+      outputs/bot/compare.txt
+weather: outputs/bot/weather.md
+      outputs/bot/weather.json
+      outputs/bot/weather.txt
+telemetry: outputs/bot/telemetry_VER.md
+      outputs/bot/telemetry_VER.json
+      outputs/bot/telemetry_VER.txt
+laps: outputs/bot/laps.md
+      outputs/bot/laps.json
+      outputs/bot/laps.txt

@@ -1,0 +1,110 @@
+輪胎策略與衰退分析
+=========
+
+摘要:
+- 策略車手數：20
+- 最常見策略：HARD(19) -> HARD(17) -> MEDIUM(14) -> SOFT(2)
+- 輪胎衰退表聚焦於可用樣本數較足夠的 stint。
+
+指標:
+- drivers: 20
+- stints_with_degradation: 48
+- compounds:
+  - HARD
+  - MEDIUM
+  - SOFT
+
+Tyre Strategy:
+driver  driver_number  n_stops stops_label                      compounds      stint_laps  total_laps                                      strategy  final_position
+   LEC             16        1      1-stop                 MEDIUM -> HARD        [15, 38]          53                        MEDIUM(15) -> HARD(38)             1.0
+   PIA             81        2      2-stop         MEDIUM -> HARD -> HARD    [16, 22, 15]          53            MEDIUM(16) -> HARD(22) -> HARD(15)             2.0
+   NOR              4        2      2-stop         MEDIUM -> HARD -> HARD    [14, 18, 21]          53            MEDIUM(14) -> HARD(18) -> HARD(21)             3.0
+   SAI             55        1      1-stop                 MEDIUM -> HARD        [19, 34]          53                        MEDIUM(19) -> HARD(34)             4.0
+   HAM             44        2      2-stop         MEDIUM -> HARD -> HARD    [15, 22, 16]          53            MEDIUM(15) -> HARD(22) -> HARD(16)             5.0
+   VER              1        2      2-stop         HARD -> HARD -> MEDIUM    [22, 19, 12]          53            HARD(22) -> HARD(19) -> MEDIUM(12)             6.0
+   RUS             63        2      2-stop         MEDIUM -> HARD -> HARD    [11, 22, 20]          53            MEDIUM(11) -> HARD(22) -> HARD(20)             7.0
+   PER             11        2      2-stop         HARD -> HARD -> MEDIUM    [23, 12, 18]          53            HARD(23) -> HARD(12) -> MEDIUM(18)             8.0
+   ALB             23        1      1-stop                 MEDIUM -> HARD        [17, 36]          53                        MEDIUM(17) -> HARD(36)             9.0
+   MAG             20        1      1-stop                 MEDIUM -> HARD        [14, 39]          53                        MEDIUM(14) -> HARD(39)            10.0
+   ALO             14        2      2-stop         MEDIUM -> HARD -> HARD    [12, 23, 18]          53            MEDIUM(12) -> HARD(23) -> HARD(18)            11.0
+   COL             43        1      1-stop                 MEDIUM -> HARD        [16, 37]          53                        MEDIUM(16) -> HARD(37)            12.0
+   RIC              3        1      1-stop                 MEDIUM -> HARD        [11, 42]          53                        MEDIUM(11) -> HARD(42)            13.0
+   OCO             31        1      1-stop                 HARD -> MEDIUM        [31, 21]          52                        HARD(31) -> MEDIUM(21)            14.0
+   GAS             10        2      2-stop         MEDIUM -> HARD -> HARD    [10, 20, 22]          52            MEDIUM(10) -> HARD(20) -> HARD(22)            15.0
+   BOT             77        1      1-stop                 HARD -> MEDIUM        [33, 19]          52                        HARD(33) -> MEDIUM(19)            16.0
+   HUL             27        2      2-stop         MEDIUM -> HARD -> HARD     [5, 27, 20]          52             MEDIUM(5) -> HARD(27) -> HARD(20)            17.0
+   ZHO             24        1      1-stop                 MEDIUM -> HARD        [15, 37]          52                        MEDIUM(15) -> HARD(37)            18.0
+   STR             18        3      3-stop HARD -> HARD -> MEDIUM -> SOFT [19, 17, 14, 2]          52 HARD(19) -> HARD(17) -> MEDIUM(14) -> SOFT(2)            19.0
+   TSU             22        0      0-stop                           HARD             [7]           7                                       HARD(7)            20.0
+
+Tyre Degradation:
+driver  stint compound  degradation_rate  intercept  laps_analyzed       r2
+   RIC      1   MEDIUM         -0.135183  87.037211              9 0.640744
+   ALO      1   MEDIUM         -0.127842  87.097618             10 0.705204
+   BOT      2   MEDIUM         -0.113067  86.209938             18 0.516751
+   ZHO      1   MEDIUM         -0.100324  87.757302             13 0.150287
+   RUS      1   MEDIUM         -0.095700  86.017533              9 0.550988
+   HAM      2     HARD         -0.087967  84.941620             20 0.795415
+   RUS      3     HARD         -0.083840  83.795454             19 0.410279
+   MAG      1   MEDIUM         -0.064017  86.651048             12 0.319632
+   NOR      3     HARD         -0.056423  83.349218             20 0.248041
+   NOR      2     HARD         -0.054582  84.347157             16 0.160791
+   RUS      2     HARD         -0.053655  84.998781             20 0.228372
+   MAG      2     HARD         -0.045665  85.517222             38 0.635210
+
+Compound Comparison:
+Driver Compound  avg_laptime  min_laptime  max_laptime  std_laptime  laps  avg_tyre_life
+   ALB     HARD    84.794914       83.918       86.282     0.529119    35      19.000000
+   ALB   MEDIUM    86.061800       85.468       87.011     0.425527    15       9.000000
+   ALO     HARD    84.372053       82.944       85.832     0.802264    38      12.552632
+   ALO   MEDIUM    86.138800       85.693       87.236     0.460918    10       7.500000
+   BOT     HARD    86.671065       85.804       88.377     0.613905    31      18.000000
+   BOT   MEDIUM    84.909667       83.609       86.704     0.839688    18      11.500000
+   COL     HARD    84.875222       83.728       85.979     0.438194    36      19.500000
+   COL   MEDIUM    86.650000       86.057       87.845     0.484160    14       8.500000
+   GAS     HARD    85.095949       83.755       87.191     0.795044    39      11.307692
+   GAS   MEDIUM    86.435375       85.820       87.148     0.400496     8       5.500000
+   HAM     HARD    83.398514       81.512       85.703     0.962658    35      10.428571
+   HAM   MEDIUM    85.240077       84.771       86.043     0.425061    13       8.000000
+   HUL     HARD    84.936977       83.275       87.809     1.034058    44      12.704545
+   HUL   MEDIUM    86.829000       86.434       87.512     0.593910     3       3.000000
+   LEC     HARD    83.624946       83.226       84.270     0.249261    37      20.000000
+   LEC   MEDIUM    84.872692       84.362       85.606     0.428084    13       8.000000
+   MAG     HARD    84.581079       83.437       86.533     0.636741    38      20.500000
+   MAG   MEDIUM    86.170917       85.785       87.205     0.408268    12       7.500000
+   NOR     HARD    83.201806       81.432       85.585     0.864383    36      10.611111
+   NOR   MEDIUM    84.825000       84.391       85.458     0.357429    12       7.500000
+   OCO     HARD    86.331138       85.369       87.519     0.446760    29      16.000000
+   OCO   MEDIUM    84.944200       84.343       86.111     0.482548    20      11.500000
+   PER     HARD    84.925323       83.473       86.411     0.858971    31      10.225806
+   PER   MEDIUM    83.722176       82.971       86.243     0.800737    17      10.000000
+   PIA     HARD    83.069471       81.943       84.602     0.671513    34      10.264706
+   PIA   MEDIUM    84.689571       84.077       85.261     0.354546    14       8.500000
+   RIC     HARD    85.021707       84.219       86.122     0.386307    41      23.000000
+   RIC   MEDIUM    86.226111       85.713       87.177     0.462500     9       6.000000
+   RUS     HARD    83.646821       82.036       85.504     1.030100    39      11.256410
+   RUS   MEDIUM    85.443333       85.046       86.055     0.353079     9       6.000000
+   SAI     HARD    83.767576       83.219       85.113     0.466487    33      18.000000
+   SAI   MEDIUM    85.145529       84.642       85.731     0.333210    17      10.000000
+   STR     HARD    85.737625       84.437       88.342     0.993630    32      11.000000
+   STR   MEDIUM    84.277333       83.427       86.104     0.891300    12       8.500000
+   STR     SOFT    82.232000       82.232       82.232          NaN     1       2.000000
+   TSU     HARD    88.223000       86.198       92.241     2.408528     5       5.000000
+   VER     HARD    84.524649       83.424       86.170     0.921918    37      10.810811
+   VER   MEDIUM    82.778000       81.745       83.711     0.512265    11       7.000000
+   ZHO     HARD    85.937972       85.092       87.640     0.644979    36      20.500000
+   ZHO   MEDIUM    86.854385       85.942       89.256     1.007835    13       9.000000
+
+詳細資料:
+- top_strategy:
+  - driver: LEC
+  - driver_number: 16
+  - n_stops: 1
+  - stops_label: 1-stop
+  - compounds: MEDIUM -> HARD
+  - stint_laps:
+    - 15
+    - 38
+  - total_laps: 53
+  - strategy: MEDIUM(15) -> HARD(38)
+  - final_position: 1

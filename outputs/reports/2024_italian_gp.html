@@ -1,0 +1,942 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monza 2024 Race Report</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #f6f7fb; color: #222; }
+    header { background: linear-gradient(120deg, #141e30, #243b55); color: #fff; padding: 28px 36px; }
+    main { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    .card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 20px; box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+    .metric { background: #f8f9fc; border: 1px solid #e6e8f0; border-radius: 12px; padding: 14px; }
+    .metric .label { color: #666; font-size: 13px; }
+    .metric .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+    h2 { margin-top: 0; }
+    .plot { margin-top: 16px; }
+    table.report-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    table.report-table th, table.report-table td { border-bottom: 1px solid #eceff5; padding: 8px 10px; text-align: left; }
+    table.report-table th { background: #f8f9fc; }
+    ul { line-height: 1.7; }
+    .small { color: #666; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Monza 2024 Race Report</h1>
+    <div>Event: 2024 Italian Grand Prix | Circuit: Monza | Date: 2024-09-01</div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Overview</h2>
+      <div class="metrics">
+        <div class="metric"><div class="label">Winner</div><div class="value">Charles Leclerc</div></div>
+        <div class="metric"><div class="label">Team</div><div class="value">Ferrari</div></div>
+        <div class="metric"><div class="label">Drivers</div><div class="value">20</div></div>
+        <div class="metric"><div class="label">Finishers</div><div class="value">13</div></div>
+        <div class="metric"><div class="label">Total Laps</div><div class="value">53</div></div>
+        <div class="metric"><div class="label">Weather</div><div class="value">Dry</div></div>
+      </div>
+      <p class="small">Air temp: 32.2 - 34.1 °C; Track temp: 43.5 - 54.6 °C</p>
+    </section>
+
+    <section class="card">
+      <h2>Final Standings</h2>
+      <table class="dataframe report-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Position</th>
+      <th>Abbreviation</th>
+      <th>FullName</th>
+      <th>TeamName</th>
+      <th>GridPosition</th>
+      <th>Points</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.0</td>
+      <td>LEC</td>
+      <td>Charles Leclerc</td>
+      <td>Ferrari</td>
+      <td>4.0</td>
+      <td>25.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>2.0</td>
+      <td>PIA</td>
+      <td>Oscar Piastri</td>
+      <td>McLaren</td>
+      <td>2.0</td>
+      <td>18.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>3.0</td>
+      <td>NOR</td>
+      <td>Lando Norris</td>
+      <td>McLaren</td>
+      <td>1.0</td>
+      <td>16.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>4.0</td>
+      <td>SAI</td>
+      <td>Carlos Sainz</td>
+      <td>Ferrari</td>
+      <td>5.0</td>
+      <td>12.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>5.0</td>
+      <td>HAM</td>
+      <td>Lewis Hamilton</td>
+      <td>Mercedes</td>
+      <td>6.0</td>
+      <td>10.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>6.0</td>
+      <td>VER</td>
+      <td>Max Verstappen</td>
+      <td>Red Bull Racing</td>
+      <td>7.0</td>
+      <td>8.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>7.0</td>
+      <td>RUS</td>
+      <td>George Russell</td>
+      <td>Mercedes</td>
+      <td>3.0</td>
+      <td>6.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>8.0</td>
+      <td>PER</td>
+      <td>Sergio Perez</td>
+      <td>Red Bull Racing</td>
+      <td>8.0</td>
+      <td>4.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>9.0</td>
+      <td>ALB</td>
+      <td>Alexander Albon</td>
+      <td>Williams</td>
+      <td>9.0</td>
+      <td>2.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>10.0</td>
+      <td>MAG</td>
+      <td>Kevin Magnussen</td>
+      <td>Haas F1 Team</td>
+      <td>13.0</td>
+      <td>1.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>11.0</td>
+      <td>ALO</td>
+      <td>Fernando Alonso</td>
+      <td>Aston Martin</td>
+      <td>11.0</td>
+      <td>0.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>12.0</td>
+      <td>COL</td>
+      <td>Franco Colapinto</td>
+      <td>Williams</td>
+      <td>18.0</td>
+      <td>0.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>13.0</td>
+      <td>RIC</td>
+      <td>Daniel Ricciardo</td>
+      <td>RB</td>
+      <td>12.0</td>
+      <td>0.0</td>
+      <td>Finished</td>
+    </tr>
+    <tr>
+      <td>14.0</td>
+      <td>OCO</td>
+      <td>Esteban Ocon</td>
+      <td>Alpine</td>
+      <td>15.0</td>
+      <td>0.0</td>
+      <td>Lapped</td>
+    </tr>
+    <tr>
+      <td>15.0</td>
+      <td>GAS</td>
+      <td>Pierre Gasly</td>
+      <td>Alpine</td>
+      <td>14.0</td>
+      <td>0.0</td>
+      <td>Lapped</td>
+    </tr>
+    <tr>
+      <td>16.0</td>
+      <td>BOT</td>
+      <td>Valtteri Bottas</td>
+      <td>Kick Sauber</td>
+      <td>19.0</td>
+      <td>0.0</td>
+      <td>Lapped</td>
+    </tr>
+    <tr>
+      <td>17.0</td>
+      <td>HUL</td>
+      <td>Nico Hulkenberg</td>
+      <td>Haas F1 Team</td>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>Lapped</td>
+    </tr>
+    <tr>
+      <td>18.0</td>
+      <td>ZHO</td>
+      <td>Guanyu Zhou</td>
+      <td>Kick Sauber</td>
+      <td>20.0</td>
+      <td>0.0</td>
+      <td>Lapped</td>
+    </tr>
+    <tr>
+      <td>19.0</td>
+      <td>STR</td>
+      <td>Lance Stroll</td>
+      <td>Aston Martin</td>
+      <td>17.0</td>
+      <td>0.0</td>
+      <td>Lapped</td>
+    </tr>
+    <tr>
+      <td>20.0</td>
+      <td>TSU</td>
+      <td>Yuki Tsunoda</td>
+      <td>RB</td>
+      <td>16.0</td>
+      <td>0.0</td>
+      <td>Retired</td>
+    </tr>
+  </tbody>
+</table>
+    </section>
+
+    <section class="card">
+      <h2>Position Changes</h2>
+      <table class="dataframe report-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Abbreviation</th>
+      <th>FullName</th>
+      <th>TeamName</th>
+      <th>GridPosition</th>
+      <th>Position</th>
+      <th>position_change</th>
+      <th>change_label</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>COL</td>
+      <td>Franco Colapinto</td>
+      <td>Williams</td>
+      <td>18.0</td>
+      <td>12.0</td>
+      <td>6.0</td>
+      <td>+6</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>LEC</td>
+      <td>Charles Leclerc</td>
+      <td>Ferrari</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>+3</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <td>MAG</td>
+      <td>Kevin Magnussen</td>
+      <td>Haas F1 Team</td>
+      <td>13.0</td>
+      <td>10.0</td>
+      <td>3.0</td>
+      <td>+3</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>BOT</td>
+      <td>Valtteri Bottas</td>
+      <td>Kick Sauber</td>
+      <td>19.0</td>
+      <td>16.0</td>
+      <td>3.0</td>
+      <td>+3</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>ZHO</td>
+      <td>Guanyu Zhou</td>
+      <td>Kick Sauber</td>
+      <td>20.0</td>
+      <td>18.0</td>
+      <td>2.0</td>
+      <td>+2</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>HAM</td>
+      <td>Lewis Hamilton</td>
+      <td>Mercedes</td>
+      <td>6.0</td>
+      <td>5.0</td>
+      <td>1.0</td>
+      <td>+1</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>SAI</td>
+      <td>Carlos Sainz</td>
+      <td>Ferrari</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>+1</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <td>OCO</td>
+      <td>Esteban Ocon</td>
+      <td>Alpine</td>
+      <td>15.0</td>
+      <td>14.0</td>
+      <td>1.0</td>
+      <td>+1</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>VER</td>
+      <td>Max Verstappen</td>
+      <td>Red Bull Racing</td>
+      <td>7.0</td>
+      <td>6.0</td>
+      <td>1.0</td>
+      <td>+1</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <td>PIA</td>
+      <td>Oscar Piastri</td>
+      <td>McLaren</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <td>PER</td>
+      <td>Sergio Perez</td>
+      <td>Red Bull Racing</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>ALB</td>
+      <td>Alexander Albon</td>
+      <td>Williams</td>
+      <td>9.0</td>
+      <td>9.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <td>ALO</td>
+      <td>Fernando Alonso</td>
+      <td>Aston Martin</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>GAS</td>
+      <td>Pierre Gasly</td>
+      <td>Alpine</td>
+      <td>14.0</td>
+      <td>15.0</td>
+      <td>-1.0</td>
+      <td>-1</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>RIC</td>
+      <td>Daniel Ricciardo</td>
+      <td>RB</td>
+      <td>12.0</td>
+      <td>13.0</td>
+      <td>-1.0</td>
+      <td>-1</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>NOR</td>
+      <td>Lando Norris</td>
+      <td>McLaren</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>-2.0</td>
+      <td>-2</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <td>STR</td>
+      <td>Lance Stroll</td>
+      <td>Aston Martin</td>
+      <td>17.0</td>
+      <td>19.0</td>
+      <td>-2.0</td>
+      <td>-2</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>RUS</td>
+      <td>George Russell</td>
+      <td>Mercedes</td>
+      <td>3.0</td>
+      <td>7.0</td>
+      <td>-4.0</td>
+      <td>-4</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <td>TSU</td>
+      <td>Yuki Tsunoda</td>
+      <td>RB</td>
+      <td>16.0</td>
+      <td>20.0</td>
+      <td>-4.0</td>
+      <td>-4</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>HUL</td>
+      <td>Nico Hulkenberg</td>
+      <td>Haas F1 Team</td>
+      <td>10.0</td>
+      <td>17.0</td>
+      <td>-7.0</td>
+      <td>-7</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+      <div class="plot"><div>                            <div id="68d90b5c-36ad-495a-b2c8-0362c9998bcd" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("68d90b5c-36ad-495a-b2c8-0362c9998bcd")) {                    Plotly.newPlot(                        "68d90b5c-36ad-495a-b2c8-0362c9998bcd",                        [{"hovertemplate":"Driver=%{x}\u003cbr\u003ePositions gained=%{marker.color}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":{"dtype":"f8","bdata":"AAAAAAAAGEAAAAAAAAAIQAAAAAAAAAhAAAAAAAAACEAAAAAAAAAAQAAAAAAAAPA\u002fAAAAAAAA8D8AAAAAAADwPwAAAAAAAPA\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAAAAPC\u002fAAAAAAAAAMAAAAAAAAAAwAAAAAAAABDAAAAAAAAAEMAAAAAAAAAcwA=="},"coloraxis":"coloraxis","pattern":{"shape":""}},"name":"","orientation":"v","showlegend":false,"textposition":"auto","x":["COL","LEC","MAG","BOT","ZHO","HAM","SAI","OCO","VER","PIA","PER","ALB","ALO","GAS","RIC","NOR","STR","RUS","TSU","HUL"],"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAAAAGEAAAAAAAAAIQAAAAAAAAAhAAAAAAAAACEAAAAAAAAAAQAAAAAAAAPA\u002fAAAAAAAA8D8AAAAAAADwPwAAAAAAAPA\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAAAAPC\u002fAAAAAAAAAMAAAAAAAAAAwAAAAAAAABDAAAAAAAAAEMAAAAAAAAAcwA=="},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1111111111111111,"#000022"],[0.2222222222222222,"#000023"],[0.3333333333333333,"#000024"],[0.4444444444444444,"#000025"],[0.5555555555555556,"#000026"],[0.6666666666666666,"#000027"],[0.7777777777777778,"#000028"],[0.8888888888888888,"#000029"],[1.0,"#000030"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Driver"},"tickangle":-45},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Positions gained"}},"coloraxis":{"colorbar":{"title":{"text":"Positions gained"}},"colorscale":[[0.0,"#d73027"],[0.5,"#f7f7f7"],[1.0,"#1a9850"]],"showscale":false},"legend":{"tracegroupgap":0},"title":{"text":"Grid vs Finish Position Change"},"barmode":"relative","shapes":[{"line":{"color":"#444","width":1},"type":"line","x0":0,"x1":1,"xref":"x domain","y0":0,"y1":0,"yref":"y"}]},                        {"responsive": true}                    )                };            </script>        </div></div>
+    </section>
+
+    <section class="card">
+      <h2>Fastest Laps</h2>
+      <table class="dataframe report-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Driver</th>
+      <th>Team</th>
+      <th>LapTime</th>
+      <th>LapTime_seconds</th>
+      <th>LapNumber</th>
+      <th>Compound</th>
+      <th>TyreLife</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>NOR</td>
+      <td>McLaren</td>
+      <td>0 days 00:01:21.432000</td>
+      <td>81.432</td>
+      <td>53.0</td>
+      <td>HARD</td>
+      <td>21.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td>HAM</td>
+      <td>Mercedes</td>
+      <td>0 days 00:01:21.512000</td>
+      <td>81.512</td>
+      <td>53.0</td>
+      <td>HARD</td>
+      <td>16.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <td>VER</td>
+      <td>Red Bull Racing</td>
+      <td>0 days 00:01:21.745000</td>
+      <td>81.745</td>
+      <td>43.0</td>
+      <td>MEDIUM</td>
+      <td>2.0</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <td>PIA</td>
+      <td>McLaren</td>
+      <td>0 days 00:01:21.943000</td>
+      <td>81.943</td>
+      <td>53.0</td>
+      <td>HARD</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <td>RUS</td>
+      <td>Mercedes</td>
+      <td>0 days 00:01:22.036000</td>
+      <td>82.036</td>
+      <td>49.0</td>
+      <td>HARD</td>
+      <td>16.0</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <td>STR</td>
+      <td>Aston Martin</td>
+      <td>0 days 00:01:22.232000</td>
+      <td>82.232</td>
+      <td>52.0</td>
+      <td>SOFT</td>
+      <td>2.0</td>
+      <td>19.0</td>
+    </tr>
+    <tr>
+      <td>ALO</td>
+      <td>Aston Martin</td>
+      <td>0 days 00:01:22.944000</td>
+      <td>82.944</td>
+      <td>46.0</td>
+      <td>HARD</td>
+      <td>13.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td>PER</td>
+      <td>Red Bull Racing</td>
+      <td>0 days 00:01:22.971000</td>
+      <td>82.971</td>
+      <td>47.0</td>
+      <td>MEDIUM</td>
+      <td>12.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <td>SAI</td>
+      <td>Ferrari</td>
+      <td>0 days 00:01:23.219000</td>
+      <td>83.219</td>
+      <td>53.0</td>
+      <td>HARD</td>
+      <td>34.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>LEC</td>
+      <td>Ferrari</td>
+      <td>0 days 00:01:23.226000</td>
+      <td>83.226</td>
+      <td>33.0</td>
+      <td>HARD</td>
+      <td>18.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <td>HUL</td>
+      <td>Haas F1 Team</td>
+      <td>0 days 00:01:23.275000</td>
+      <td>83.275</td>
+      <td>44.0</td>
+      <td>HARD</td>
+      <td>12.0</td>
+      <td>19.0</td>
+    </tr>
+    <tr>
+      <td>MAG</td>
+      <td>Haas F1 Team</td>
+      <td>0 days 00:01:23.437000</td>
+      <td>83.437</td>
+      <td>51.0</td>
+      <td>HARD</td>
+      <td>37.0</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <td>BOT</td>
+      <td>Kick Sauber</td>
+      <td>0 days 00:01:23.609000</td>
+      <td>83.609</td>
+      <td>52.0</td>
+      <td>MEDIUM</td>
+      <td>20.0</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <td>COL</td>
+      <td>Williams</td>
+      <td>0 days 00:01:23.728000</td>
+      <td>83.728</td>
+      <td>53.0</td>
+      <td>HARD</td>
+      <td>37.0</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <td>GAS</td>
+      <td>Alpine</td>
+      <td>0 days 00:01:23.755000</td>
+      <td>83.755</td>
+      <td>51.0</td>
+      <td>HARD</td>
+      <td>21.0</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td>ALB</td>
+      <td>Williams</td>
+      <td>0 days 00:01:23.918000</td>
+      <td>83.918</td>
+      <td>53.0</td>
+      <td>HARD</td>
+      <td>36.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>RIC</td>
+      <td>RB</td>
+      <td>0 days 00:01:24.219000</td>
+      <td>84.219</td>
+      <td>52.0</td>
+      <td>HARD</td>
+      <td>42.0</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <td>OCO</td>
+      <td>Alpine</td>
+      <td>0 days 00:01:24.343000</td>
+      <td>84.343</td>
+      <td>52.0</td>
+      <td>MEDIUM</td>
+      <td>21.0</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <td>ZHO</td>
+      <td>Kick Sauber</td>
+      <td>0 days 00:01:25.092000</td>
+      <td>85.092</td>
+      <td>17.0</td>
+      <td>HARD</td>
+      <td>3.0</td>
+      <td>19.0</td>
+    </tr>
+    <tr>
+      <td>TSU</td>
+      <td>RB</td>
+      <td>0 days 00:01:26.198000</td>
+      <td>86.198</td>
+      <td>4.0</td>
+      <td>HARD</td>
+      <td>5.0</td>
+      <td>15.0</td>
+    </tr>
+  </tbody>
+</table>
+      <div class="plot"><div>                            <div id="1d2fdeea-5b66-4128-b78c-a71ee1c3144c" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("1d2fdeea-5b66-4128-b78c-a71ee1c3144c")) {                    Plotly.newPlot(                        "1d2fdeea-5b66-4128-b78c-a71ee1c3144c",                        [{"hovertemplate":"Team=McLaren\u003cbr\u003eDriver=%{x}\u003cbr\u003eLap time (s)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"McLaren","marker":{"color":"#000001","pattern":{"shape":""}},"name":"McLaren","orientation":"v","showlegend":true,"textposition":"auto","x":["NOR","PIA"],"xaxis":"x","y":{"dtype":"f8","bdata":"z\u002fdT46VbVEAxCKwcWnxUQA=="},"yaxis":"y","type":"bar"},{"hovertemplate":"Team=Mercedes\u003cbr\u003eDriver=%{x}\u003cbr\u003eLap time (s)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Mercedes","marker":{"color":"#000002","pattern":{"shape":""}},"name":"Mercedes","orientation":"v","showlegend":true,"textposition":"auto","x":["HAM","RUS"],"xaxis":"x","y":{"dtype":"f8","bdata":"VOOlm8RgVED8qfHSTYJUQA=="},"yaxis":"y","type":"bar"},{"hovertemplate":"Team=Red Bull Racing\u003cbr\u003eDriver=%{x}\u003cbr\u003eLap time (s)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Red Bull Racing","marker":{"color":"#000003","pattern":{"shape":""}},"name":"Red Bull Racing","orientation":"v","showlegend":true,"textposition":"auto","x":["VER","PER"],"xaxis":"x","y":{"dtype":"f8","bdata":"SOF6FK5vVECgGi\u002fdJL5UQA=="},"yaxis":"y","type":"bar"},{"hovertemplate":"Team=Aston Martin\u003cbr\u003eDriver=%{x}\u003cbr\u003eLap time (s)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Aston Martin","marker":{"color":"#000004","pattern":{"shape":""}},"name":"Aston Martin","orientation":"v","showlegend":true,"textposition":"auto","x":["STR","ALO"],"xaxis":"x","y":{"dtype":"f8","bdata":"AiuHFtmOVEAj2\u002fl+arxUQA=="},"yaxis":"y","type":"bar"},{"hovertemplate":"Team=Ferrari\u003cbr\u003eDriver=%{x}\u003cbr\u003eLap time (s)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Ferrari","marker":{"color":"#000005","pattern":{"shape":""}},"name":"Ferrari","orientation":"v","showlegend":true,"textposition":"auto","x":["SAI","LEC"],"xaxis":"x","y":{"dtype":"f8","bdata":"vHSTGATOVEBYObTIds5UQA=="},"yaxis":"y","type":"bar"},{"hovertemplate":"Team=Haas F1 Team\u003cbr\u003eDriver=%{x}\u003cbr\u003eLap time (s)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Haas F1 Team","marker":{"color":"#000006","pattern":{"shape":""}},"name":"Haas F1 Team","orientation":"v","showlegend":true,"textposition":"auto","x":["HUL","MAG"],"xaxis":"x","y":{"dtype":"f8","bdata":"mpmZmZnRVECHFtnO99tUQA=="},"yaxis":"y","type":"bar"},{"hovertemplate":"Team=Kick Sauber\u003cbr\u003eDriver=%{x}\u003cbr\u003eLap time (s)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Kick Sauber","marker":{"color":"#000007","pattern":{"shape":""}},"name":"Kick Sauber","orientation":"v","showlegend":true,"textposition":"auto","x":["BOT","ZHO"],"xaxis":"x","y":{"dtype":"f8","bdata":"5dAi2\u002fnmVEDZzvdT40VVQA=="},"yaxis":"y","type":"bar"},{"hovertemplate":"Team=Williams\u003cbr\u003eDriver=%{x}\u003cbr\u003eLap time (s)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Williams","marker":{"color":"#000008","pattern":{"shape":""}},"name":"Williams","orientation":"v","showlegend":true,"textposition":"auto","x":["COL","ALB"],"xaxis":"x","y":{"dtype":"f8","bdata":"O99PjZfuVECYbhKDwPpUQA=="},"yaxis":"y","type":"bar"},{"hovertemplate":"Team=Alpine\u003cbr\u003eDriver=%{x}\u003cbr\u003eLap time (s)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Alpine","marker":{"color":"#000009","pattern":{"shape":""}},"name":"Alpine","orientation":"v","showlegend":true,"textposition":"auto","x":["GAS","OCO"],"xaxis":"x","y":{"dtype":"f8","bdata":"uB6F61HwVEDLoUW28xVVQA=="},"yaxis":"y","type":"bar"},{"hovertemplate":"Team=RB\u003cbr\u003eDriver=%{x}\u003cbr\u003eLap time (s)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"RB","marker":{"color":"#000010","pattern":{"shape":""}},"name":"RB","orientation":"v","showlegend":true,"textposition":"auto","x":["RIC","TSU"],"xaxis":"x","y":{"dtype":"f8","bdata":"vHSTGAQOVUDpJjEIrIxVQA=="},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1111111111111111,"#000022"],[0.2222222222222222,"#000023"],[0.3333333333333333,"#000024"],[0.4444444444444444,"#000025"],[0.5555555555555556,"#000026"],[0.6666666666666666,"#000027"],[0.7777777777777778,"#000028"],[0.8888888888888888,"#000029"],[1.0,"#000030"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Driver"},"tickangle":-45},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Lap time (s)"},"autorange":"reversed"},"legend":{"title":{"text":"Team"},"tracegroupgap":0},"title":{"text":"Fastest Lap Time by Driver"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div></div>
+    </section>
+
+    <section class="card">
+      <h2>Tyre Strategy</h2>
+      <table class="dataframe report-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>driver</th>
+      <th>n_stops</th>
+      <th>stops_label</th>
+      <th>compounds</th>
+      <th>strategy</th>
+      <th>final_position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LEC</td>
+      <td>1</td>
+      <td>1-stop</td>
+      <td>MEDIUM -&gt; HARD</td>
+      <td>MEDIUM(15) -&gt; HARD(38)</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>PIA</td>
+      <td>2</td>
+      <td>2-stop</td>
+      <td>MEDIUM -&gt; HARD -&gt; HARD</td>
+      <td>MEDIUM(16) -&gt; HARD(22) -&gt; HARD(15)</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <td>NOR</td>
+      <td>2</td>
+      <td>2-stop</td>
+      <td>MEDIUM -&gt; HARD -&gt; HARD</td>
+      <td>MEDIUM(14) -&gt; HARD(18) -&gt; HARD(21)</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td>SAI</td>
+      <td>1</td>
+      <td>1-stop</td>
+      <td>MEDIUM -&gt; HARD</td>
+      <td>MEDIUM(19) -&gt; HARD(34)</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>HAM</td>
+      <td>2</td>
+      <td>2-stop</td>
+      <td>MEDIUM -&gt; HARD -&gt; HARD</td>
+      <td>MEDIUM(15) -&gt; HARD(22) -&gt; HARD(16)</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <td>VER</td>
+      <td>2</td>
+      <td>2-stop</td>
+      <td>HARD -&gt; HARD -&gt; MEDIUM</td>
+      <td>HARD(22) -&gt; HARD(19) -&gt; MEDIUM(12)</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <td>RUS</td>
+      <td>2</td>
+      <td>2-stop</td>
+      <td>MEDIUM -&gt; HARD -&gt; HARD</td>
+      <td>MEDIUM(11) -&gt; HARD(22) -&gt; HARD(20)</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <td>PER</td>
+      <td>2</td>
+      <td>2-stop</td>
+      <td>HARD -&gt; HARD -&gt; MEDIUM</td>
+      <td>HARD(23) -&gt; HARD(12) -&gt; MEDIUM(18)</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <td>ALB</td>
+      <td>1</td>
+      <td>1-stop</td>
+      <td>MEDIUM -&gt; HARD</td>
+      <td>MEDIUM(17) -&gt; HARD(36)</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <td>MAG</td>
+      <td>1</td>
+      <td>1-stop</td>
+      <td>MEDIUM -&gt; HARD</td>
+      <td>MEDIUM(14) -&gt; HARD(39)</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>ALO</td>
+      <td>2</td>
+      <td>2-stop</td>
+      <td>MEDIUM -&gt; HARD -&gt; HARD</td>
+      <td>MEDIUM(12) -&gt; HARD(23) -&gt; HARD(18)</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td>COL</td>
+      <td>1</td>
+      <td>1-stop</td>
+      <td>MEDIUM -&gt; HARD</td>
+      <td>MEDIUM(16) -&gt; HARD(37)</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <td>RIC</td>
+      <td>1</td>
+      <td>1-stop</td>
+      <td>MEDIUM -&gt; HARD</td>
+      <td>MEDIUM(11) -&gt; HARD(42)</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <td>OCO</td>
+      <td>1</td>
+      <td>1-stop</td>
+      <td>HARD -&gt; MEDIUM</td>
+      <td>HARD(31) -&gt; MEDIUM(21)</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <td>GAS</td>
+      <td>2</td>
+      <td>2-stop</td>
+      <td>MEDIUM -&gt; HARD -&gt; HARD</td>
+      <td>MEDIUM(10) -&gt; HARD(20) -&gt; HARD(22)</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td>BOT</td>
+      <td>1</td>
+      <td>1-stop</td>
+      <td>HARD -&gt; MEDIUM</td>
+      <td>HARD(33) -&gt; MEDIUM(19)</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <td>HUL</td>
+      <td>2</td>
+      <td>2-stop</td>
+      <td>MEDIUM -&gt; HARD -&gt; HARD</td>
+      <td>MEDIUM(5) -&gt; HARD(27) -&gt; HARD(20)</td>
+      <td>17.0</td>
+    </tr>
+    <tr>
+      <td>ZHO</td>
+      <td>1</td>
+      <td>1-stop</td>
+      <td>MEDIUM -&gt; HARD</td>
+      <td>MEDIUM(15) -&gt; HARD(37)</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <td>STR</td>
+      <td>3</td>
+      <td>3-stop</td>
+      <td>HARD -&gt; HARD -&gt; MEDIUM -&gt; SOFT</td>
+      <td>HARD(19) -&gt; HARD(17) -&gt; MEDIUM(14) -&gt; SOFT(2)</td>
+      <td>19.0</td>
+    </tr>
+    <tr>
+      <td>TSU</td>
+      <td>0</td>
+      <td>0-stop</td>
+      <td>HARD</td>
+      <td>HARD(7)</td>
+      <td>20.0</td>
+    </tr>
+  </tbody>
+</table>
+      <div class="plot"><div>                            <div id="ea2f842c-5a15-495a-a31c-29bb9738757c" class="plotly-graph-div" style="height:650px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("ea2f842c-5a15-495a-a31c-29bb9738757c")) {                    Plotly.newPlot(                        "ea2f842c-5a15-495a-a31c-29bb9738757c",                        [{"base":1,"hovertemplate":"STR\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 1-19\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[19],"y":["STR"],"type":"bar"},{"base":1,"hovertemplate":"OCO\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 1-31\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[31],"y":["OCO"],"type":"bar"},{"base":1,"hovertemplate":"TSU\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 1-7\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[7],"y":["TSU"],"type":"bar"},{"base":1,"hovertemplate":"HAM\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-15\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[15],"y":["HAM"],"type":"bar"},{"base":1,"hovertemplate":"BOT\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 1-33\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[33],"y":["BOT"],"type":"bar"},{"base":1,"hovertemplate":"NOR\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-14\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[14],"y":["NOR"],"type":"bar"},{"base":1,"hovertemplate":"GAS\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-10\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[10],"y":["GAS"],"type":"bar"},{"base":1,"hovertemplate":"ZHO\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-15\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[15],"y":["ZHO"],"type":"bar"},{"base":1,"hovertemplate":"PIA\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-16\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[16],"y":["PIA"],"type":"bar"},{"base":1,"hovertemplate":"RIC\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-11\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[11],"y":["RIC"],"type":"bar"},{"base":1,"hovertemplate":"ALO\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-12\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[12],"y":["ALO"],"type":"bar"},{"base":1,"hovertemplate":"RUS\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-11\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[11],"y":["RUS"],"type":"bar"},{"base":1,"hovertemplate":"LEC\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-15\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[15],"y":["LEC"],"type":"bar"},{"base":1,"hovertemplate":"PER\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 1-23\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[23],"y":["PER"],"type":"bar"},{"base":1,"hovertemplate":"SAI\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-19\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[19],"y":["SAI"],"type":"bar"},{"base":1,"hovertemplate":"MAG\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-14\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[14],"y":["MAG"],"type":"bar"},{"base":1,"hovertemplate":"ALB\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-17\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[17],"y":["ALB"],"type":"bar"},{"base":1,"hovertemplate":"VER\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 1-22\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[22],"y":["VER"],"type":"bar"},{"base":1,"hovertemplate":"COL\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-16\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[16],"y":["COL"],"type":"bar"},{"base":1,"hovertemplate":"HUL\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 1-5\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[5],"y":["HUL"],"type":"bar"},{"base":6,"hovertemplate":"HUL\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 6-32\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[27],"y":["HUL"],"type":"bar"},{"base":11,"hovertemplate":"GAS\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 11-30\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[20],"y":["GAS"],"type":"bar"},{"base":12,"hovertemplate":"RUS\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 12-33\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[22],"y":["RUS"],"type":"bar"},{"base":12,"hovertemplate":"RIC\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 12-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[42],"y":["RIC"],"type":"bar"},{"base":13,"hovertemplate":"ALO\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 13-35\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[23],"y":["ALO"],"type":"bar"},{"base":15,"hovertemplate":"NOR\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 15-32\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[18],"y":["NOR"],"type":"bar"},{"base":15,"hovertemplate":"MAG\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 15-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[39],"y":["MAG"],"type":"bar"},{"base":16,"hovertemplate":"LEC\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 16-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[38],"y":["LEC"],"type":"bar"},{"base":16,"hovertemplate":"HAM\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 16-37\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[22],"y":["HAM"],"type":"bar"},{"base":16,"hovertemplate":"ZHO\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 16-52\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[37],"y":["ZHO"],"type":"bar"},{"base":17,"hovertemplate":"PIA\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 17-38\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[22],"y":["PIA"],"type":"bar"},{"base":17,"hovertemplate":"COL\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 17-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[37],"y":["COL"],"type":"bar"},{"base":18,"hovertemplate":"ALB\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 18-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[36],"y":["ALB"],"type":"bar"},{"base":20,"hovertemplate":"SAI\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 20-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[34],"y":["SAI"],"type":"bar"},{"base":20,"hovertemplate":"STR\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 20-36\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[17],"y":["STR"],"type":"bar"},{"base":23,"hovertemplate":"VER\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 23-41\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[19],"y":["VER"],"type":"bar"},{"base":24,"hovertemplate":"PER\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 24-35\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[12],"y":["PER"],"type":"bar"},{"base":31,"hovertemplate":"GAS\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 31-52\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[22],"y":["GAS"],"type":"bar"},{"base":32,"hovertemplate":"OCO\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 32-52\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[21],"y":["OCO"],"type":"bar"},{"base":33,"hovertemplate":"NOR\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 33-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[21],"y":["NOR"],"type":"bar"},{"base":33,"hovertemplate":"HUL\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 33-52\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[20],"y":["HUL"],"type":"bar"},{"base":34,"hovertemplate":"RUS\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 34-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[20],"y":["RUS"],"type":"bar"},{"base":34,"hovertemplate":"BOT\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 34-52\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[19],"y":["BOT"],"type":"bar"},{"base":36,"hovertemplate":"PER\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 36-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[18],"y":["PER"],"type":"bar"},{"base":36,"hovertemplate":"ALO\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 36-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[18],"y":["ALO"],"type":"bar"},{"base":37,"hovertemplate":"STR\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 37-50\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[14],"y":["STR"],"type":"bar"},{"base":38,"hovertemplate":"HAM\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 38-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[16],"y":["HAM"],"type":"bar"},{"base":39,"hovertemplate":"PIA\u003cbr\u003eCompound: HARD\u003cbr\u003eLap 39-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#d9d9d9"},"orientation":"h","showlegend":false,"x":[15],"y":["PIA"],"type":"bar"},{"base":42,"hovertemplate":"VER\u003cbr\u003eCompound: MEDIUM\u003cbr\u003eLap 42-53\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ffd633"},"orientation":"h","showlegend":false,"x":[12],"y":["VER"],"type":"bar"},{"base":51,"hovertemplate":"STR\u003cbr\u003eCompound: SOFT\u003cbr\u003eLap 51-52\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#ff4d4d"},"orientation":"h","showlegend":false,"x":[2],"y":["STR"],"type":"bar"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1111111111111111,"#000022"],[0.2222222222222222,"#000023"],[0.3333333333333333,"#000024"],[0.4444444444444444,"#000025"],[0.5555555555555556,"#000026"],[0.6666666666666666,"#000027"],[0.7777777777777778,"#000028"],[0.8888888888888888,"#000029"],[1.0,"#000030"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"title":{"text":"Tyre Strategy Timeline"},"xaxis":{"title":{"text":"Lap"}},"yaxis":{"title":{"text":"Driver"},"autorange":"reversed"},"barmode":"stack","height":650},                        {"responsive": true}                    )                };            </script>        </div></div>
+    </section>
+
+    <section class="card">
+      <h2>Weather Summary</h2>
+      <table class="dataframe report-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Metric</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Air temp min</td>
+      <td>32.2</td>
+    </tr>
+    <tr>
+      <td>Air temp max</td>
+      <td>34.1</td>
+    </tr>
+    <tr>
+      <td>Track temp min</td>
+      <td>43.5</td>
+    </tr>
+    <tr>
+      <td>Track temp max</td>
+      <td>54.6</td>
+    </tr>
+    <tr>
+      <td>Rainfall</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+      <div class="plot"><div>                            <div id="0826fd4a-e4f2-4e48-a911-a0aff12c70c5" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("0826fd4a-e4f2-4e48-a911-a0aff12c70c5")) {                    Plotly.newPlot(                        "0826fd4a-e4f2-4e48-a911-a0aff12c70c5",                        [{"name":"Air temp","x":{"dtype":"f8","bdata":"Pg0FWTzi2z\u002fUCWgibPj2P6ehIItHfANAgSnwO3N8C0Cu2F92T74RQNNyjbyZvhVAV1uxv+y+GUBNzmOnMr8dQFYOLbKd3yBArD5XW7HfIkAwlvxiyd8kQPZQtfDP3yZAJngwT9TfKEBMgd+Z498qQABvgQTF3yxA0UcGpsDfLkBDYxOG7m8wQPzwGXYFcDFAbXuoWvhvMkA0NmHo\u002fm8zQNHYhKH7bzRAaWzC0P1vNUDMyZ4XAXA2QF9O9rwIcDdA7cNn2BVwOEDVeOkmMXA5QA6+MJkqcDpABKBkhTVwO0Bj7lpCPnA8QK8AuddccD1A50UASlZwPkA5Z0Rpb3A\u002fQOHmZ\u002f1AOEBAlyS8Kj24QEDMWh0TPDhBQGf9QMw4uEFAsb\u002fsnjw4QkBJUyrOPrhCQF7fdLhDOENAkhXWoEK4Q0BERERERDhEQElTKs4+uERA4eZn\u002fUA4RUBERERERLhFQGPuWkI+OEZA9nKy50W4RkAQDuNbRThHQK2wBhVCuEdAjgbwFkg4SED2crLnRbhIQEA1XrpJOElAWtCOLkm4SUAQDuNbRThKQCWaLUZKuEpAREREREQ4S0DCPFH\u002fRrhLQFrQji5JOExAb1zZGE64TEDxY8xdSzhNQEREREREuE1Ac2u\u002fokg4TkD2crLnRbhOQPFjzF1LOE9AOyZ4ME+4T0CRxSPeJxxQQGLGAeEwXFBAgXAY3yqcUED0IgAlK9xQQE06t\u002fYrHFFAjLY9VC1cUUCW\u002fGLJL5xRQLvduLIx3FFA4L4OnDMcUkBdtxtXNlxSQF23G1c2nFJAd1JMyzXcUkCsiK2zNBxTQJwzorQ3XFNA268oEjmcU0AkctTkPNxTQHl6pSxDHFRAK6kT0ERcVEC39iuKRJxUQF7fdLhD3FRA95oLSVMcVUAFyL3mQlxVQBAO41tFnFVAzYJ2dEncVUBa0I4uSRxWQI4G8BZIXFZA4g7BXk6cVkA7JngwT9xWQKOSOgFNHFdAo5I6AU1cV0AWRSJHTZxXQMdzkOpO3FdAkz0vAlAcWECTPS8CUFxYQAbwFkhQnFhA\u002fKnx0k3cWEBUwaikThxZQCGLR7xPXFlAeqL+jVCcWUDtVObTUNxZQPyp8dJNHFpAifcJjU1cWkDSubVfUZxaQIToIwNT3FpA7VTm01AcW0DHc5DqTlxbQEVsnaVRnFtAHHxhMlXcW0Dd\u002f9rUUxxcQEVsnaVRXFxAak3zjlOcXEAmwoanV9xcQNK5tV9RHF1Aqcl57FRcXUBFbJ2lUZxdQDYXkqZU3F1Aak3zjlMcXkBFbJ2lUVxeQJ6DVHdSnF5AAuEwvlXcXkCPLkl4VRxfQN3\u002f2tRTXF9AAuEwvlWcX0AHGHCpXdxfQPS2rNUxDmBAGZgCvzMuYEBdtxtXNk5gQLtxZWM4bmBATmIQWDmOYEA="},"y":{"dtype":"f8","bdata":"mpmZmZmZQECamZmZmZlAQJqZmZmZmUBAmpmZmZmZQEBmZmZmZqZAQGZmZmZmpkBAZmZmZmamQEAzMzMzM7NAQGZmZmZmpkBAZmZmZmamQEAzMzMzM7NAQGZmZmZmpkBAZmZmZmamQEAzMzMzM7NAQDMzMzMzs0BAMzMzMzOzQEBmZmZmZqZAQJqZmZmZmUBAzczMzMyMQEBmZmZmZqZAQM3MzMzMzEBAmpmZmZnZQEAAAAAAAMBAQAAAAAAAwEBAAAAAAADAQECamZmZmdlAQM3MzMzMzEBAAAAAAADAQEAAAAAAAMBAQM3MzMzMzEBAZmZmZmbmQECamZmZmdlAQM3MzMzMzEBAzczMzMzMQECamZmZmdlAQM3MzMzMzEBAZmZmZmbmQEAzMzMzM\u002fNAQGZmZmZm5kBAmpmZmZnZQEDNzMzMzMxAQDMzMzMz80BAMzMzMzPzQEAzMzMzM\u002fNAQAAAAAAAAEFAzczMzMwMQUAAAAAAAABBQDMzMzMz80BAmpmZmZnZQECamZmZmdlAQGZmZmZm5kBAmpmZmZnZQEBmZmZmZuZAQGZmZmZm5kBAZmZmZmbmQEBmZmZmZuZAQGZmZmZm5kBAMzMzMzPzQEBmZmZmZuZAQJqZmZmZ2UBAmpmZmZnZQECamZmZmdlAQJqZmZmZ2UBAAAAAAADAQEAAAAAAAMBAQDMzMzMzs0BAZmZmZmamQEBmZmZmZqZAQGZmZmZmpkBAZmZmZmamQECamZmZmZlAQJqZmZmZmUBAzczMzMyMQEAAAAAAAIBAQAAAAAAAgEBAMzMzMzNzQEAzMzMzM3NAQGZmZmZmZkBAZmZmZmZmQEAzMzMzM3NAQDMzMzMzc0BAZmZmZmZmQEBmZmZmZmZAQGZmZmZmZkBAZmZmZmZmQEBmZmZmZmZAQJqZmZmZWUBAmpmZmZlZQEDNzMzMzExAQM3MzMzMTEBAzczMzMxMQEDNzMzMzExAQJqZmZmZWUBAzczMzMxMQEAAAAAAAEBAQAAAAAAAQEBAAAAAAABAQEAAAAAAAEBAQAAAAAAAQEBAMzMzMzMzQEAAAAAAAEBAQAAAAAAAQEBAmpmZmZlZQECamZmZmVlAQJqZmZmZWUBAzczMzMxMQEAAAAAAAEBAQAAAAAAAQEBAAAAAAABAQEAAAAAAAEBAQAAAAAAAQEBAAAAAAABAQEAAAAAAAEBAQAAAAAAAQEBAMzMzMzMzQEAAAAAAAEBAQAAAAAAAQEBAMzMzMzMzQEAzMzMzMzNAQGZmZmZmJkBAZmZmZmYmQEAzMzMzMzNAQDMzMzMzM0BAZmZmZmYmQEBmZmZmZiZAQGZmZmZmJkBAZmZmZmYmQEBmZmZmZiZAQJqZmZmZGUBAmpmZmZkZQECamZmZmRlAQJqZmZmZGUBAmpmZmZkZQEA="},"type":"scatter"},{"name":"Track temp","x":{"dtype":"f8","bdata":"Pg0FWTzi2z\u002fUCWgibPj2P6ehIItHfANAgSnwO3N8C0Cu2F92T74RQNNyjbyZvhVAV1uxv+y+GUBNzmOnMr8dQFYOLbKd3yBArD5XW7HfIkAwlvxiyd8kQPZQtfDP3yZAJngwT9TfKEBMgd+Z498qQABvgQTF3yxA0UcGpsDfLkBDYxOG7m8wQPzwGXYFcDFAbXuoWvhvMkA0NmHo\u002fm8zQNHYhKH7bzRAaWzC0P1vNUDMyZ4XAXA2QF9O9rwIcDdA7cNn2BVwOEDVeOkmMXA5QA6+MJkqcDpABKBkhTVwO0Bj7lpCPnA8QK8AuddccD1A50UASlZwPkA5Z0Rpb3A\u002fQOHmZ\u002f1AOEBAlyS8Kj24QEDMWh0TPDhBQGf9QMw4uEFAsb\u002fsnjw4QkBJUyrOPrhCQF7fdLhDOENAkhXWoEK4Q0BERERERDhEQElTKs4+uERA4eZn\u002fUA4RUBERERERLhFQGPuWkI+OEZA9nKy50W4RkAQDuNbRThHQK2wBhVCuEdAjgbwFkg4SED2crLnRbhIQEA1XrpJOElAWtCOLkm4SUAQDuNbRThKQCWaLUZKuEpAREREREQ4S0DCPFH\u002fRrhLQFrQji5JOExAb1zZGE64TEDxY8xdSzhNQEREREREuE1Ac2u\u002fokg4TkD2crLnRbhOQPFjzF1LOE9AOyZ4ME+4T0CRxSPeJxxQQGLGAeEwXFBAgXAY3yqcUED0IgAlK9xQQE06t\u002fYrHFFAjLY9VC1cUUCW\u002fGLJL5xRQLvduLIx3FFA4L4OnDMcUkBdtxtXNlxSQF23G1c2nFJAd1JMyzXcUkCsiK2zNBxTQJwzorQ3XFNA268oEjmcU0AkctTkPNxTQHl6pSxDHFRAK6kT0ERcVEC39iuKRJxUQF7fdLhD3FRA95oLSVMcVUAFyL3mQlxVQBAO41tFnFVAzYJ2dEncVUBa0I4uSRxWQI4G8BZIXFZA4g7BXk6cVkA7JngwT9xWQKOSOgFNHFdAo5I6AU1cV0AWRSJHTZxXQMdzkOpO3FdAkz0vAlAcWECTPS8CUFxYQAbwFkhQnFhA\u002fKnx0k3cWEBUwaikThxZQCGLR7xPXFlAeqL+jVCcWUDtVObTUNxZQPyp8dJNHFpAifcJjU1cWkDSubVfUZxaQIToIwNT3FpA7VTm01AcW0DHc5DqTlxbQEVsnaVRnFtAHHxhMlXcW0Dd\u002f9rUUxxcQEVsnaVRXFxAak3zjlOcXEAmwoanV9xcQNK5tV9RHF1Aqcl57FRcXUBFbJ2lUZxdQDYXkqZU3F1Aak3zjlMcXkBFbJ2lUVxeQJ6DVHdSnF5AAuEwvlXcXkCPLkl4VRxfQN3\u002f2tRTXF9AAuEwvlWcX0AHGHCpXdxfQPS2rNUxDmBAGZgCvzMuYEBdtxtXNk5gQLtxZWM4bmBATmIQWDmOYEA="},"y":{"dtype":"f8","bdata":"zczMzMwMSkDNzMzMzAxKQGZmZmZmZkpAZmZmZmZmSkBmZmZmZmZKQAAAAAAAgEpAAAAAAACASkCamZmZmVlKQAAAAAAAgEpAZmZmZmamSkCamZmZmZlKQJqZmZmZmUpAMzMzMzOzSkAzMzMzM7NKQJqZmZmZmUpAAAAAAADASkAzMzMzM7NKQDMzMzMzs0pAmpmZmZkZS0CamZmZmRlLQAAAAAAAAEtAZmZmZmamSkAAAAAAAIBKQAAAAAAAAEpAZmZmZmbmSUCamZmZmRlKQGZmZmZmZkpAmpmZmZlZSkAAAAAAAIBKQAAAAAAAwEpAAAAAAADASkAAAAAAAMBKQGZmZmZm5kpAZmZmZmbmSkCamZmZmdlKQJqZmZmZ2UpAzczMzMzMSkAzMzMzM3NKQGZmZmZmZkpAMzMzMzNzSkBmZmZmZuZKQAAAAAAAAEtAZmZmZmbmSkBmZmZmZqZKQGZmZmZm5kpAMzMzMzPzSkDNzMzMzAxLQDMzMzMz80pAmpmZmZnZSkCamZmZmdlKQDMzMzMzM0tAMzMzMzMzS0DNzMzMzExLQAAAAAAAwEpAMzMzMzMzSkCamZmZmdlJQGZmZmZmpklAAAAAAABASUAzMzMzMzNJQM3MzMzMTElAzczMzMxMSUCamZmZmVlJQM3MzMzMTElAmpmZmZkZSUDNzMzMzMxIQAAAAAAAwEhAAAAAAADASEAAAAAAAIBIQJqZmZmZWUhAzczMzMxMSEAzMzMzMzNIQJqZmZmZ2UdAzczMzMzMR0DNzMzMzMxHQAAAAAAAwEdAAAAAAAAASEAzMzMzM\u002fNHQDMzMzMz80dAZmZmZmbmR0AAAAAAAMBHQJqZmZmZmUdAAAAAAACAR0BmZmZmZmZHQM3MzMzMTEdAAAAAAABAR0BmZmZmZiZHQJqZmZmZGUdAzczMzMwMR0AzMzMzM\u002fNGQJqZmZmZ2UZAZmZmZmbmRkBmZmZmZuZGQAAAAAAAwEZAAAAAAADARkBmZmZmZqZGQGZmZmZmpkZAmpmZmZkZR0DNzMzMzAxHQM3MzMzMDEdAMzMzMzPzRkAzMzMzM\u002fNGQJqZmZmZ2UZAmpmZmZnZRkAAAAAAAMBGQAAAAAAAwEZAMzMzMzOzRkAzMzMzM7NGQJqZmZmZmUZAmpmZmZmZRkAAAAAAAIBGQDMzMzMzc0ZAMzMzMzNzRkCamZmZmVlGQJqZmZmZWUZAAAAAAABARkAAAAAAAIBGQDMzMzMzc0ZAMzMzMzNzRkDNzMzMzExGQM3MzMzMTEZAzczMzMxMRkAzMzMzMzNGQJqZmZmZGUZAmpmZmZkZRkCamZmZmRlGQM3MzMzMDEZAzczMzMwMRkDNzMzMzAxGQDMzMzMz80VAZmZmZmbmRUBmZmZmZuZFQM3MzMzMzEVAAAAAAADARUA="},"type":"scatter"},{"name":"Humidity","x":{"dtype":"f8","bdata":"Pg0FWTzi2z\u002fUCWgibPj2P6ehIItHfANAgSnwO3N8C0Cu2F92T74RQNNyjbyZvhVAV1uxv+y+GUBNzmOnMr8dQFYOLbKd3yBArD5XW7HfIkAwlvxiyd8kQPZQtfDP3yZAJngwT9TfKEBMgd+Z498qQABvgQTF3yxA0UcGpsDfLkBDYxOG7m8wQPzwGXYFcDFAbXuoWvhvMkA0NmHo\u002fm8zQNHYhKH7bzRAaWzC0P1vNUDMyZ4XAXA2QF9O9rwIcDdA7cNn2BVwOEDVeOkmMXA5QA6+MJkqcDpABKBkhTVwO0Bj7lpCPnA8QK8AuddccD1A50UASlZwPkA5Z0Rpb3A\u002fQOHmZ\u002f1AOEBAlyS8Kj24QEDMWh0TPDhBQGf9QMw4uEFAsb\u002fsnjw4QkBJUyrOPrhCQF7fdLhDOENAkhXWoEK4Q0BERERERDhEQElTKs4+uERA4eZn\u002fUA4RUBERERERLhFQGPuWkI+OEZA9nKy50W4RkAQDuNbRThHQK2wBhVCuEdAjgbwFkg4SED2crLnRbhIQEA1XrpJOElAWtCOLkm4SUAQDuNbRThKQCWaLUZKuEpAREREREQ4S0DCPFH\u002fRrhLQFrQji5JOExAb1zZGE64TEDxY8xdSzhNQEREREREuE1Ac2u\u002fokg4TkD2crLnRbhOQPFjzF1LOE9AOyZ4ME+4T0CRxSPeJxxQQGLGAeEwXFBAgXAY3yqcUED0IgAlK9xQQE06t\u002fYrHFFAjLY9VC1cUUCW\u002fGLJL5xRQLvduLIx3FFA4L4OnDMcUkBdtxtXNlxSQF23G1c2nFJAd1JMyzXcUkCsiK2zNBxTQJwzorQ3XFNA268oEjmcU0AkctTkPNxTQHl6pSxDHFRAK6kT0ERcVEC39iuKRJxUQF7fdLhD3FRA95oLSVMcVUAFyL3mQlxVQBAO41tFnFVAzYJ2dEncVUBa0I4uSRxWQI4G8BZIXFZA4g7BXk6cVkA7JngwT9xWQKOSOgFNHFdAo5I6AU1cV0AWRSJHTZxXQMdzkOpO3FdAkz0vAlAcWECTPS8CUFxYQAbwFkhQnFhA\u002fKnx0k3cWEBUwaikThxZQCGLR7xPXFlAeqL+jVCcWUDtVObTUNxZQPyp8dJNHFpAifcJjU1cWkDSubVfUZxaQIToIwNT3FpA7VTm01AcW0DHc5DqTlxbQEVsnaVRnFtAHHxhMlXcW0Dd\u002f9rUUxxcQEVsnaVRXFxAak3zjlOcXEAmwoanV9xcQNK5tV9RHF1Aqcl57FRcXUBFbJ2lUZxdQDYXkqZU3F1Aak3zjlMcXkBFbJ2lUVxeQJ6DVHdSnF5AAuEwvlXcXkCPLkl4VRxfQN3\u002f2tRTXF9AAuEwvlWcX0AHGHCpXdxfQPS2rNUxDmBAGZgCvzMuYEBdtxtXNk5gQLtxZWM4bmBATmIQWDmOYEA="},"y":{"dtype":"f8","bdata":"AAAAAAAAQ0AAAAAAAIBCQAAAAAAAgEJAAAAAAAAAQkAAAAAAAABCQAAAAAAAAEJAAAAAAACAQUAAAAAAAIBBQAAAAAAAgEFAAAAAAAAAQUAAAAAAAABBQAAAAAAAAEFAAAAAAAAAQUAAAAAAAABBQAAAAAAAAEFAAAAAAACAQEAAAAAAAABBQAAAAAAAgEFAAAAAAAAAQUAAAAAAAIBAQAAAAAAAgEBAAAAAAACAQEAAAAAAAABAQAAAAAAAgEBAAAAAAACAQEAAAAAAAABAQAAAAAAAAEBAAAAAAAAAQEAAAAAAAABAQAAAAAAAAD9AAAAAAAAAP0AAAAAAAAA\u002fQAAAAAAAAD9AAAAAAAAAP0AAAAAAAABAQAAAAAAAAEBAAAAAAACAQEAAAAAAAIBAQAAAAAAAAEFAAAAAAACAQEAAAAAAAABBQAAAAAAAAEBAAAAAAACAQEAAAAAAAIBAQAAAAAAAgEBAAAAAAACAQEAAAAAAAABAQAAAAAAAAEBAAAAAAAAAQEAAAAAAAIBAQAAAAAAAgEBAAAAAAACAQEAAAAAAAIBAQAAAAAAAgEBAAAAAAACAQEAAAAAAAIBAQAAAAAAAAEBAAAAAAAAAP0AAAAAAAAA+QAAAAAAAAD5AAAAAAAAAP0AAAAAAAAA+QAAAAAAAAD9AAAAAAAAAP0AAAAAAAABAQAAAAAAAAEBAAAAAAAAAQEAAAAAAAAA\u002fQAAAAAAAAD9AAAAAAAAAP0AAAAAAAAA\u002fQAAAAAAAAD9AAAAAAAAAQEAAAAAAAAA\u002fQAAAAAAAAD9AAAAAAAAAP0AAAAAAAAA\u002fQAAAAAAAAD9AAAAAAAAAPkAAAAAAAAA\u002fQAAAAAAAAD9AAAAAAAAAP0AAAAAAAAA\u002fQAAAAAAAAD9AAAAAAAAAP0AAAAAAAABAQAAAAAAAAD9AAAAAAAAAP0AAAAAAAAA\u002fQAAAAAAAAD9AAAAAAAAAQEAAAAAAAAA\u002fQAAAAAAAAD9AAAAAAAAAP0AAAAAAAAA\u002fQAAAAAAAAD9AAAAAAAAAQEAAAAAAAABAQAAAAAAAAEBAAAAAAAAAQEAAAAAAAABAQAAAAAAAAEBAAAAAAAAAQEAAAAAAAABAQAAAAAAAAD9AAAAAAAAAQEAAAAAAAABAQAAAAAAAAEBAAAAAAAAAP0AAAAAAAAA\u002fQAAAAAAAAD9AAAAAAAAAQEAAAAAAAABAQAAAAAAAAEBAAAAAAAAAQEAAAAAAAABAQAAAAAAAAEBAAAAAAAAAQEAAAAAAAABAQAAAAAAAgEBAAAAAAAAAQEAAAAAAAABAQAAAAAAAAEBAAAAAAAAAQEAAAAAAAIBAQAAAAAAAAEBAAAAAAAAAQEAAAAAAAIBAQAAAAAAAgEBAAAAAAAAAQEAAAAAAAABAQAAAAAAAAEBAAAAAAAAAQEA="},"yaxis":"y2","type":"scatter"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1111111111111111,"#000022"],[0.2222222222222222,"#000023"],[0.3333333333333333,"#000024"],[0.4444444444444444,"#000025"],[0.5555555555555556,"#000026"],[0.6666666666666666,"#000027"],[0.7777777777777778,"#000028"],[0.8888888888888888,"#000029"],[1.0,"#000030"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"yaxis2":{"title":{"text":"Humidity"},"overlaying":"y","side":"right","showgrid":false},"title":{"text":"Weather Timeline"},"xaxis":{"title":{"text":"Session time (min)"}},"yaxis":{"title":{"text":"Temperature \u002f Humidity"}}},                        {"responsive": true}                    )                };            </script>        </div></div>
+    </section>
+
+    <section class="card">
+      <h2>Telemetry Summary for VER</h2>
+      <table class="dataframe report-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Metric</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Full throttle %</td>
+      <td>73.892405</td>
+    </tr>
+    <tr>
+      <td>Braking %</td>
+      <td>13.291139</td>
+    </tr>
+    <tr>
+      <td>Coasting %</td>
+      <td>1.424051</td>
+    </tr>
+    <tr>
+      <td>Average speed</td>
+      <td>253.611338</td>
+    </tr>
+    <tr>
+      <td>Max speed</td>
+      <td>333.000000</td>
+    </tr>
+    <tr>
+      <td>Brake points</td>
+      <td>7.000000</td>
+    </tr>
+  </tbody>
+</table>
+      <div class="plot"><div>                            <div id="e40181d2-452e-4608-815c-daa65bf13423" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("e40181d2-452e-4608-815c-daa65bf13423")) {                    Plotly.newPlot(                        "e40181d2-452e-4608-815c-daa65bf13423",                        [{"hovertemplate":"Gear=8\u003cbr\u003eDistance (m)=%{x}\u003cbr\u003eSpeed (km\u002fh)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"8","line":{"color":"#000001","dash":"solid","width":1},"marker":{"symbol":"circle"},"mode":"lines","name":"8","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"N\u002f3YoggR0T94+4MMlZ0WQH8TiENprzFAcFWjGegYPkCissPU5cZCQIo6CNLJtUlAaSTgm1fjSUB\u002fsDneXTRSQM6riWdFS1JAv9IgPoDQVUCVHaYut8dWQIBZGJbWG1xAyVDZYer6XUDAysRT509gQAff0bPzzWJA1sSzopGEY0APU5fbH8hlQPkD7hJmymdAqOwwdbmBaECxEUThFktqQC+W\u002fGLJI2xAaLQvh5h8bUAOdNpAp+FuQDhQTg1Nxm9ABzptoNPQcEBv6yki231xQF2PwvUo9nFAbN\u002fIRBqGckCbCr\u002fZXqxzQCQB37yaQnRAot1ZeQfTdEDqWTxYkr11QFc0EvDNVXZAIwHfvJpCd0Abl\u002f6NU7R3QLiv+kG9gnhA9ihcj8LfeECKxAhl6SB6QCpcj8L1QnpAnBtvq1Ere0D3KFyPwi97QD0K16NwlHxAACFDZYeAfUD5rQCws\u002fB9QMI3ryaebH5AKtz9KV4Xf0DSSMA3r81\u002fQNtApw30eYBAhmDi5rmFgEDnal5SfPuAQLJ\u002fLjKbjoFA1uX2B5m9gUDU9dCWAASCQNbl9geZbYJA3aXLVbyWgkDC4c+09SmDQLkehevRk4NADnTaQCcJhEBxcABl4hSEQG1fiFA4toRADnTaQCe5hECmG9Am4EiFQGPJL5Z83oVABOolRFA0hkC4HoXr0VOGQDCW\u002fGJJA4dAJAIFRLkPh0BnTUbilpOHQDCW\u002fGJJI4hA5\u002f7fY9UuiEDsUbgeBb+IQDqtVguC4YhAsjBTwL1yiUAwlvxiyXOJQJCRcoaG34lA4JtXE88OikAZKjtMXWaKQLKErsC9bYpACBkqO0ylikD8jNctKqyKQAdbsAVbPZZABcvPK\u002fVjlkATEREREZqWQJdFPNaBzpZAWFVVVVXqlkAxOQh3nCyXQJuZmZmZSJdA9WriWdGLl0CwTEYR6JGXQNmjcD0KwpdAJsE8ovrOl0DS1rD7uwWYQFR2mLrcIZhA7FQVeaE8mEABIUNlh2aYQK314UtnuJhAASFDZYfimEAqIu9cif2YQFZ2mLrcJ5lApn7\u002fk2RemUAHfPNq4sCZQKgnuye825lAwjevJp4UmkBNf5HEjBqaQN7+IENlWppAehRWB01nmkBR+qRPeq6aQMegr84K7JpAUfqkT3osm0DUi8hEFVWbQFL6pE96gJtAUvqkT3rGm0CboUdTFcybQNftjK44C5xAqaaUT3hDnEC4YAu24EScQL27u7s7fZxANxbXgemJnEA\u002fOCYuW9CcQEhERETE0ZxAGIm9AtcInUA1MzMzszSdQMeEn8OGlp1AyXEcx\u002fGXnUDSJ33Sp9CdQNlazkqnJJ5AbcEWbEFQnkC0bmlYSFaeQPykT\u002fokl55AFc0EK4rAnkCKiIiICN6eQCXOEDNnFp9AiIiIiAhOn0BEHxMXvXGfQKyqqqoqoJ9ABxYrMAKln0B5d3d398yfQJy\u002foD+CAKBADLZgC3YHoECwv4Y4QxygQH7SJ32SHKBAq+wwdRlRqUCelfHJjlqpQKzsMHWZf6lAI2o+u\u002feFqUCFZZ\u002fAf52pQM4OU5e7rqlAlkTaRmzJqUC0EDcWMOipQLFH4Xr08qlANAizWV0KqkDBWPKLBRyqQAukZEswMKpA6+S569xZqkAXrkfhWmGqQF0Elg3Eg6pA43oUroegqkC\u002fs1D626aqQMezopHAw6pAx6YYIJPGqkAuGgn4Ju6qQHmPVuD78KpALsufqhAfq0A60GkD3SarQMFY8otlUatAahRpkTxUq0A9Gb9dWXurQN8fZKgsg6tANRG4rHeiq0BtA502ELyrQCQVsiZ2wqtANHW5\u002fYHYq0A7ArRKcfurQCJkqOxwCqxAgYMtg8AirEDpIM79TUqsQC0aCfgmWaxAd7n9QcZ1rECkCYqilIOsQAadNtCpmaxAQ2FV+OSjrEBuAbT+IdasQKWRgG+e6KxANtd1vJUPrUCa8uFHTSytQMmzopHAPq1ArP8zH\u002f5hrUDjehSuh2KtQMreGfhJgq1Ac15NPGuGrUDw3eoSnaKtQHm5\u002fUHGvq1AEsxgjRPIrUA0dbn9geStQOSlz6M4861AMnW5\u002fYH8rUBEUZNw8gyuQNUnfdLnHK5Alb+ZJaY6rkAfx3Ech0GuQNGFQesVTq5APaijz+xerkCMiIiI2AqxQPTNq4kHKbFAU5bP4A0ssUBrRSMBfzaxQJL2zqDxTbFAnnhWNLJRsUBsRSMBf3CxQD+IZSQId7FAiAyVHUZ+sUDWmy6e2ISxQMxQ2WGKlrFADQ0BvsqlsUAgpi6336exQP+DDJW9vLFAanMEZOC\u002fsUDtcvuDrNGxQBTZL\u002fFQ2LFA7XL7gyzqsUDQgQrD1fCxQOmO4YZc+7FAhwyVHcYJskAoffTFBw2yQEgjAd\u002fcF7JACjptoPMlskCqyZEfvyyyQD1toNMmO7JAn5FZ0vNBskDoF0t+0UyyQDJLGBIsV7JAKMpZ4SFnskDtcvuDLGmyQEkFzas8frJA7XL7gyyJskAu16F26JiyQEPIUNmBnrJAMfynKz2uskBej8L1SLCyQDSx8yZ8vLJA+Shcj2LQskDchwZh59GyQCxcj8KV8LJA8lABFBvyskAe6LSBzv6yQJVfLPlFFLNAHctascsVs0AggAyEUiuzQKZwPQpXP7NAlHp6J3REs0DKUCJGmVSzQLImnhUNXLNAuJK\u002f1V9os0C8\u002fUGGimqzQDN1uf0BgLNAzbbKdF6Bs0CGQync5pKzQDN1uf0Bn7NAT+Pycsu0s0AIVHdLGrazQGEs+cWCGLZA9WriWcEltkCAKfYszy22QP+tyMZ+PrZAoBWNBGxAtkBmsLdJvFe2QLAmnhX9V7ZA9WriWUFstkAp6DCxsG22QJVhZzKDebZAze0PMsR5tkCnVvngGnq2QA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"obr7FK7Ic0AAAAAAANBzQMIWbMEW3HNAiYiIiIjoc0AAAAAAAPBzQJqZmZmZ\u002f3NAAAAAAAAAdEC7u7u7uw90QAAAAAAAEHRA6lBVuh4pdEAAAAAAADB0QEmpOprZO3RAAAAAAABAdEBCdfcpXEl0QO11OcL1WnRAAAAAAABgdEAAAAAAAGB0QJs3hczMa3RAAAAAAABwdECT6tjm33d0QAAAAAAAgHRAQQht3t2HdEAAAAAAAJB0QJZdwjMzlXRAAAAAAACgdEAAAAAAAKB0QAAAAAAAoHRAFtLIhOujdEAW0siE66t0QAAAAAAAsHRAbulQBVu0dEBLs5EWbLt0QAAAAAAAwHRAAAAAAADQdEDp9NaZmct0QOn01pmZw3RAAAAAAADAdEBG4i93d850QAAAAAAA0HRAAAAAAADQdEAAAAAAANB0QAAAAAAA0HRAAAAAAADAdEAAAAAAAMB0QAAAAAAAwHRARERERES4dEAAAAAAALB0QAAAAAAAsHRAAAAAAACwdEAAAAAAALB0QAAAAAAAsHRAAAAAAACwdECamZmZmal0QAAAAAAAoHRACtejcD2idEAK16NwPap0QAAAAAAAsHRAAAAAAACgdEAAAAAAAKB0QAAAAAAAoHRAAAAAAACgdEAAAAAAAKB0QAAAAAAAoHRAAAAAAACgdEAAAAAAAKB0QAAAAAAAkHRALllwmpmMdEDbWhWXmWh0QAAAAAAAQHRA72GuxLsbdEAAAAAAAEByQGJ0HTY41nFAiydwN2znb0AAAAAAAOBvQOkWcIVmuWxAAAAAAABAa0AAAAAAAKBoQEHvjSEAWGhAAAAAAAAgZkAx3dp4ZvhlQAAAAAAAcHJAaUQSow6EckAAAAAAAKByQCWl6mhmv3JAAAAAAADQckCDp6qpg+ZyQAAAAAAA8HJAAAAAAAAAc0A4DfbLzAFzQAAAAAAAEHNAg6eqqYMWc0A7FYZg8TFzQAAAAAAAQHNAgaNPcT1Gc0AAAAAAAFBzQIEFnumTWnNAAAAAAABgc0ADR5\u002fiemxzQAAAAAAAgHNA4EzUhrWFc0AAAAAAAJBzQPGM2iEilXNAAAAAAACgc0AAAAAAAKBzQAAAAAAAoHNAAAAAAACgc0AAAAAAAKBzQH3SJ33Sp3NAAAAAAACwc0AAAAAAALBzQAAAAAAAsHNAAAAAAACwc0ALtmALtrBzQAu2YAu2uHNAfdInfdK\u002fc0AAAAAAAMBzQAAAAAAA0HNAAAAAAADQc0AAAAAAANBzQAAAAAAA0HNAD+qgDurYc0AAAAAAAOBzQHzFV3zF73NAAAAAAADwc0AAAAAAAPBzQAAAAAAA8HNAAAAAAADwc0AAAAAAAPBzQAAAAAAA8HNAAAAAAADwc0AAAAAAAPBzQNtaFZeZ0HNAAAAAAACwc0ALdckrB1tyQAAAAAAAgHBAFxeinplrcEAAAAAAAIBvQLiILBMAoGtAAAAAAACAakAQP94vj8pnQAAAAAAAwGdAAAAAAACQckDbbr5yzplyQAAAAAAAwHJAg6eqqYPGckDOX8qmg95yQAAAAAAA8HJADh+mtx4Jc0Db63KE6yVzQAAAAAAAMHNA8YzaISI5c0AAAAAAAEBzQKi4P1G4UnNADh+mtx55c0AAAAAAAIBzQFrrjqMxmnNAAAAAAACwc0D2KFyPwrVzQAAAAAAA0HNAERERERHRc0AAAAAAAOBzQM3MzMzM4HNAzczMzMztc0AAAAAAAPBzQAAAAAAA8HNAD+qgDurwc0BZfMVXfP1zQAAAAAAAAHRAAAAAAAAAdEAAAAAAAAB0QAAAAAAAAHRAAAAAAAAAdEAzMzMzMwt0QAAAAAAAEHRAlSBPCfIUdEA12ORY+xx0QAAAAAAAIHRAAAAAAAAgdEAPQsT2KCZ0QAAAAAAAMHRAAAAAAAAwdEAAAAAAADB0QAAAAAAAMHRAAAAAAAAwdEAAAAAAADB0QAAAAAAAMHRAWCSibz0gdEAAAAAAACB0QCGpbPUoLnRAAAAAAAAwdEBJCKBi5gB0QAAAAAAA0HNAZJ1O1sxOc0AAAAAAALBxQK5D2mvmMXFAAAAAAADgcEDa2D7nWRRwQAAAAAAAgG5Acp5WdmavakAAAAAAAMBpQPwgDL5t92hA19d5mSTlZ0AAAAAAAJByQAAAAAAA0HJAMzMzMzPXckAAAAAAAPByQGZmZmZmGXNAAAAAAAAgc0AAAAAAAEBzQDMzMzMzT3NAAAAAAABgc0CLr\u002fiKr2hzQAAAAAAAgHNAAAAAAACAc0AAAAAAAIBzQAAAAAAAkHNAZmZmZmaSc0AAAAAAAKBzQMVXfMVXpHNAAAAAAACwc0C2YAu2YLNzQAu2YAu2uHNAAAAAAADAc0CSUnU0s8NzQAAAAAAA0HNAAAAAAADQc0C34fgiItVzQAAAAAAA4HNAAAAAAADgc0AAAAAAAOBzQEmpOprZ5XNAtOljmdnuc0AAAAAAAPBzQOyyF4mI+nNAAAAAAAAAdEAAAAAAAAB0QAAAAAAAAHRAAAAAAAAAdEAAAAAAAAB0QPZdPMEWBnRAAAAAAAAQdECgCOdrwRB0QAAAAAAAIHRAAAAAAAAgdEAAAAAAACB0QAAAAAAAIHRAeEbtEJEgdEB4Ru0QkSh0QAAAAAAAMHRAAAAAAAAwdEAAAAAAADB0QAAAAAAAMHRAs9Z4ap09dEAAAAAAAEB0QAAAAAAAIHRAFK5H4XoEdECuR+F6FIpyQAAAAAAAcHFAFK5H4XqEb0CuR+F6FE5vQAAAAAAAoHJAAAAAAACgckBp08cys6lyQGnTxzKzvXJAAAAAAADAckAgsu1ZfO9yQAAAAAAA8HJAAAAAAAAAc0AAAAAAAABzQAAAAAAAAHNAAAAAAAAAc0BxPQrXowBzQA=="},"yaxis":"y","type":"scatter"},{"hovertemplate":"Gear=6\u003cbr\u003eDistance (m)=%{x}\u003cbr\u003eSpeed (km\u002fh)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"6","line":{"color":"#000002","dash":"solid","width":1},"marker":{"symbol":"circle"},"mode":"lines","name":"6","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"uB6F61HgikCoGwZm7QWLQO4wdbn9CJJAc8F34ZAukkBoZmZmZkuSQFDPbdOLfJJAm5mZmZmOkkBogPHUIZOSQC88Egxk6ZJANDMzMzP2kkCbmZmZmTyTQJDjOI7ja5NAGDdIrqdwk0AjP4Ols5qTQHsUrkdhmKJAGwn45lWuokAxsiROb7aiQCO+DQDC0qJA84slv9jVokDXgXBiKduiQNRMCpTD86JAv1jyi6X2okAX0\u002fl1Ew+jQIwlv1hyIqNA9W0xA283o0A30GkDHTqjQK\u002frpKT9S6NARIbKDjPGpEAiZKjsENykQBbIR1cr4aRAPysaCdj3pEAcCfjmtRmlQPdKXC4hHKVAg29eTRw8pUAD+niJkT6lQO8wdbndaqVAgcSvEFdwpUBGhsoOM4ilQMgzjp54naVAUDwrGumspUBeoZp3DLalQEGgIVY\u002f0KVAt6KRgE\u002fdpUBvUaFvEfClQJvbH2QIYKdA\u002fObVxBOHp0Afe5FUJ4ynQB0J+OY1qadAHQbFTbzFp0CPJb9YUsanQFeX2x\u002fE46dAVZhFAhD4p0CORgK+ebGvQGfJL5b8xq9A3LEKhinJr0AtO0xdbuKvQI0iakHE769AjkYCvnn4r0AmFH67PAewQCUB37waDbBA4avso9UWsEA2EvDNKx6wQOnXEQUXL7BAA9+8mvg3sEBhQhpnakawQK6JZ0WjRrBAtaKRgC\u002fEs0ATUogwWsyzQHFeTTzribRAZaHQGbiNtEAEpAMQjpi0QKWRgG8emrRABxHLWu+otEAL+ObVhKq0QJjdYycFu7RAu\u002f1Bhgq+tEDuMHW5zdG0QJwVeLxM17RAImSo7ADjtEBMZkX8H+e0QKL46z5P8bRA2MSzomH3tEC1KLJGaAS1QO6TjBC+EbVA"},"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAADAZECnzqPi\u002fyJjQAAAAAAAIG5A2qnwCFafbkAAAAAAAABvQN3d3d3dXW9AAAAAAACAb0Cf9Emf9IlvQKVP+qRPInBAAAAAAAAwcEAAAAAAAIBwQAAAAAAAoHBAVVVVVVWlcEAAAAAAANRwQAAAAAAAoG5AAAAAAADgbkDAabBfZg5vQMBpsF9mrm9AAAAAAADAb0BE0YRud5dvQKsdaoB3125AAAAAAADAbkAtLkQ9M+dsQAAAAAAAYGtAeBLofhS2akAAAAAAAKBqQH\u002fqadFM82lAAAAAAABAbkAAAAAAAMBuQN12iByu125AAAAAAABAb0AAAAAAAMBvQINn1A4RyW9AAAAAAAAgcECGkPP+PyRwQAAAAAAAcHBA3A6Rw\u002fVycEAAAAAAAIBwQLGtVXGZCW9AAAAAAACAbUB252wQM6tsQF+K+D7tE2pAAAAAAADAaEBzaVIAaQJoQAAAAAAAoG5AAAAAAABgb0AAAAAAAHhvQAAAAAAAAHBArkfhehRecEAAAAAAAGBwQAAAAAAAkHBAamoNV3yncEAAAAAAAKBtQAAAAAAAQG5AzczMzMxMbkAAAAAAAOBuQNKmj2Vm825AAAAAAAAAb0B7Jg6zqmhvQAAAAAAAoG9Ao00fy8zWb0AAAAAAAABwQNhlLxIRFXBAAAAAAAAgcEDyJTNij35wQAAAAAAAgHBAAAAAAAAAbEBCHdRBHXRrQAAAAAAAgG1AfApJLzO1bUDSX56EiEpuQAAAAAAAYG5Ao00fy8y2bkAAAAAAAMBuQPwgDL5tR29AAAAAAABgb0AAAAAAAOBvQKNNH8vM\u002fm9AAAAAAAAgcEAUmn9PBy1wQBSaf08HTXBAAAAAAABgcEA2qcTWP3xwQIYzC0H6mHBA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Gear=3\u003cbr\u003eDistance (m)=%{x}\u003cbr\u003eSpeed (km\u002fh)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"3","line":{"color":"#000003","dash":"solid","width":1},"marker":{"symbol":"circle"},"mode":"lines","name":"3","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"i0YCvnk9i0CQPPKvkGuLQCs7TF1uq41ArQ96rpSxjUDW5fYHGc6NQEz8Wd\u002fq0I1A1uX2BxnyjUAWeN0hRxCOQJ\u002fe4KU0Q45A8axoJOBDjkCvP6kaNkyOQP0Ha2eGn45AD3TaQKeljkAjT2y7qeKOQA902kCnDY9ANvGsaCRAj0AlqyF2MUyPQIO2nsUYgo9ARwK+eTWRj0A0vOUf\u002ffePQIXrUbge+Y9AcxzHcVxVoECbO7nTgFmgQHMcx3FcY6BAmpmZmdltoEA7V3jENnCgQLEFW7BFf6BAPmmVyD+GoECqqqqq6o+gQF9gTNlGmKBA6ZM+6dOjoEB3UAgSh6egQD9yyZLMuKBA18SzorG7oEBkzA+R0sWgQA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAABgYEAwJ74dEaleQAAAAAAAwFJAw\u002fUoXI\u002fiUkAAAAAAAIBTQI\u002fC9Shcj1NAAAAAAABAVEDD9Shcj1JVQHjgEGi4+lZAAAAAAAAAV0DgFmaAj2pXQJfIR4PCPVtAAAAAAACAW0COzvkpjoNeQAAAAAAAQGBAAAAAAADAYUD3TBxmVfFhQEuicbuqxmJAAAAAAAAAY0A89UiD29pkQAAAAAAA4GRAAAAAAADgYEB0DlzteoxgQAAAAAAAgF9AAAAAAACAXUA+0d3ZQU1dQAAAAAAAAFxAUmtdKUl6W0AAAAAAAMBaQBhCzvv\u002fSFtAAAAAAAAAXEAiC02dvEZcQD7+m2dliV1AAAAAAADAXUCLr\u002fiKr3hdQA=="},"yaxis":"y","type":"scatter"},{"hovertemplate":"Gear=2\u003cbr\u003eDistance (m)=%{x}\u003cbr\u003eSpeed (km\u002fh)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"2","line":{"color":"#000004","dash":"solid","width":1},"marker":{"symbol":"circle"},"mode":"lines","name":"2","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"vnk18ayYi0AOdNpAp72LQK6AI5Wb0otAtSNrSQPzi0DsUbgehfeLQAoZKjtMQYxAT99\u002fce9HjEDD1OX2B2WMQJfysFi6boxAKV\u002fmgwGNjEAk96Oa1qeMQGkk4JtXr4xAFcRFqrjRjEDcQKcNdNKMQPoYiOV25IxA9gcZKjv4jEB9uUK4SBGNQKgNdNpAK41AgHxmzyEujUDhm1cTz06NQJ1MOs\u002f2VI1AKztMXW6DjUCDLHhpDoaNQNXBWSCkjI1A"},"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAACAXEAAAAAAAABaQNvOX0wdDFlAt4XNJ9R5V0AAAAAAAEBXQAAAAAAAwFRA6Q3WIaicVEAAAAAAAABUQN+w9g1r31NA9w1r37B2U0CamZmZmRlTQAAAAAAAAFNAXI\u002fC9Si8U0AAAAAAAMBTQLgehetReFRAAAAAAABAVUAsvuIrvuJUQAAAAAAAgFRA9ihcj8J1VEAAAAAAAABUQM3MzMzM1FNAAAAAAACAUkBERERERIRSQO\u002fu7u7ujlJA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Gear=4\u003cbr\u003eDistance (m)=%{x}\u003cbr\u003eSpeed (km\u002fh)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"4","line":{"color":"#000005","dash":"solid","width":1},"marker":{"symbol":"circle"},"mode":"lines","name":"4","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"h8oOU5cikECfTrErdzaQQNhlloUOYZBAuv1BhsplkEDZPPTk5pCQQPSLJb9YkZBACvjm1eTNoEBfXP9NmNmgQP4BSrOh5KBAYE08KzrpoEAK+ObV5AehQIUX8u4mCaFAU+4o3Z8SoUClzmM8gCGhQKnsMHXZIaFAUej3fcc5oUB5bwoNvEuhQJ020GkjTKFA3MKXNmBmoUCdNtBpI3GhQMKz8B7edKFALBoJ+AaGoUA99arLKYyhQJSAb15toKFA"},"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAACAZUC34FaLmSZmQLfgVouZemdAAAAAAACgZ0B5V8GYwn1oQAAAAAAAgGhAAAAAAABAXUApXI\u002fC9ehdQMP1KFyPgl5AAAAAAADAXkAAAAAAAEBhQM3MzMzMTGFAzczMzMysYUDNzMzMzDxiQAAAAAAAQGJA9w1r37A2ZEDIU4I8JZhlQAAAAAAAoGVAERERERGxZkAAAAAAACBnQOF6FK5HMWdAAAAAAACAZ0AfWGj6\u002f8tnQAAAAAAAwGhA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Gear=5\u003cbr\u003eDistance (m)=%{x}\u003cbr\u003eSpeed (km\u002fh)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"5","line":{"color":"#000006","dash":"solid","width":1},"marker":{"symbol":"circle"},"mode":"lines","name":"5","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"taKRgG\u002fRkEDvvwEP8PqQQF9NPCsaAJFAPSsaCfglkUCLMDu1C0eRQOjVxLOiVpFA5IXa5zmekUAUrkfheqmRQLSikYBv05FASztA5+HnkUBzHMdxXD2gQA7GjiV6TKBAr0fhejS3oUDkk1eXK7mhQHa5\u002fUGmzqFAOpOxcnzVoUDim4\u002ftwtyhQPq88A8E+KFAuv1BhuoEokA9KxoJGBmiQOjop51xJaJANMn\u002fIKM8okAsGgn4Bj2iQHkTHw46XKJAxbOikaBcokAE8g3j5Y+iQHa5\u002fUEGXqNARardYUNko0DcH2SozICjQFcdkPb1iKNAr0fhevSRo0DajNdStqSjQEjhehSOq6NAKkv2zi+6o0CBb15NHMGjQPsFP8u12KNAx7OikWDbo0DE3npVRu+jQFSX2x9E+6NAiPuAeG4ZpEAydbn9ISGkQOWhCfkYSKRAquwwdZlIpEAQU5fb\u002f2akQP\u002f3TLGqcKRA2MSzonF7pECNgcntAJikQABChsrupaRA3nJ\u002fGq69pEAGnTbQifalQAz45tXkFqZAkp4RS64apkBK4XoUziamQAQ+Hmt2LKZAKL9Y8qs+pkCMujg8YECmQOz9OPKVUqZAoDbQaSNbpkATU5fbP3CmQGMe2NQUcqZA6tXEs8KBpkA2OwcY+pWmQHNeTTyLsKZAzmgHvd+0pkABQobKbuGmQMAgq2Bp46ZAKXWzgl\u002f8pkABQobKbv+mQM7\u002f6NYPGadApvwOjRMhp0Cb2x9kCC+nQAxALDhoQadAwvInTvlZp0ArfdInPV+uQGmLQScEfK5A7ZM+6VN8rkA3MzMz84yuQD6dAddxp65AkPpaNAS4rkDvUbgehbquQH418axoy65Au2qq9GLjrkDDeTXxrOquQNcJS9AoDa9AF8+KRgIQr0DH+MLvTSCvQAa+eTXxLK9AtBZkp7Q9r0BoZYlmt1uvQCKF61G4Xq9A5JtXE89yr0Dhu9Flp4GvQGwk4JtXh69AKZ7sbF2er0CZ2x9k6NSzQNNpA5123rNAinWWE+His0B9FK5HIeyzQEqMv3BW8LNAf3CHeYjys0CwR+F6VPmzQBEmkjPQALRAfRSuRyECtEDxtV4KBw+0QBeuR+G6FbRAjKFFDgwbtEBnqOwwNSW0QBBJMt\u002ftM7RAmtsfZOg5tEClIUEMFEO0QH0UrkehRbRAF65H4TpUtEBcfm42vFe0QIrnTOdfZbRA2CvhlypptEB9FK5HoWq0QN\u002fp0KSefLRASeF6FG5\u002ftEA="},"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAADAaUCZVMB\u002f6zFqQAAAAAAAQGpAAAAAAACgakAhh7EahSNrQAAAAAAAYGtAu4\u002ftxszjbEAAAAAAACBtQAAAAAAAgG1ARps+lpm9bUAAAAAAAABjQIStI1hmr2FAAAAAAACgaUDuU37nUbBpQAAAAAAAYGpARps+lpmNakCUlKqjmb1qQEabPpaZbWtAAAAAAADAa0AAAAAAAGBsQEx9kcNXjGxAVDDP76DebEAAAAAAAOBsQJSUqqOZnW1AAAAAAACgbUB3axdU2HtuQAAAAAAAQGlABxkSbjkYaUAAAAAAAGBoQJqZmZmZQWhAAAAAAAAgaECJiIiIiAhoQAAAAAAAAGhA7FG4HoUraEAAAAAAAEBoQGZmZmZmlmhAAAAAAACgaEAP6qAO6kBpQAAAAAAAoGlAzczMzMxsakAAAAAAAKBqQGZmZmZmvGtAAAAAAADAa0AAAAAAAIBsQGZmZmZmnmxAAAAAAADAbEBmZmZmZoJtQAAAAAAA4G1Ao00fy8wmbkAAAAAAAMBnQAAAAAAAwGZAtrUqLjOpZkAAAAAAAGBmQAAAAAAAYGZAAAAAAABgZkAE62x6xWdmQCg0\u002f54OumZAAAAAAADgZkAAAAAAAMBnQLuP7cbM12dAAAAAAACgaEDhS\u002f7znldpQAAAAAAAQGpAzczMzMxcakAAAAAAAIBrQKqqqqqqimtAAAAAAAAQbEAAAAAAACBsQCd90id9Am1AfdInfdJHbUAAAAAAAMBtQEqf9EmfFG5ASp\u002f0SZ+EbkAAAAAAAOBnQJA53BdfYWdAAAAAAABgZ0AAAAAAAGBnQFFuUvpZTWdAvda80r1BZ0AAAAAAAEBnQAAAAAAAwGdA+Yqv+IrPaEAAAAAAACBpQGZmZmZmKmpAAAAAAABAakDv7u7u7r5qQAAAAAAAIGtAXI\u002fC9Shsa0DD9Shcj\u002fJrQAAAAAAAAGxAAAAAAABAbEAAAAAAALRsQAAAAAAA4GxAmpmZmZlJbUAAAAAAAOBqQAAAAAAA4GpAqqqqqqp6akAAAAAAAKBpQBERERERWWlAvLu7u7szaUAAAAAAAMBoQAAAAAAAwGhAAAAAAADAaEBRNKHb3ZVoQAAAAAAAgGhA+h2t0kGhaEAAAAAAAOBoQLA0G2nBlmlAAAAAAADgaUCpQ1XpekRqQAAAAAAAYGpAAAAAAABga0BfHXhTVXlrQFLEXncc22tAKI+UGsf1a0AAAAAAAABsQLk5lQwAFW1AAAAAAABAbUA="},"yaxis":"y","type":"scatter"},{"hovertemplate":"Gear=7\u003cbr\u003eDistance (m)=%{x}\u003cbr\u003eSpeed (km\u002fh)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"7","line":{"color":"#000007","dash":"solid","width":1},"marker":{"symbol":"circle"},"mode":"lines","name":"7","orientation":"v","showlegend":true,"x":{"dtype":"f8","bdata":"1Cd90ie0k0AblBTW7+mTQPVJn\u002fRJFpRAbo7C6mkhlECQ4ziO40eUQFJmGuftZZRAOo7jOI6GlEC+XaV0kqSUQBlR8KgsypRAbcEWbMHRlEA6juM4jh6VQC+DvI22I5VA7KN7yspXlUBXVVVVVaCVQAAL3\u002fu77ZVAz8zMzMz7lUBslV03ABWWQOU4juN4LKBAEjwsdr42oEDDEeKfYDigQLFH4Xp0DahAlyqHcoMuqEA\u002fKxoJWD6oQM4OU5c7XahAcBVQbN9fqEDwqd9zuI6oQG0DnTYwj6hAvP1BhiqoqEDhi1G0IcGoQO8wdbld26hAeOlxOrL0qEC8\u002fUGGKgKpQJfyrattIqlAE1OX238pqUAaS36xZHqwQBxb+0VAfbBAp7pnLaWJsEC05BdL\u002foywQNmzw9\u002fcmrBAhwyVHSamsECPE56Hm7KwQBXwzasJtrBAhidChqPCsED\u002fhuNoR9mwQA62YAuG2bBA8u7u7r7zsECIFOHHJPWwQMigGgpIB7FAFq5H4Tq6s0BhLPnFAhW1QKBQUsikHbVAnxWNBOwstUDkcTlwoy+1QO0I4IyyNbVAQ9Y8oUJRtUCDThvopFS1QO8rqoeTXbVAgj1MYQtttUCOBHzzWm21QASQ1i2nfLVAACFDZfd8tUDkWdFIsIy1QINVzJLzjbVAjgR881qZtUAfAGqgAKG1QPrFkl8cprVAzyDSGMettUD6xZJfHLa1QLfgp3rZvbVALfnFkk\u002fTtUCpzPGF4de1QOry\u002fzSA3rVASsA3rxb0tUAh5ZhqffW1QB3gqaJSDrZA"},"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAADwcEAAAAAAABxxQAAAAAAAQHFAzczMzMxKcUAAAAAAAHBxQNejcD0Kh3FAAAAAAACgcUAAAAAAAKBxQAAAAAAAoHFAAAAAAACgcUAAAAAAAAByQMP1KFyPAnJAQVLZ6lEcckAAAAAAAEByQMw5z\u002fIVW3JAAAAAAABgckAPQsT2KGZyQAAAAAAAgGZAhAhhA1xvZEAC4\u002fC0whVkQAAAAAAAwHBA72O7MfMLcUAAAAAAADBxQAAAAAAAYHFAHb0rzIxicUDc+6\u002fOjI9xQAAAAAAAkHFAAAAAAACQcUABoZo388ZxQAAAAAAAAHJAJaXqaGYfckAAAAAAADByQNyG44uIZHJAAAAAAABwckAAAAAAACBxQD4Th1lVLHFAk2jcrqphcUAAAAAAAHBxQNKmj2Vmk3FAAAAAAACwcUBf+X8XrtVxQAAAAAAA4HFAUldUSpz8cUCIXOcKdC9yQAAAAAAAMHJAAAAAAABwckDBOpte8XFyQFNf5PAVi3JAAAAAAACgbkAAAAAAAKBwQGZmZmZmsXBAAAAAAADQcEBqpVZqpdZwQFhqpVZq5XBAfuAHfuAncUAAAAAAADBxQGZmZmZmQXFAZmZmZmZfcUAAAAAAAGBxQNejcD0Kj3FAAAAAAACQcUAAAAAAALBxQDMzMzMzs3FAAAAAAADQcUAzMzMzM+NxQAAAAAAA8HFASOF6FK73cUAAAAAAAAByQBEREREREXJAAAAAAABAckAfhetRuEZyQOQwVqNwUHJAAAAAAABwckCKiQjD2nFyQCu3aPOUknJA"},"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"candlestick":[{"decreasing":{"line":{"color":"#000033"}},"increasing":{"line":{"color":"#000032"}},"type":"candlestick"}],"contourcarpet":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contourcarpet"}],"contour":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"contour"}],"heatmap":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"heatmap"}],"histogram2d":[{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"type":"histogram2d"}],"icicle":[{"textfont":{"color":"white"},"type":"icicle"}],"sankey":[{"textfont":{"color":"#000036"},"type":"sankey"}],"scatter":[{"marker":{"line":{"width":0}},"type":"scatter"}],"table":[{"cells":{"fill":{"color":"#000038"},"font":{"color":"#000037"},"line":{"color":"#000039"}},"header":{"fill":{"color":"#000040"},"font":{"color":"#000036"},"line":{"color":"#000039"}},"type":"table"}],"waterfall":[{"connector":{"line":{"color":"#000036","width":2}},"decreasing":{"marker":{"color":"#000033"}},"increasing":{"marker":{"color":"#000032"}},"totals":{"marker":{"color":"#000034"}},"type":"waterfall"}]},"layout":{"coloraxis":{"colorscale":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorscale":{"diverging":[[0.0,"#000021"],[0.1111111111111111,"#000022"],[0.2222222222222222,"#000023"],[0.3333333333333333,"#000024"],[0.4444444444444444,"#000025"],[0.5555555555555556,"#000026"],[0.6666666666666666,"#000027"],[0.7777777777777778,"#000028"],[0.8888888888888888,"#000029"],[1.0,"#000030"]],"sequential":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]],"sequentialminus":[[0.0,"#000011"],[0.1111111111111111,"#000012"],[0.2222222222222222,"#000013"],[0.3333333333333333,"#000014"],[0.4444444444444444,"#000015"],[0.5555555555555556,"#000016"],[0.6666666666666666,"#000017"],[0.7777777777777778,"#000018"],[0.8888888888888888,"#000019"],[1.0,"#000020"]]},"colorway":["#000001","#000002","#000003","#000004","#000005","#000006","#000007","#000008","#000009","#000010"]}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Distance (m)"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Speed (km\u002fh)"}},"legend":{"title":{"text":"Gear"},"tracegroupgap":0},"title":{"text":"VER Telemetry Speed Profile"}},                        {"responsive": true}                    )                };            </script>        </div></div>
+      <p class="small">Source telemetry is based on VER only, reusing the existing analysis functions.</p>
+    </section>
+  </main>
+</body>
+</html>

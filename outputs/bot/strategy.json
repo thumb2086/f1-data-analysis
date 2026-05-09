@@ -1,0 +1,877 @@
+{
+  "command": "strategy",
+  "title": "輪胎策略與衰退分析",
+  "summary": [
+    "策略車手數：20",
+    "最常見策略：HARD(19) -> HARD(17) -> MEDIUM(14) -> SOFT(2)",
+    "輪胎衰退表聚焦於可用樣本數較足夠的 stint。"
+  ],
+  "metrics": {
+    "drivers": 20,
+    "stints_with_degradation": 48,
+    "compounds": [
+      "HARD",
+      "MEDIUM",
+      "SOFT"
+    ]
+  },
+  "tables": {
+    "tyre_strategy": {
+      "columns": [
+        "driver",
+        "driver_number",
+        "n_stops",
+        "stops_label",
+        "compounds",
+        "stint_laps",
+        "total_laps",
+        "strategy",
+        "final_position"
+      ],
+      "rows": [
+        {
+          "driver": "LEC",
+          "driver_number": 16,
+          "n_stops": 1,
+          "stops_label": "1-stop",
+          "compounds": "MEDIUM -> HARD",
+          "stint_laps": [
+            15,
+            38
+          ],
+          "total_laps": 53,
+          "strategy": "MEDIUM(15) -> HARD(38)",
+          "final_position": 1.0
+        },
+        {
+          "driver": "PIA",
+          "driver_number": 81,
+          "n_stops": 2,
+          "stops_label": "2-stop",
+          "compounds": "MEDIUM -> HARD -> HARD",
+          "stint_laps": [
+            16,
+            22,
+            15
+          ],
+          "total_laps": 53,
+          "strategy": "MEDIUM(16) -> HARD(22) -> HARD(15)",
+          "final_position": 2.0
+        },
+        {
+          "driver": "NOR",
+          "driver_number": 4,
+          "n_stops": 2,
+          "stops_label": "2-stop",
+          "compounds": "MEDIUM -> HARD -> HARD",
+          "stint_laps": [
+            14,
+            18,
+            21
+          ],
+          "total_laps": 53,
+          "strategy": "MEDIUM(14) -> HARD(18) -> HARD(21)",
+          "final_position": 3.0
+        },
+        {
+          "driver": "SAI",
+          "driver_number": 55,
+          "n_stops": 1,
+          "stops_label": "1-stop",
+          "compounds": "MEDIUM -> HARD",
+          "stint_laps": [
+            19,
+            34
+          ],
+          "total_laps": 53,
+          "strategy": "MEDIUM(19) -> HARD(34)",
+          "final_position": 4.0
+        },
+        {
+          "driver": "HAM",
+          "driver_number": 44,
+          "n_stops": 2,
+          "stops_label": "2-stop",
+          "compounds": "MEDIUM -> HARD -> HARD",
+          "stint_laps": [
+            15,
+            22,
+            16
+          ],
+          "total_laps": 53,
+          "strategy": "MEDIUM(15) -> HARD(22) -> HARD(16)",
+          "final_position": 5.0
+        },
+        {
+          "driver": "VER",
+          "driver_number": 1,
+          "n_stops": 2,
+          "stops_label": "2-stop",
+          "compounds": "HARD -> HARD -> MEDIUM",
+          "stint_laps": [
+            22,
+            19,
+            12
+          ],
+          "total_laps": 53,
+          "strategy": "HARD(22) -> HARD(19) -> MEDIUM(12)",
+          "final_position": 6.0
+        },
+        {
+          "driver": "RUS",
+          "driver_number": 63,
+          "n_stops": 2,
+          "stops_label": "2-stop",
+          "compounds": "MEDIUM -> HARD -> HARD",
+          "stint_laps": [
+            11,
+            22,
+            20
+          ],
+          "total_laps": 53,
+          "strategy": "MEDIUM(11) -> HARD(22) -> HARD(20)",
+          "final_position": 7.0
+        },
+        {
+          "driver": "PER",
+          "driver_number": 11,
+          "n_stops": 2,
+          "stops_label": "2-stop",
+          "compounds": "HARD -> HARD -> MEDIUM",
+          "stint_laps": [
+            23,
+            12,
+            18
+          ],
+          "total_laps": 53,
+          "strategy": "HARD(23) -> HARD(12) -> MEDIUM(18)",
+          "final_position": 8.0
+        },
+        {
+          "driver": "ALB",
+          "driver_number": 23,
+          "n_stops": 1,
+          "stops_label": "1-stop",
+          "compounds": "MEDIUM -> HARD",
+          "stint_laps": [
+            17,
+            36
+          ],
+          "total_laps": 53,
+          "strategy": "MEDIUM(17) -> HARD(36)",
+          "final_position": 9.0
+        },
+        {
+          "driver": "MAG",
+          "driver_number": 20,
+          "n_stops": 1,
+          "stops_label": "1-stop",
+          "compounds": "MEDIUM -> HARD",
+          "stint_laps": [
+            14,
+            39
+          ],
+          "total_laps": 53,
+          "strategy": "MEDIUM(14) -> HARD(39)",
+          "final_position": 10.0
+        },
+        {
+          "driver": "ALO",
+          "driver_number": 14,
+          "n_stops": 2,
+          "stops_label": "2-stop",
+          "compounds": "MEDIUM -> HARD -> HARD",
+          "stint_laps": [
+            12,
+            23,
+            18
+          ],
+          "total_laps": 53,
+          "strategy": "MEDIUM(12) -> HARD(23) -> HARD(18)",
+          "final_position": 11.0
+        },
+        {
+          "driver": "COL",
+          "driver_number": 43,
+          "n_stops": 1,
+          "stops_label": "1-stop",
+          "compounds": "MEDIUM -> HARD",
+          "stint_laps": [
+            16,
+            37
+          ],
+          "total_laps": 53,
+          "strategy": "MEDIUM(16) -> HARD(37)",
+          "final_position": 12.0
+        },
+        {
+          "driver": "RIC",
+          "driver_number": 3,
+          "n_stops": 1,
+          "stops_label": "1-stop",
+          "compounds": "MEDIUM -> HARD",
+          "stint_laps": [
+            11,
+            42
+          ],
+          "total_laps": 53,
+          "strategy": "MEDIUM(11) -> HARD(42)",
+          "final_position": 13.0
+        },
+        {
+          "driver": "OCO",
+          "driver_number": 31,
+          "n_stops": 1,
+          "stops_label": "1-stop",
+          "compounds": "HARD -> MEDIUM",
+          "stint_laps": [
+            31,
+            21
+          ],
+          "total_laps": 52,
+          "strategy": "HARD(31) -> MEDIUM(21)",
+          "final_position": 14.0
+        },
+        {
+          "driver": "GAS",
+          "driver_number": 10,
+          "n_stops": 2,
+          "stops_label": "2-stop",
+          "compounds": "MEDIUM -> HARD -> HARD",
+          "stint_laps": [
+            10,
+            20,
+            22
+          ],
+          "total_laps": 52,
+          "strategy": "MEDIUM(10) -> HARD(20) -> HARD(22)",
+          "final_position": 15.0
+        },
+        {
+          "driver": "BOT",
+          "driver_number": 77,
+          "n_stops": 1,
+          "stops_label": "1-stop",
+          "compounds": "HARD -> MEDIUM",
+          "stint_laps": [
+            33,
+            19
+          ],
+          "total_laps": 52,
+          "strategy": "HARD(33) -> MEDIUM(19)",
+          "final_position": 16.0
+        },
+        {
+          "driver": "HUL",
+          "driver_number": 27,
+          "n_stops": 2,
+          "stops_label": "2-stop",
+          "compounds": "MEDIUM -> HARD -> HARD",
+          "stint_laps": [
+            5,
+            27,
+            20
+          ],
+          "total_laps": 52,
+          "strategy": "MEDIUM(5) -> HARD(27) -> HARD(20)",
+          "final_position": 17.0
+        },
+        {
+          "driver": "ZHO",
+          "driver_number": 24,
+          "n_stops": 1,
+          "stops_label": "1-stop",
+          "compounds": "MEDIUM -> HARD",
+          "stint_laps": [
+            15,
+            37
+          ],
+          "total_laps": 52,
+          "strategy": "MEDIUM(15) -> HARD(37)",
+          "final_position": 18.0
+        },
+        {
+          "driver": "STR",
+          "driver_number": 18,
+          "n_stops": 3,
+          "stops_label": "3-stop",
+          "compounds": "HARD -> HARD -> MEDIUM -> SOFT",
+          "stint_laps": [
+            19,
+            17,
+            14,
+            2
+          ],
+          "total_laps": 52,
+          "strategy": "HARD(19) -> HARD(17) -> MEDIUM(14) -> SOFT(2)",
+          "final_position": 19.0
+        },
+        {
+          "driver": "TSU",
+          "driver_number": 22,
+          "n_stops": 0,
+          "stops_label": "0-stop",
+          "compounds": "HARD",
+          "stint_laps": [
+            7
+          ],
+          "total_laps": 7,
+          "strategy": "HARD(7)",
+          "final_position": 20.0
+        }
+      ]
+    },
+    "tyre_degradation": {
+      "columns": [
+        "driver",
+        "stint",
+        "compound",
+        "degradation_rate",
+        "intercept",
+        "laps_analyzed",
+        "r2"
+      ],
+      "rows": [
+        {
+          "driver": "RIC",
+          "stint": 1,
+          "compound": "MEDIUM",
+          "degradation_rate": -0.13518333333333657,
+          "intercept": 87.03721111111115,
+          "laps_analyzed": 9,
+          "r2": 0.6407444909241581
+        },
+        {
+          "driver": "ALO",
+          "stint": 1,
+          "compound": "MEDIUM",
+          "degradation_rate": -0.12784242424242542,
+          "intercept": 87.09761818181819,
+          "laps_analyzed": 10,
+          "r2": 0.7052040268526696
+        },
+        {
+          "driver": "BOT",
+          "stint": 2,
+          "compound": "MEDIUM",
+          "degradation_rate": -0.11306707946336389,
+          "intercept": 86.20993808049538,
+          "laps_analyzed": 18,
+          "r2": 0.5167512005038556
+        },
+        {
+          "driver": "ZHO",
+          "stint": 1,
+          "compound": "MEDIUM",
+          "degradation_rate": -0.10032417582417268,
+          "intercept": 87.75730219780222,
+          "laps_analyzed": 13,
+          "r2": 0.15028728584412887
+        },
+        {
+          "driver": "RUS",
+          "stint": 1,
+          "compound": "MEDIUM",
+          "degradation_rate": -0.0957000000000041,
+          "intercept": 86.01753333333335,
+          "laps_analyzed": 9,
+          "r2": 0.5509882524696303
+        },
+        {
+          "driver": "HAM",
+          "stint": 2,
+          "compound": "HARD",
+          "degradation_rate": -0.08796691729323435,
+          "intercept": 84.9416195488722,
+          "laps_analyzed": 20,
+          "r2": 0.7954153542626508
+        },
+        {
+          "driver": "RUS",
+          "stint": 3,
+          "compound": "HARD",
+          "degradation_rate": -0.08384035087719317,
+          "intercept": 83.7954543859649,
+          "laps_analyzed": 19,
+          "r2": 0.41027900136317075
+        },
+        {
+          "driver": "MAG",
+          "stint": 1,
+          "compound": "MEDIUM",
+          "degradation_rate": -0.06401748251748653,
+          "intercept": 86.65104778554782,
+          "laps_analyzed": 12,
+          "r2": 0.3196316086144342
+        },
+        {
+          "driver": "NOR",
+          "stint": 3,
+          "compound": "HARD",
+          "degradation_rate": -0.05642330827067653,
+          "intercept": 83.34921804511278,
+          "laps_analyzed": 20,
+          "r2": 0.2480411791015122
+        },
+        {
+          "driver": "NOR",
+          "stint": 2,
+          "compound": "HARD",
+          "degradation_rate": -0.054582352941176186,
+          "intercept": 84.34715735294115,
+          "laps_analyzed": 16,
+          "r2": 0.1607914246973613
+        },
+        {
+          "driver": "RUS",
+          "stint": 2,
+          "compound": "HARD",
+          "degradation_rate": -0.05365488721804518,
+          "intercept": 84.99878120300751,
+          "laps_analyzed": 20,
+          "r2": 0.22837171795633143
+        },
+        {
+          "driver": "MAG",
+          "stint": 2,
+          "compound": "HARD",
+          "degradation_rate": -0.045665499507605276,
+          "intercept": 85.51722168727434,
+          "laps_analyzed": 38,
+          "r2": 0.6352101136609362
+        }
+      ]
+    },
+    "compound_comparison": {
+      "columns": [
+        "Driver",
+        "Compound",
+        "avg_laptime",
+        "min_laptime",
+        "max_laptime",
+        "std_laptime",
+        "laps",
+        "avg_tyre_life"
+      ],
+      "rows": [
+        {
+          "Driver": "ALB",
+          "Compound": "HARD",
+          "avg_laptime": 84.79491428571428,
+          "min_laptime": 83.918,
+          "max_laptime": 86.282,
+          "std_laptime": 0.5291189331125405,
+          "laps": 35,
+          "avg_tyre_life": 19.0
+        },
+        {
+          "Driver": "ALB",
+          "Compound": "MEDIUM",
+          "avg_laptime": 86.06179999999999,
+          "min_laptime": 85.468,
+          "max_laptime": 87.011,
+          "std_laptime": 0.42552676598708905,
+          "laps": 15,
+          "avg_tyre_life": 9.0
+        },
+        {
+          "Driver": "ALO",
+          "Compound": "HARD",
+          "avg_laptime": 84.37205263157894,
+          "min_laptime": 82.944,
+          "max_laptime": 85.832,
+          "std_laptime": 0.8022635189959737,
+          "laps": 38,
+          "avg_tyre_life": 12.552631578947368
+        },
+        {
+          "Driver": "ALO",
+          "Compound": "MEDIUM",
+          "avg_laptime": 86.1388,
+          "min_laptime": 85.693,
+          "max_laptime": 87.236,
+          "std_laptime": 0.46091763544767156,
+          "laps": 10,
+          "avg_tyre_life": 7.5
+        },
+        {
+          "Driver": "BOT",
+          "Compound": "HARD",
+          "avg_laptime": 86.67106451612902,
+          "min_laptime": 85.804,
+          "max_laptime": 88.377,
+          "std_laptime": 0.6139046579333455,
+          "laps": 31,
+          "avg_tyre_life": 18.0
+        },
+        {
+          "Driver": "BOT",
+          "Compound": "MEDIUM",
+          "avg_laptime": 84.90966666666667,
+          "min_laptime": 83.609,
+          "max_laptime": 86.704,
+          "std_laptime": 0.8396878271469856,
+          "laps": 18,
+          "avg_tyre_life": 11.5
+        },
+        {
+          "Driver": "COL",
+          "Compound": "HARD",
+          "avg_laptime": 84.87522222222222,
+          "min_laptime": 83.728,
+          "max_laptime": 85.979,
+          "std_laptime": 0.4381941586042909,
+          "laps": 36,
+          "avg_tyre_life": 19.5
+        },
+        {
+          "Driver": "COL",
+          "Compound": "MEDIUM",
+          "avg_laptime": 86.64999999999999,
+          "min_laptime": 86.057,
+          "max_laptime": 87.845,
+          "std_laptime": 0.48415970028970096,
+          "laps": 14,
+          "avg_tyre_life": 8.5
+        },
+        {
+          "Driver": "GAS",
+          "Compound": "HARD",
+          "avg_laptime": 85.09594871794873,
+          "min_laptime": 83.755,
+          "max_laptime": 87.191,
+          "std_laptime": 0.7950442208395795,
+          "laps": 39,
+          "avg_tyre_life": 11.307692307692308
+        },
+        {
+          "Driver": "GAS",
+          "Compound": "MEDIUM",
+          "avg_laptime": 86.435375,
+          "min_laptime": 85.82,
+          "max_laptime": 87.148,
+          "std_laptime": 0.40049609860771634,
+          "laps": 8,
+          "avg_tyre_life": 5.5
+        },
+        {
+          "Driver": "HAM",
+          "Compound": "HARD",
+          "avg_laptime": 83.39851428571428,
+          "min_laptime": 81.512,
+          "max_laptime": 85.703,
+          "std_laptime": 0.9626580350451445,
+          "laps": 35,
+          "avg_tyre_life": 10.428571428571429
+        },
+        {
+          "Driver": "HAM",
+          "Compound": "MEDIUM",
+          "avg_laptime": 85.24007692307693,
+          "min_laptime": 84.771,
+          "max_laptime": 86.043,
+          "std_laptime": 0.42506126255291155,
+          "laps": 13,
+          "avg_tyre_life": 8.0
+        },
+        {
+          "Driver": "HUL",
+          "Compound": "HARD",
+          "avg_laptime": 84.93697727272728,
+          "min_laptime": 83.275,
+          "max_laptime": 87.809,
+          "std_laptime": 1.0340578115419832,
+          "laps": 44,
+          "avg_tyre_life": 12.704545454545455
+        },
+        {
+          "Driver": "HUL",
+          "Compound": "MEDIUM",
+          "avg_laptime": 86.829,
+          "min_laptime": 86.434,
+          "max_laptime": 87.512,
+          "std_laptime": 0.5939099258305094,
+          "laps": 3,
+          "avg_tyre_life": 3.0
+        },
+        {
+          "Driver": "LEC",
+          "Compound": "HARD",
+          "avg_laptime": 83.62494594594595,
+          "min_laptime": 83.226,
+          "max_laptime": 84.27,
+          "std_laptime": 0.249260678579447,
+          "laps": 37,
+          "avg_tyre_life": 20.0
+        },
+        {
+          "Driver": "LEC",
+          "Compound": "MEDIUM",
+          "avg_laptime": 84.8726923076923,
+          "min_laptime": 84.362,
+          "max_laptime": 85.606,
+          "std_laptime": 0.42808437342331157,
+          "laps": 13,
+          "avg_tyre_life": 8.0
+        },
+        {
+          "Driver": "MAG",
+          "Compound": "HARD",
+          "avg_laptime": 84.58107894736843,
+          "min_laptime": 83.437,
+          "max_laptime": 86.533,
+          "std_laptime": 0.6367412551667276,
+          "laps": 38,
+          "avg_tyre_life": 20.5
+        },
+        {
+          "Driver": "MAG",
+          "Compound": "MEDIUM",
+          "avg_laptime": 86.17091666666666,
+          "min_laptime": 85.785,
+          "max_laptime": 87.205,
+          "std_laptime": 0.40826806219205913,
+          "laps": 12,
+          "avg_tyre_life": 7.5
+        },
+        {
+          "Driver": "NOR",
+          "Compound": "HARD",
+          "avg_laptime": 83.20180555555555,
+          "min_laptime": 81.432,
+          "max_laptime": 85.585,
+          "std_laptime": 0.8643830109867618,
+          "laps": 36,
+          "avg_tyre_life": 10.61111111111111
+        },
+        {
+          "Driver": "NOR",
+          "Compound": "MEDIUM",
+          "avg_laptime": 84.825,
+          "min_laptime": 84.391,
+          "max_laptime": 85.458,
+          "std_laptime": 0.3574292046876396,
+          "laps": 12,
+          "avg_tyre_life": 7.5
+        },
+        {
+          "Driver": "OCO",
+          "Compound": "HARD",
+          "avg_laptime": 86.33113793103449,
+          "min_laptime": 85.369,
+          "max_laptime": 87.519,
+          "std_laptime": 0.4467602204553148,
+          "laps": 29,
+          "avg_tyre_life": 16.0
+        },
+        {
+          "Driver": "OCO",
+          "Compound": "MEDIUM",
+          "avg_laptime": 84.9442,
+          "min_laptime": 84.343,
+          "max_laptime": 86.111,
+          "std_laptime": 0.48254758150990057,
+          "laps": 20,
+          "avg_tyre_life": 11.5
+        },
+        {
+          "Driver": "PER",
+          "Compound": "HARD",
+          "avg_laptime": 84.92532258064516,
+          "min_laptime": 83.473,
+          "max_laptime": 86.411,
+          "std_laptime": 0.8589711049504432,
+          "laps": 31,
+          "avg_tyre_life": 10.225806451612904
+        },
+        {
+          "Driver": "PER",
+          "Compound": "MEDIUM",
+          "avg_laptime": 83.72217647058824,
+          "min_laptime": 82.971,
+          "max_laptime": 86.243,
+          "std_laptime": 0.8007371787370442,
+          "laps": 17,
+          "avg_tyre_life": 10.0
+        },
+        {
+          "Driver": "PIA",
+          "Compound": "HARD",
+          "avg_laptime": 83.06947058823529,
+          "min_laptime": 81.943,
+          "max_laptime": 84.602,
+          "std_laptime": 0.6715128210285385,
+          "laps": 34,
+          "avg_tyre_life": 10.264705882352942
+        },
+        {
+          "Driver": "PIA",
+          "Compound": "MEDIUM",
+          "avg_laptime": 84.68957142857143,
+          "min_laptime": 84.077,
+          "max_laptime": 85.261,
+          "std_laptime": 0.35454623530229823,
+          "laps": 14,
+          "avg_tyre_life": 8.5
+        },
+        {
+          "Driver": "RIC",
+          "Compound": "HARD",
+          "avg_laptime": 85.02170731707317,
+          "min_laptime": 84.219,
+          "max_laptime": 86.122,
+          "std_laptime": 0.38630701805056583,
+          "laps": 41,
+          "avg_tyre_life": 23.0
+        },
+        {
+          "Driver": "RIC",
+          "Compound": "MEDIUM",
+          "avg_laptime": 86.22611111111111,
+          "min_laptime": 85.713,
+          "max_laptime": 87.177,
+          "std_laptime": 0.46249957957938564,
+          "laps": 9,
+          "avg_tyre_life": 6.0
+        },
+        {
+          "Driver": "RUS",
+          "Compound": "HARD",
+          "avg_laptime": 83.64682051282051,
+          "min_laptime": 82.036,
+          "max_laptime": 85.504,
+          "std_laptime": 1.0301000940581777,
+          "laps": 39,
+          "avg_tyre_life": 11.256410256410257
+        },
+        {
+          "Driver": "RUS",
+          "Compound": "MEDIUM",
+          "avg_laptime": 85.44333333333333,
+          "min_laptime": 85.046,
+          "max_laptime": 86.055,
+          "std_laptime": 0.35307860314666867,
+          "laps": 9,
+          "avg_tyre_life": 6.0
+        },
+        {
+          "Driver": "SAI",
+          "Compound": "HARD",
+          "avg_laptime": 83.76757575757576,
+          "min_laptime": 83.219,
+          "max_laptime": 85.113,
+          "std_laptime": 0.46648747506651894,
+          "laps": 33,
+          "avg_tyre_life": 18.0
+        },
+        {
+          "Driver": "SAI",
+          "Compound": "MEDIUM",
+          "avg_laptime": 85.1455294117647,
+          "min_laptime": 84.642,
+          "max_laptime": 85.731,
+          "std_laptime": 0.3332096032617952,
+          "laps": 17,
+          "avg_tyre_life": 10.0
+        },
+        {
+          "Driver": "STR",
+          "Compound": "HARD",
+          "avg_laptime": 85.737625,
+          "min_laptime": 84.437,
+          "max_laptime": 88.342,
+          "std_laptime": 0.9936303184169673,
+          "laps": 32,
+          "avg_tyre_life": 11.0
+        },
+        {
+          "Driver": "STR",
+          "Compound": "MEDIUM",
+          "avg_laptime": 84.27733333333333,
+          "min_laptime": 83.427,
+          "max_laptime": 86.104,
+          "std_laptime": 0.8913001059059035,
+          "laps": 12,
+          "avg_tyre_life": 8.5
+        },
+        {
+          "Driver": "STR",
+          "Compound": "SOFT",
+          "avg_laptime": 82.232,
+          "min_laptime": 82.232,
+          "max_laptime": 82.232,
+          "std_laptime": NaN,
+          "laps": 1,
+          "avg_tyre_life": 2.0
+        },
+        {
+          "Driver": "TSU",
+          "Compound": "HARD",
+          "avg_laptime": 88.223,
+          "min_laptime": 86.198,
+          "max_laptime": 92.241,
+          "std_laptime": 2.4085284926693324,
+          "laps": 5,
+          "avg_tyre_life": 5.0
+        },
+        {
+          "Driver": "VER",
+          "Compound": "HARD",
+          "avg_laptime": 84.52464864864865,
+          "min_laptime": 83.424,
+          "max_laptime": 86.17,
+          "std_laptime": 0.9219183265891386,
+          "laps": 37,
+          "avg_tyre_life": 10.81081081081081
+        },
+        {
+          "Driver": "VER",
+          "Compound": "MEDIUM",
+          "avg_laptime": 82.778,
+          "min_laptime": 81.745,
+          "max_laptime": 83.711,
+          "std_laptime": 0.5122649704986634,
+          "laps": 11,
+          "avg_tyre_life": 7.0
+        },
+        {
+          "Driver": "ZHO",
+          "Compound": "HARD",
+          "avg_laptime": 85.93797222222221,
+          "min_laptime": 85.092,
+          "max_laptime": 87.64,
+          "std_laptime": 0.6449789580670104,
+          "laps": 36,
+          "avg_tyre_life": 20.5
+        },
+        {
+          "Driver": "ZHO",
+          "Compound": "MEDIUM",
+          "avg_laptime": 86.85438461538462,
+          "min_laptime": 85.942,
+          "max_laptime": 89.256,
+          "std_laptime": 1.0078352658430478,
+          "laps": 13,
+          "avg_tyre_life": 9.0
+        }
+      ]
+    }
+  },
+  "details": {
+    "top_strategy": {
+      "driver": "LEC",
+      "driver_number": 16,
+      "n_stops": 1,
+      "stops_label": "1-stop",
+      "compounds": "MEDIUM -> HARD",
+      "stint_laps": [
+        15,
+        38
+      ],
+      "total_laps": 53,
+      "strategy": "MEDIUM(15) -> HARD(38)",
+      "final_position": 1.0
+    }
+  },
+  "artifacts": {}
+}

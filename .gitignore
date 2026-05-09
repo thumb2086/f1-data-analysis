@@ -1,0 +1,12 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Virtualenv packages should not be committed
+.venv/lib/
+.venv/lib64/
+
+# Local editor / OS noise
+.DS_Store
+.vscode/
+.idea/

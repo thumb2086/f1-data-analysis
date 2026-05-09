@@ -1,0 +1,547 @@
+{
+  "command": "standings",
+  "title": "最終排名 / 車隊積分",
+  "summary": [
+    "2024 Italian Grand Prix @ Monza",
+    "冠軍：Charles Leclerc (Ferrari)",
+    "總圈數：53 圈；參賽車手：20 位；完賽：13 位"
+  ],
+  "metrics": {
+    "winner": "Charles Leclerc",
+    "winner_team": "Ferrari",
+    "total_laps": 53,
+    "drivers": 20,
+    "finishers": 13
+  },
+  "tables": {
+    "final_standings": {
+      "columns": [
+        "Position",
+        "Abbreviation",
+        "FullName",
+        "TeamName",
+        "GridPosition",
+        "Points",
+        "Laps",
+        "Status"
+      ],
+      "rows": [
+        {
+          "Position": 1.0,
+          "Abbreviation": "LEC",
+          "FullName": "Charles Leclerc",
+          "TeamName": "Ferrari",
+          "GridPosition": 4.0,
+          "Points": 25.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 2.0,
+          "Abbreviation": "PIA",
+          "FullName": "Oscar Piastri",
+          "TeamName": "McLaren",
+          "GridPosition": 2.0,
+          "Points": 18.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 3.0,
+          "Abbreviation": "NOR",
+          "FullName": "Lando Norris",
+          "TeamName": "McLaren",
+          "GridPosition": 1.0,
+          "Points": 16.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 4.0,
+          "Abbreviation": "SAI",
+          "FullName": "Carlos Sainz",
+          "TeamName": "Ferrari",
+          "GridPosition": 5.0,
+          "Points": 12.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 5.0,
+          "Abbreviation": "HAM",
+          "FullName": "Lewis Hamilton",
+          "TeamName": "Mercedes",
+          "GridPosition": 6.0,
+          "Points": 10.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 6.0,
+          "Abbreviation": "VER",
+          "FullName": "Max Verstappen",
+          "TeamName": "Red Bull Racing",
+          "GridPosition": 7.0,
+          "Points": 8.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 7.0,
+          "Abbreviation": "RUS",
+          "FullName": "George Russell",
+          "TeamName": "Mercedes",
+          "GridPosition": 3.0,
+          "Points": 6.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 8.0,
+          "Abbreviation": "PER",
+          "FullName": "Sergio Perez",
+          "TeamName": "Red Bull Racing",
+          "GridPosition": 8.0,
+          "Points": 4.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 9.0,
+          "Abbreviation": "ALB",
+          "FullName": "Alexander Albon",
+          "TeamName": "Williams",
+          "GridPosition": 9.0,
+          "Points": 2.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 10.0,
+          "Abbreviation": "MAG",
+          "FullName": "Kevin Magnussen",
+          "TeamName": "Haas F1 Team",
+          "GridPosition": 13.0,
+          "Points": 1.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 11.0,
+          "Abbreviation": "ALO",
+          "FullName": "Fernando Alonso",
+          "TeamName": "Aston Martin",
+          "GridPosition": 11.0,
+          "Points": 0.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 12.0,
+          "Abbreviation": "COL",
+          "FullName": "Franco Colapinto",
+          "TeamName": "Williams",
+          "GridPosition": 18.0,
+          "Points": 0.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 13.0,
+          "Abbreviation": "RIC",
+          "FullName": "Daniel Ricciardo",
+          "TeamName": "RB",
+          "GridPosition": 12.0,
+          "Points": 0.0,
+          "Laps": 53.0,
+          "Status": "Finished"
+        },
+        {
+          "Position": 14.0,
+          "Abbreviation": "OCO",
+          "FullName": "Esteban Ocon",
+          "TeamName": "Alpine",
+          "GridPosition": 15.0,
+          "Points": 0.0,
+          "Laps": 52.0,
+          "Status": "Lapped"
+        },
+        {
+          "Position": 15.0,
+          "Abbreviation": "GAS",
+          "FullName": "Pierre Gasly",
+          "TeamName": "Alpine",
+          "GridPosition": 14.0,
+          "Points": 0.0,
+          "Laps": 52.0,
+          "Status": "Lapped"
+        },
+        {
+          "Position": 16.0,
+          "Abbreviation": "BOT",
+          "FullName": "Valtteri Bottas",
+          "TeamName": "Kick Sauber",
+          "GridPosition": 19.0,
+          "Points": 0.0,
+          "Laps": 52.0,
+          "Status": "Lapped"
+        },
+        {
+          "Position": 17.0,
+          "Abbreviation": "HUL",
+          "FullName": "Nico Hulkenberg",
+          "TeamName": "Haas F1 Team",
+          "GridPosition": 10.0,
+          "Points": 0.0,
+          "Laps": 52.0,
+          "Status": "Lapped"
+        },
+        {
+          "Position": 18.0,
+          "Abbreviation": "ZHO",
+          "FullName": "Guanyu Zhou",
+          "TeamName": "Kick Sauber",
+          "GridPosition": 20.0,
+          "Points": 0.0,
+          "Laps": 52.0,
+          "Status": "Lapped"
+        },
+        {
+          "Position": 19.0,
+          "Abbreviation": "STR",
+          "FullName": "Lance Stroll",
+          "TeamName": "Aston Martin",
+          "GridPosition": 17.0,
+          "Points": 0.0,
+          "Laps": 52.0,
+          "Status": "Lapped"
+        },
+        {
+          "Position": 20.0,
+          "Abbreviation": "TSU",
+          "FullName": "Yuki Tsunoda",
+          "TeamName": "RB",
+          "GridPosition": 16.0,
+          "Points": 0.0,
+          "Laps": 7.0,
+          "Status": "Retired"
+        }
+      ]
+    },
+    "position_changes": {
+      "columns": [
+        "Abbreviation",
+        "FullName",
+        "TeamName",
+        "GridPosition",
+        "Position",
+        "position_change",
+        "change_label",
+        "Points"
+      ],
+      "rows": [
+        {
+          "Abbreviation": "COL",
+          "FullName": "Franco Colapinto",
+          "TeamName": "Williams",
+          "GridPosition": 18.0,
+          "Position": 12.0,
+          "position_change": 6.0,
+          "change_label": "+6",
+          "Points": 0.0
+        },
+        {
+          "Abbreviation": "LEC",
+          "FullName": "Charles Leclerc",
+          "TeamName": "Ferrari",
+          "GridPosition": 4.0,
+          "Position": 1.0,
+          "position_change": 3.0,
+          "change_label": "+3",
+          "Points": 25.0
+        },
+        {
+          "Abbreviation": "MAG",
+          "FullName": "Kevin Magnussen",
+          "TeamName": "Haas F1 Team",
+          "GridPosition": 13.0,
+          "Position": 10.0,
+          "position_change": 3.0,
+          "change_label": "+3",
+          "Points": 1.0
+        },
+        {
+          "Abbreviation": "BOT",
+          "FullName": "Valtteri Bottas",
+          "TeamName": "Kick Sauber",
+          "GridPosition": 19.0,
+          "Position": 16.0,
+          "position_change": 3.0,
+          "change_label": "+3",
+          "Points": 0.0
+        },
+        {
+          "Abbreviation": "ZHO",
+          "FullName": "Guanyu Zhou",
+          "TeamName": "Kick Sauber",
+          "GridPosition": 20.0,
+          "Position": 18.0,
+          "position_change": 2.0,
+          "change_label": "+2",
+          "Points": 0.0
+        },
+        {
+          "Abbreviation": "HAM",
+          "FullName": "Lewis Hamilton",
+          "TeamName": "Mercedes",
+          "GridPosition": 6.0,
+          "Position": 5.0,
+          "position_change": 1.0,
+          "change_label": "+1",
+          "Points": 10.0
+        },
+        {
+          "Abbreviation": "SAI",
+          "FullName": "Carlos Sainz",
+          "TeamName": "Ferrari",
+          "GridPosition": 5.0,
+          "Position": 4.0,
+          "position_change": 1.0,
+          "change_label": "+1",
+          "Points": 12.0
+        },
+        {
+          "Abbreviation": "OCO",
+          "FullName": "Esteban Ocon",
+          "TeamName": "Alpine",
+          "GridPosition": 15.0,
+          "Position": 14.0,
+          "position_change": 1.0,
+          "change_label": "+1",
+          "Points": 0.0
+        },
+        {
+          "Abbreviation": "VER",
+          "FullName": "Max Verstappen",
+          "TeamName": "Red Bull Racing",
+          "GridPosition": 7.0,
+          "Position": 6.0,
+          "position_change": 1.0,
+          "change_label": "+1",
+          "Points": 8.0
+        },
+        {
+          "Abbreviation": "PIA",
+          "FullName": "Oscar Piastri",
+          "TeamName": "McLaren",
+          "GridPosition": 2.0,
+          "Position": 2.0,
+          "position_change": 0.0,
+          "change_label": "0",
+          "Points": 18.0
+        },
+        {
+          "Abbreviation": "PER",
+          "FullName": "Sergio Perez",
+          "TeamName": "Red Bull Racing",
+          "GridPosition": 8.0,
+          "Position": 8.0,
+          "position_change": 0.0,
+          "change_label": "0",
+          "Points": 4.0
+        },
+        {
+          "Abbreviation": "ALB",
+          "FullName": "Alexander Albon",
+          "TeamName": "Williams",
+          "GridPosition": 9.0,
+          "Position": 9.0,
+          "position_change": 0.0,
+          "change_label": "0",
+          "Points": 2.0
+        },
+        {
+          "Abbreviation": "ALO",
+          "FullName": "Fernando Alonso",
+          "TeamName": "Aston Martin",
+          "GridPosition": 11.0,
+          "Position": 11.0,
+          "position_change": 0.0,
+          "change_label": "0",
+          "Points": 0.0
+        },
+        {
+          "Abbreviation": "GAS",
+          "FullName": "Pierre Gasly",
+          "TeamName": "Alpine",
+          "GridPosition": 14.0,
+          "Position": 15.0,
+          "position_change": -1.0,
+          "change_label": "-1",
+          "Points": 0.0
+        },
+        {
+          "Abbreviation": "RIC",
+          "FullName": "Daniel Ricciardo",
+          "TeamName": "RB",
+          "GridPosition": 12.0,
+          "Position": 13.0,
+          "position_change": -1.0,
+          "change_label": "-1",
+          "Points": 0.0
+        },
+        {
+          "Abbreviation": "NOR",
+          "FullName": "Lando Norris",
+          "TeamName": "McLaren",
+          "GridPosition": 1.0,
+          "Position": 3.0,
+          "position_change": -2.0,
+          "change_label": "-2",
+          "Points": 16.0
+        },
+        {
+          "Abbreviation": "STR",
+          "FullName": "Lance Stroll",
+          "TeamName": "Aston Martin",
+          "GridPosition": 17.0,
+          "Position": 19.0,
+          "position_change": -2.0,
+          "change_label": "-2",
+          "Points": 0.0
+        },
+        {
+          "Abbreviation": "RUS",
+          "FullName": "George Russell",
+          "TeamName": "Mercedes",
+          "GridPosition": 3.0,
+          "Position": 7.0,
+          "position_change": -4.0,
+          "change_label": "-4",
+          "Points": 6.0
+        },
+        {
+          "Abbreviation": "TSU",
+          "FullName": "Yuki Tsunoda",
+          "TeamName": "RB",
+          "GridPosition": 16.0,
+          "Position": 20.0,
+          "position_change": -4.0,
+          "change_label": "-4",
+          "Points": 0.0
+        },
+        {
+          "Abbreviation": "HUL",
+          "FullName": "Nico Hulkenberg",
+          "TeamName": "Haas F1 Team",
+          "GridPosition": 10.0,
+          "Position": 17.0,
+          "position_change": -7.0,
+          "change_label": "-7",
+          "Points": 0.0
+        }
+      ]
+    },
+    "team_standings": {
+      "columns": [
+        "TeamName",
+        "total_points",
+        "drivers",
+        "best_position",
+        "color"
+      ],
+      "rows": [
+        {
+          "TeamName": "Ferrari",
+          "total_points": 37.0,
+          "drivers": "LEC / SAI",
+          "best_position": 1.0,
+          "color": "E80020"
+        },
+        {
+          "TeamName": "McLaren",
+          "total_points": 34.0,
+          "drivers": "NOR / PIA",
+          "best_position": 2.0,
+          "color": "FF8000"
+        },
+        {
+          "TeamName": "Mercedes",
+          "total_points": 16.0,
+          "drivers": "HAM / RUS",
+          "best_position": 5.0,
+          "color": "27F4D2"
+        },
+        {
+          "TeamName": "Red Bull Racing",
+          "total_points": 12.0,
+          "drivers": "PER / VER",
+          "best_position": 6.0,
+          "color": "3671C6"
+        },
+        {
+          "TeamName": "Williams",
+          "total_points": 2.0,
+          "drivers": "ALB / COL",
+          "best_position": 9.0,
+          "color": "64C4FF"
+        },
+        {
+          "TeamName": "Haas F1 Team",
+          "total_points": 1.0,
+          "drivers": "HUL / MAG",
+          "best_position": 10.0,
+          "color": "B6BABD"
+        },
+        {
+          "TeamName": "Aston Martin",
+          "total_points": 0.0,
+          "drivers": "ALO / STR",
+          "best_position": 11.0,
+          "color": "229971"
+        },
+        {
+          "TeamName": "Alpine",
+          "total_points": 0.0,
+          "drivers": "GAS / OCO",
+          "best_position": 14.0,
+          "color": "0093cc"
+        },
+        {
+          "TeamName": "Kick Sauber",
+          "total_points": 0.0,
+          "drivers": "BOT / ZHO",
+          "best_position": 16.0,
+          "color": "52e252"
+        },
+        {
+          "TeamName": "RB",
+          "total_points": 0.0,
+          "drivers": "RIC / TSU",
+          "best_position": 13.0,
+          "color": "6692FF"
+        }
+      ]
+    }
+  },
+  "details": {
+    "race_info": {
+      "event": "2024 Italian Grand Prix",
+      "circuit": "Monza",
+      "date": "2024-09-01",
+      "drivers": 20,
+      "finishers": 13,
+      "total_laps": 53,
+      "weather": {
+        "temp_min": 32.2,
+        "temp_max": 34.1,
+        "track_temp_min": 43.5,
+        "track_temp_max": 54.6,
+        "rain": false
+      },
+      "winner": "Charles Leclerc",
+      "winner_team": "Ferrari"
+    }
+  },
+  "artifacts": {}
+}

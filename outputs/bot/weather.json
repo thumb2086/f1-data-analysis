@@ -1,0 +1,221 @@
+{
+  "command": "weather",
+  "title": "天氣摘要與時間序列",
+  "summary": [
+    "降雨：無",
+    "氣溫：32.2 ~ 34.1 °C",
+    "賽道溫度：43.5 ~ 54.6 °C"
+  ],
+  "metrics": {
+    "rainfall": false,
+    "records_count": 133,
+    "wind_speed_avg": 1.518796992481203
+  },
+  "tables": {
+    "weather_summary": {
+      "columns": [
+        "metric",
+        "value"
+      ],
+      "rows": [
+        {
+          "metric": "air_temp_min",
+          "value": 32.2
+        },
+        {
+          "metric": "air_temp_max",
+          "value": 34.1
+        },
+        {
+          "metric": "track_temp_min",
+          "value": 43.5
+        },
+        {
+          "metric": "track_temp_max",
+          "value": 54.6
+        },
+        {
+          "metric": "humidity_avg",
+          "value": 32.285714285714285
+        }
+      ]
+    },
+    "weather_timeline": {
+      "columns": [
+        "Time",
+        "AirTemp",
+        "Humidity",
+        "Pressure",
+        "Rainfall",
+        "TrackTemp",
+        "WindDirection",
+        "WindSpeed",
+        "Time_minutes"
+      ],
+      "rows": [
+        {
+          "Time": "0 days 00:00:26.141000",
+          "AirTemp": 33.2,
+          "Humidity": 38.0,
+          "Pressure": 993.8,
+          "Rainfall": false,
+          "TrackTemp": 52.1,
+          "WindDirection": 318,
+          "WindSpeed": 0.7,
+          "Time_minutes": 0.4356833333333333
+        },
+        {
+          "Time": "0 days 00:01:26.139000",
+          "AirTemp": 33.2,
+          "Humidity": 37.0,
+          "Pressure": 993.9,
+          "Rainfall": false,
+          "TrackTemp": 52.1,
+          "WindDirection": 207,
+          "WindSpeed": 1.0,
+          "Time_minutes": 1.4356499999999999
+        },
+        {
+          "Time": "0 days 00:02:26.141000",
+          "AirTemp": 33.2,
+          "Humidity": 37.0,
+          "Pressure": 993.9,
+          "Rainfall": false,
+          "TrackTemp": 52.8,
+          "WindDirection": 230,
+          "WindSpeed": 1.3,
+          "Time_minutes": 2.435683333333333
+        },
+        {
+          "Time": "0 days 00:03:26.146000",
+          "AirTemp": 33.2,
+          "Humidity": 36.0,
+          "Pressure": 993.8,
+          "Rainfall": false,
+          "TrackTemp": 52.8,
+          "WindDirection": 200,
+          "WindSpeed": 0.7,
+          "Time_minutes": 3.4357666666666664
+        },
+        {
+          "Time": "0 days 00:04:26.151000",
+          "AirTemp": 33.3,
+          "Humidity": 36.0,
+          "Pressure": 993.8,
+          "Rainfall": false,
+          "TrackTemp": 52.8,
+          "WindDirection": 182,
+          "WindSpeed": 0.8,
+          "Time_minutes": 4.43585
+        },
+        {
+          "Time": "0 days 00:05:26.168000",
+          "AirTemp": 33.3,
+          "Humidity": 36.0,
+          "Pressure": 993.8,
+          "Rainfall": false,
+          "TrackTemp": 53.0,
+          "WindDirection": 318,
+          "WindSpeed": 0.8,
+          "Time_minutes": 5.436133333333333
+        },
+        {
+          "Time": "0 days 00:06:26.187000",
+          "AirTemp": 33.3,
+          "Humidity": 35.0,
+          "Pressure": 993.9,
+          "Rainfall": false,
+          "TrackTemp": 53.0,
+          "WindDirection": 349,
+          "WindSpeed": 1.5,
+          "Time_minutes": 6.43645
+        },
+        {
+          "Time": "0 days 00:07:26.203000",
+          "AirTemp": 33.4,
+          "Humidity": 35.0,
+          "Pressure": 993.8,
+          "Rainfall": false,
+          "TrackTemp": 52.7,
+          "WindDirection": 0,
+          "WindSpeed": 1.7,
+          "Time_minutes": 7.436716666666666
+        },
+        {
+          "Time": "0 days 00:08:26.205000",
+          "AirTemp": 33.3,
+          "Humidity": 35.0,
+          "Pressure": 993.8,
+          "Rainfall": false,
+          "TrackTemp": 53.0,
+          "WindDirection": 230,
+          "WindSpeed": 0.4,
+          "Time_minutes": 8.43675
+        },
+        {
+          "Time": "0 days 00:09:26.214000",
+          "AirTemp": 33.3,
+          "Humidity": 34.0,
+          "Pressure": 993.8,
+          "Rainfall": false,
+          "TrackTemp": 53.3,
+          "WindDirection": 229,
+          "WindSpeed": 1.6,
+          "Time_minutes": 9.436900000000001
+        },
+        {
+          "Time": "0 days 00:10:26.225000",
+          "AirTemp": 33.4,
+          "Humidity": 34.0,
+          "Pressure": 993.8,
+          "Rainfall": false,
+          "TrackTemp": 53.2,
+          "WindDirection": 177,
+          "WindSpeed": 1.6,
+          "Time_minutes": 10.437083333333334
+        },
+        {
+          "Time": "0 days 00:11:26.228000",
+          "AirTemp": 33.3,
+          "Humidity": 34.0,
+          "Pressure": 993.7,
+          "Rainfall": false,
+          "TrackTemp": 53.2,
+          "WindDirection": 198,
+          "WindSpeed": 1.6,
+          "Time_minutes": 11.437133333333332
+        }
+      ]
+    }
+  },
+  "details": {
+    "weather_summary": {
+      "air_temp": {
+        "min": 32.2,
+        "max": 34.1,
+        "avg": 33.1015037593985
+      },
+      "track_temp": {
+        "min": 43.5,
+        "max": 54.6,
+        "avg": 49.31127819548872
+      },
+      "humidity": {
+        "min": 30.0,
+        "max": 38.0,
+        "avg": 32.285714285714285
+      },
+      "pressure": {
+        "min": 992.7,
+        "max": 993.9
+      },
+      "rainfall": false,
+      "wind_speed": {
+        "avg": 1.518796992481203,
+        "max": 3.2
+      },
+      "records_count": 133
+    }
+  },
+  "artifacts": {}
+}

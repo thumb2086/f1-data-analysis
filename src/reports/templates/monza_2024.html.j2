@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monza 2024 Race Report</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #f6f7fb; color: #222; }
+    header { background: linear-gradient(120deg, #141e30, #243b55); color: #fff; padding: 28px 36px; }
+    main { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    .card { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 20px; box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+    .metric { background: #f8f9fc; border: 1px solid #e6e8f0; border-radius: 12px; padding: 14px; }
+    .metric .label { color: #666; font-size: 13px; }
+    .metric .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+    h2 { margin-top: 0; }
+    .plot { margin-top: 16px; }
+    table.report-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    table.report-table th, table.report-table td { border-bottom: 1px solid #eceff5; padding: 8px 10px; text-align: left; }
+    table.report-table th { background: #f8f9fc; }
+    ul { line-height: 1.7; }
+    .small { color: #666; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Monza 2024 Race Report</h1>
+    <div>Event: {{ race_info.event }} | Circuit: {{ race_info.circuit }} | Date: {{ race_info.date }}</div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Overview</h2>
+      <div class="metrics">
+        <div class="metric"><div class="label">Winner</div><div class="value">{{ summary.winner }}</div></div>
+        <div class="metric"><div class="label">Team</div><div class="value">{{ summary.winner_team }}</div></div>
+        <div class="metric"><div class="label">Drivers</div><div class="value">{{ summary.drivers }}</div></div>
+        <div class="metric"><div class="label">Finishers</div><div class="value">{{ summary.finishers }}</div></div>
+        <div class="metric"><div class="label">Total Laps</div><div class="value">{{ summary.total_laps }}</div></div>
+        <div class="metric"><div class="label">Weather</div><div class="value">{{ "Dry" if not summary.weather_rain else "Rain" }}</div></div>
+      </div>
+      <p class="small">Air temp: {{ summary.temp_min | round(1) }} - {{ summary.temp_max | round(1) }} °C; Track temp: {{ summary.track_temp_min | round(1) }} - {{ summary.track_temp_max | round(1) }} °C</p>
+    </section>
+
+    <section class="card">
+      <h2>Final Standings</h2>
+      {{ standings_html | safe }}
+    </section>
+
+    <section class="card">
+      <h2>Position Changes</h2>
+      {{ position_changes_html | safe }}
+      <div class="plot">{{ figure_html.position_change | safe }}</div>
+    </section>
+
+    <section class="card">
+      <h2>Fastest Laps</h2>
+      {{ fastest_laps_html | safe }}
+      <div class="plot">{{ figure_html.fastest_laps | safe }}</div>
+    </section>
+
+    <section class="card">
+      <h2>Tyre Strategy</h2>
+      {{ tyre_strategy_html | safe }}
+      <div class="plot">{{ figure_html.tyre_strategy | safe }}</div>
+    </section>
+
+    <section class="card">
+      <h2>Weather Summary</h2>
+      {{ weather_html | safe }}
+      <div class="plot">{{ figure_html.weather | safe }}</div>
+    </section>
+
+    <section class="card">
+      <h2>Telemetry Summary for {{ driver }}</h2>
+      {{ telemetry_html | safe }}
+      <div class="plot">{{ figure_html.telemetry | safe }}</div>
+      <p class="small">Source telemetry is based on VER only, reusing the existing analysis functions.</p>
+    </section>
+  </main>
+</body>
+</html>

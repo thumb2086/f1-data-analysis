@@ -1,0 +1,56 @@
+# Monza 2024 Race Report
+
+Event: {{ race_info.event }}
+Circuit: {{ race_info.circuit }}
+Date: {{ race_info.date }}
+
+## Overview
+
+- Winner: {{ summary.winner }} ({{ summary.winner_team }})
+- Drivers: {{ summary.drivers }}
+- Finishers: {{ summary.finishers }}
+- Total laps: {{ summary.total_laps }}
+- Weather: {{ "Rainy" if summary.weather_rain else "Dry" }}
+- Air temperature: {{ summary.temp_min | round(1) }} - {{ summary.temp_max | round(1) }} °C
+- Track temperature: {{ summary.track_temp_min | round(1) }} - {{ summary.track_temp_max | round(1) }} °C
+
+## Final Standings
+
+{{ standings_md }}
+
+## Position Changes
+
+{{ position_changes_md }}
+
+## Fastest Laps
+
+{{ fastest_laps_md }}
+
+## Tyre Strategy
+
+{{ tyre_strategy_md }}
+
+## Weather Summary
+
+- Air temp avg: {{ weather_summary.air_temp.avg | round(1) }} °C
+- Track temp avg: {{ weather_summary.track_temp.avg | round(1) }} °C
+- Humidity avg: {{ weather_summary.humidity.avg | round(1) }} %
+- Wind speed avg: {{ weather_summary.wind_speed.avg | round(1) }} m/s
+- Rainfall observed: {{ "Yes" if weather_summary.rainfall else "No" }}
+- Weather records: {{ weather_summary.records_count }}
+
+## Telemetry Summary for {{ driver }}
+
+- Full throttle: {{ telemetry_summary.full_throttle_pct | round(1) }}%
+- Braking: {{ telemetry_summary.braking_pct | round(1) }}%
+- Coasting: {{ telemetry_summary.coasting_pct | round(1) }}%
+- DRS active: {{ telemetry_summary.drs_active_pct | round(1) }}%
+- Average speed: {{ telemetry_summary.avg_speed | round(1) }} km/h
+- Max speed: {{ telemetry_summary.max_speed | round(1) }} km/h
+- Brake points: {{ telemetry_summary.brake_points }}
+- Average RPM: {{ telemetry_summary.avg_rpm | round(0) }}
+
+## Notes
+
+This report was generated automatically from the Monza 2024 analysis modules.
+It reuses the existing data loaders and analysis helpers without modifying Product 1.

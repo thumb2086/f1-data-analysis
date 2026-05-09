@@ -1,0 +1,373 @@
+{
+  "command": "compare",
+  "title": "遙測對比與教練回饋",
+  "summary": [
+    "比對區間：0.3m ~ 5754.1m",
+    "平均速度差：-3.72 km/h",
+    "配對煞車區段：6 組"
+  ],
+  "metrics": {
+    "mean_speed_delta_kph": -3.721651379213105,
+    "median_speed_delta_kph": -2.5,
+    "paired_zones": 6,
+    "benchmark_brake_zones": 7,
+    "user_brake_zones": 6
+  },
+  "tables": {
+    "events": {
+      "columns": [
+        "zone_index",
+        "ref_brake_start_m",
+        "user_brake_start_m",
+        "brake_delta_m",
+        "brake_verdict",
+        "ref_throttle_pickup_m",
+        "user_throttle_pickup_m",
+        "throttle_delta_m",
+        "throttle_verdict"
+      ],
+      "rows": [
+        {
+          "zone_index": 1,
+          "ref_brake_start_m": 765.7988030724978,
+          "user_brake_start_m": 806.9564449228112,
+          "brake_delta_m": 41.15764185031344,
+          "brake_verdict": "偏晚煞車",
+          "ref_throttle_pickup_m": 922.1978421036888,
+          "user_throttle_pickup_m": 955.1239555839395,
+          "throttle_delta_m": 32.926113480250706,
+          "throttle_verdict": "油門回補偏晚"
+        },
+        {
+          "zone_index": 2,
+          "ref_brake_start_m": 2000.5280585818998,
+          "user_brake_start_m": 2033.4541720621505,
+          "brake_delta_m": 32.926113480250706,
+          "brake_verdict": "偏晚煞車",
+          "ref_throttle_pickup_m": 2124.00098413284,
+          "user_throttle_pickup_m": 2156.9270976130906,
+          "throttle_delta_m": 32.92611348025048,
+          "throttle_verdict": "油門回補偏晚"
+        },
+        {
+          "zone_index": 3,
+          "ref_brake_start_m": 2428.567533825159,
+          "user_brake_start_m": 2461.49364730541,
+          "brake_delta_m": 32.92611348025093,
+          "brake_verdict": "偏晚煞車",
+          "ref_throttle_pickup_m": 2510.882817525786,
+          "user_throttle_pickup_m": 2519.1143458958486,
+          "throttle_delta_m": 8.231528370062733,
+          "throttle_verdict": "油門回補偏晚"
+        },
+        {
+          "zone_index": 4,
+          "ref_brake_start_m": 2757.8286686276665,
+          "user_brake_start_m": 2790.754782107917,
+          "brake_delta_m": 32.92611348025048,
+          "brake_verdict": "偏晚煞車",
+          "ref_throttle_pickup_m": 2840.1439523282934,
+          "user_throttle_pickup_m": 2856.6070090684184,
+          "throttle_delta_m": 16.463056740125012,
+          "throttle_verdict": "油門回補偏晚"
+        },
+        {
+          "zone_index": 5,
+          "ref_brake_start_m": 3803.232771625627,
+          "user_brake_start_m": 3836.1588851058773,
+          "brake_delta_m": 32.92611348025048,
+          "brake_verdict": "偏晚煞車",
+          "ref_throttle_pickup_m": 3918.474168806504,
+          "user_throttle_pickup_m": 3951.400282286755,
+          "throttle_delta_m": 32.92611348025093,
+          "throttle_verdict": "油門回補偏晚"
+        },
+        {
+          "zone_index": 6,
+          "ref_brake_start_m": 5021.498970394903,
+          "user_brake_start_m": 5062.656612245217,
+          "brake_delta_m": 41.15764185031367,
+          "brake_verdict": "偏晚煞車",
+          "ref_throttle_pickup_m": 5128.508839205718,
+          "user_throttle_pickup_m": 5136.7403675757805,
+          "throttle_delta_m": 8.231528370062733,
+          "throttle_verdict": "油門回補偏晚"
+        }
+      ]
+    },
+    "segments": {
+      "columns": [
+        "segment",
+        "distance_start",
+        "distance_end",
+        "avg_speed_ref",
+        "avg_speed_user",
+        "speed_delta",
+        "avg_throttle_ref",
+        "avg_throttle_user",
+        "avg_brake_ref",
+        "avg_brake_user"
+      ],
+      "rows": [
+        {
+          "segment": "S01",
+          "distance_start": 0.2666646566685417,
+          "distance_end": 287.9585811903592,
+          "avg_speed_ref": 324.30981295155976,
+          "avg_speed_user": 321.80981295155976,
+          "speed_delta": -2.5,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S02",
+          "distance_start": 287.9585811903592,
+          "distance_end": 575.65049772405,
+          "avg_speed_ref": 331.7350113606714,
+          "avg_speed_user": 329.2350113606714,
+          "speed_delta": -2.5,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S03",
+          "distance_start": 575.65049772405,
+          "distance_end": 863.3424142577406,
+          "avg_speed_ref": 304.6394539138702,
+          "avg_speed_user": 299.05373962815594,
+          "speed_delta": -5.585714285714285,
+          "avg_throttle_ref": 63.214565287583305,
+          "avg_throttle_user": 63.214565287583305,
+          "avg_brake_ref": 0.34285714285714286,
+          "avg_brake_user": 0.2
+        },
+        {
+          "segment": "S04",
+          "distance_start": 863.3424142577406,
+          "distance_end": 1151.0343307914313,
+          "avg_speed_ref": 150.82933211191104,
+          "avg_speed_user": 146.2459279081112,
+          "speed_delta": -4.58340420379984,
+          "avg_throttle_ref": 64.7333911619575,
+          "avg_throttle_user": 64.15414254745997,
+          "avg_brake_ref": 0.2,
+          "avg_brake_user": 0.17142857142857143
+        },
+        {
+          "segment": "S05",
+          "distance_start": 1151.0343307914313,
+          "distance_end": 1438.7262473251221,
+          "avg_speed_ref": 274.29174858957384,
+          "avg_speed_user": 271.79174858957384,
+          "speed_delta": -2.499999999999999,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S06",
+          "distance_start": 1438.7262473251221,
+          "distance_end": 1726.4181638588127,
+          "avg_speed_ref": 308.54680392888775,
+          "avg_speed_user": 306.04680392888775,
+          "speed_delta": -2.5,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S07",
+          "distance_start": 1726.4181638588127,
+          "distance_end": 2014.1100803925033,
+          "avg_speed_ref": 316.7525216545624,
+          "avg_speed_user": 312.5106886754498,
+          "speed_delta": -4.241832979112524,
+          "avg_throttle_ref": 92.03022012553294,
+          "avg_throttle_user": 92.03022012553288,
+          "avg_brake_ref": 0.05714285714285714,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S08",
+          "distance_start": 2014.1100803925033,
+          "distance_end": 2301.801996926194,
+          "avg_speed_ref": 172.25406788542188,
+          "avg_speed_user": 167.18263931399332,
+          "speed_delta": -5.071428571428556,
+          "avg_throttle_ref": 50.79658039044359,
+          "avg_throttle_user": 49.439791417404855,
+          "avg_brake_ref": 0.37142857142857144,
+          "avg_brake_user": 0.3142857142857143
+        },
+        {
+          "segment": "S09",
+          "distance_start": 2301.801996926194,
+          "distance_end": 2589.493913459885,
+          "avg_speed_ref": 221.13538595865128,
+          "avg_speed_user": 215.62886038373261,
+          "speed_delta": -5.506525574918651,
+          "avg_throttle_ref": 66.77170523270367,
+          "avg_throttle_user": 65.26307666175687,
+          "avg_brake_ref": 0.17142857142857143,
+          "avg_brake_user": 0.05714285714285714
+        },
+        {
+          "segment": "S10",
+          "distance_start": 2589.493913459885,
+          "distance_end": 2877.1858299935757,
+          "avg_speed_ref": 226.81678980132526,
+          "avg_speed_user": 221.10250408703953,
+          "speed_delta": -5.714285714285727,
+          "avg_throttle_ref": 71.37422485770502,
+          "avg_throttle_user": 68.49560145203188,
+          "avg_brake_ref": 0.22857142857142856,
+          "avg_brake_user": 0.11428571428571428
+        },
+        {
+          "segment": "S11",
+          "distance_start": 2877.1858299935757,
+          "distance_end": 3164.877746527266,
+          "avg_speed_ref": 249.47939730577028,
+          "avg_speed_user": 246.6592700474988,
+          "speed_delta": -2.820127258271493,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S12",
+          "distance_start": 3164.877746527266,
+          "distance_end": 3452.569663060957,
+          "avg_speed_ref": 304.20567174950077,
+          "avg_speed_user": 301.70567174950077,
+          "speed_delta": -2.5,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S13",
+          "distance_start": 3452.569663060957,
+          "distance_end": 3740.2615795946476,
+          "avg_speed_ref": 321.12044632327854,
+          "avg_speed_user": 318.12570405871946,
+          "speed_delta": -2.9947422645590724,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S14",
+          "distance_start": 3740.2615795946476,
+          "distance_end": 4027.953496128338,
+          "avg_speed_ref": 243.73066623709005,
+          "avg_speed_user": 237.27696259602115,
+          "speed_delta": -6.453703641068902,
+          "avg_throttle_ref": 55.02256489576809,
+          "avg_throttle_user": 47.64911291264033,
+          "avg_brake_ref": 0.37142857142857144,
+          "avg_brake_user": 0.2571428571428571
+        },
+        {
+          "segment": "S15",
+          "distance_start": 4027.953496128338,
+          "distance_end": 4315.645412662029,
+          "avg_speed_ref": 264.2148239202677,
+          "avg_speed_user": 261.7148239202677,
+          "speed_delta": -2.499999999999998,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S16",
+          "distance_start": 4315.645412662029,
+          "distance_end": 4603.33732919572,
+          "avg_speed_ref": 306.57428793517096,
+          "avg_speed_user": 304.07428793517096,
+          "speed_delta": -2.5,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S17",
+          "distance_start": 4603.33732919572,
+          "distance_end": 4891.02924572941,
+          "avg_speed_ref": 319.5403018735629,
+          "avg_speed_user": 317.0403018735629,
+          "speed_delta": -2.5,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S18",
+          "distance_start": 4891.02924572941,
+          "distance_end": 5178.721162263101,
+          "avg_speed_ref": 261.88943009727126,
+          "avg_speed_user": 255.44146887609153,
+          "speed_delta": -6.447961221179776,
+          "avg_throttle_ref": 51.71718811397425,
+          "avg_throttle_user": 50.9294927728738,
+          "avg_brake_ref": 0.2571428571428571,
+          "avg_brake_user": 0.11428571428571428
+        },
+        {
+          "segment": "S19",
+          "distance_start": 5178.721162263101,
+          "distance_end": 5466.4130787967915,
+          "avg_speed_ref": 249.950196302172,
+          "avg_speed_user": 247.43689443224878,
+          "speed_delta": -2.513301869923282,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        },
+        {
+          "segment": "S20",
+          "distance_start": 5466.4130787967915,
+          "distance_end": 5754.104995330482,
+          "avg_speed_ref": 292.9178639394095,
+          "avg_speed_user": 290.4178639394095,
+          "speed_delta": -2.5,
+          "avg_throttle_ref": 100.0,
+          "avg_throttle_user": 100.0,
+          "avg_brake_ref": 0.0,
+          "avg_brake_user": 0.0
+        }
+      ]
+    }
+  },
+  "details": {
+    "feedback": [
+      "有 6 個煞車點偏晚；可嘗試提早約 3–5m 開始制動，讓入彎速度更穩。",
+      "有 6 個出彎油門回補偏晚；可在車身更穩後提早漸進補油。",
+      "整體平均速度比 benchmark 慢 3.72 km/h，主要損失可從煞車點與油門銜接處下手。",
+      "最大速度落後約 11.50 km/h；最大領先約 -2.50 km/h。"
+    ],
+    "output_files": {
+      "json": "outputs/bot/compare/coaching_report.json",
+      "text": "outputs/bot/compare/coaching_summary.txt"
+    },
+    "user_csv": "/home/thumb/data/outputs/coaching/synthetic_user.csv",
+    "benchmark_csv": "/home/thumb/data/raw/telemetry_VER.csv"
+  },
+  "artifacts": {
+    "json": "outputs/bot/compare/coaching_report.json",
+    "text": "outputs/bot/compare/coaching_summary.txt"
+  }
+}
